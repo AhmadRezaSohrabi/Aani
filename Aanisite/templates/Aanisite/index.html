@@ -1,0 +1,243 @@
+{% extends 'Aanisite/base.html' %}
+{% load i18n %}
+{% load static %}
+{% block extra_style %}
+{% get_current_language as LANGUAGE_CODE %}
+<style>
+    .parallax-main1 {
+        background-image: url("{% static "Aanisite/media/IA2.jpg" %}");
+        filter:brightness(1);
+        background-size: 80%;
+        min-height: 43vw;
+
+    }
+
+    .parallax-main2 {
+        background-image: url("{% static "Aanisite/media/pic28.jpg" %}")
+    }
+        {% if LANGUAGE_CODE == 'en' %}
+        #mottodiv{
+             width:70%;
+        }
+        {% else %}
+       #mottodiv{
+             width:59%;
+        }
+        {% endif %}
+</style>
+{% endblock %}
+{% block content %}
+
+<div style="padding: auto;" class="pt-4" id="main">
+    
+    <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:980px;height:610px;overflow:hidden;visibility:hidden;">
+        <!-- Loading Screen -->
+        <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+            <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="img/spin.svg" />
+        </div>
+        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:980px;height:610px;overflow:hidden;">
+            <div>
+                <img  data-u="image" src="{% static "Aanisite/media/7676.jpg" %}" />
+            </div>
+            <div>
+                <img  data-u="image" src="{% static "Aanisite/media/1.jpg" %}" />
+            </div>
+            <div>
+                <img  data-u="image" src="{% static "Aanisite/media/IA1.jpg" %}" />
+            </div>
+            <div>
+                <img data-u="image" src="{% static "Aanisite/media/189.jpg" %}" />
+            </div>
+            <div>
+                <img data-u="image" src="{% static "Aanisite/media/2.jpg" %}" />
+            </div>
+            <div>
+                <img data-u="image" src="{% static "Aanisite/media/3.jpg" %}" />
+            </div>
+            <div>
+                <img data-u="image" src="{% static "Aanisite/media/4.jpg" %}" />
+            </div>
+             
+        </div>
+        <!-- Bullet Navigator -->
+        <div data-u="navigator" class="jssorb051" style="position:absolute;bottom:12px;right:12px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+            <div data-u="prototype" class="i" style="width:16px;height:16px;">
+                <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                    <circle class="b" cx="8000" cy="8000" r="5800"></circle>
+                </svg>
+            </div>
+        </div>
+        <!-- Arrow Navigator -->
+        <div data-u="arrowleft" class="jssora051" style="width:55px;height:55px;top:0px;left:25px;" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+            <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                <polyline class="a" points="11040,1920 4960,8000 11040,14080 "></polyline>
+            </svg>
+        </div>
+        <div data-u="arrowright" class="jssora051" style="width:55px;height:55px;top:0px;right:25px;" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+            <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                <polyline class="a" points="4960,1920 11040,8000 4960,14080 "></polyline>
+            </svg>
+        </div>
+    </div>
+ 	            
+ 	            <div class="row">
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+               </div>
+    
+    
+    <!--<div class="px-4 parallax-main1">-->
+    <!--     <div id="mottodiv" class="container px-5">-->
+    <!--        <h1 id="motto"></h1>-->
+    <!--    </div>-->
+    <!--</div>-->
+    <div class="container">
+        <div class="container mt-4 mb-4 ">
+                <div class="row col-12 " id="abstract-content">
+                    <div class="col-lg-10 col-md-10 col-sm-12 col-12 " id="abstract-p">
+                        <p class="mt-lg-5 mt-md-5 mb-md-5">
+                         {% blocktrans %}
+                            The Name “Aani Darman” was inspired by our motivation to provide the
+                            patients with effective and accessible medicinal treatment;
+                            Aani Darman brings immediate treatment to mind.
+                            Each talented member of our team, working collaboratively, comes together
+                            to contribute to a common goal: improving patients’ lives.
+                            we work each day to provide medical services for all with invulnerable ethics,
+                            we do this now to build what patients need tomorrow.
+                            We are many, working as one unit and this is why we are proud of ourselves and our customers
+                            for choosing us.                            
+                         {% endblocktrans %}
+                         </p>
+                    </div>
+                </div>
+        </div>
+        
+        <div class="col-12 col-sm-12 col-md-10 col-xl-10 col-lg-10 m-auto text-center " style="height:27rem;">
+            	<iframe src="slider" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" height="100%" width="100%"></iframe>
+		</div>
+	</div>
+	           
+	           <div class="row">
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+            </div>
+	           
+    <!--<div class="container-fluid">-->
+    <!--    <div class="row mt-4">-->
+    <!--        <div class="cardMainDivleft card col-12 col-sm-12 col-md-6 col-lg-3 " style="width: 18rem;">-->
+    <!--            <img class="card-img-top" src="{% static "Aanisite/media/7.svg" %}" alt="Card image cap">-->
+               
+    <!--        </div>-->
+    <!--        <div class="cardMainDivleft card col-12 col-sm-12 col-md-6 col-lg-3" style="width: 18rem;">-->
+    <!--            <img class="card-img-top" src="{% static "Aanisite/media/19.svg" %}" alt="Card image cap">-->
+                
+    <!--        </div>-->
+    <!--        <div class="cardMainDivright card col-12 col-sm-12 col-md-6 col-lg-3" style="width: 18rem;">-->
+    <!--            <img class="card-img-top" src="{% static "Aanisite/media/17.svg" %}" alt="Card image cap">-->
+            
+    <!--        </div>-->
+    <!--        <div class="cardMainDivright card col-12 col-sm-12 col-md-6 col-lg-3" style="width: 18rem;">-->
+    <!--            <img class="card-img-top" src="{% static "Aanisite/media/2.svg" %}" alt="Card image cap">-->
+                <!--<div class="card-body">-->
+                <!--    <h5 class="card-title"><b>{% trans "Content title"%}</b></h5>-->
+                <!--    <a href="#" class="btn btn-primary"><b>{% trans "More" %}</b></a>-->
+                <!--</div>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--</div>-->
+    <div class="mt-4 parallax-main2"></div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    var counter = 0;
+    {% if LANGUAGE_CODE == 'fa' %}
+    var txt = ' آنی درمان پیشرو در صنعت \xa0داروسازی\xa0 تحت پوشش گروه اهران تجارت';
+    {% else %}
+    var txt = 'Aani Darman Pharmaceutical Co. Affiliated With Ahran Group'
+    {% endif %}
+    var speed = 180;
+
+    function typeWriter() {
+        if (counter < txt.length) {
+            document.getElementById("motto").innerHTML += txt.charAt(counter);
+            counter++;
+            setTimeout(typeWriter, speed);
+        }
+    }
+
+    $(document).ready(function () {
+      typeWriter();
+    });
+
+    slideShow(document.getElementById("slideshow"));
+</script>
+<script src="{% static 'Aanisite/jquery-1.11.3.min.js' %}"></script>
+<script src="{% static 'Aanisite/jssor.slider-27.5.0.min.js' %}"></script>
+ <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+
+            var jssor_1_SlideshowTransitions = [
+              {$Duration:800,$Opacity:2}
+            ];
+
+            var jssor_1_options = {
+              $AutoPlay: 1,
+              $SlideshowOptions: {
+                $Class: $JssorSlideshowRunner$,
+                $Transitions: jssor_1_SlideshowTransitions,
+                $TransitionsOrder: 1
+              },
+              $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$
+              },
+              $BulletNavigatorOptions: {
+                $Class: $JssorBulletNavigator$
+              }
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+            /*#region responsive code begin*/
+
+            var MAX_WIDTH = 980;
+
+            function ScaleSlider() {
+                var containerElement = jssor_1_slider.$Elmt.parentNode;
+                var containerWidth = containerElement.clientWidth;
+
+                if (containerWidth) {
+
+                    var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+
+                    jssor_1_slider.$ScaleWidth(expectedWidth);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+
+            ScaleSlider();
+
+            $(window).bind("load", ScaleSlider);
+            $(window).bind("resize", ScaleSlider);
+            $(window).bind("orientationchange", ScaleSlider);
+            /*#endregion responsive code end*/
+        });
+    </script>
+{% endblock %}

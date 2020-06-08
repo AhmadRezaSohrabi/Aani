@@ -1,0 +1,245 @@
+{% load staticfiles %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_available_languages as LANGUAGES %}
+{% get_language_info_list for LANGUAGES as languages %}
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <title>{% trans "AaniDarman Pharmaceutical Company" %}</title>
+    
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8 " />
+    <meta name="description" content="شرکت داروسازی آنی درمان ،تولید دارو در ایران"/>
+    <meta name="keywords" content="آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان"/>
+    <meta name="robots"   content="index/follow" />
+    
+    <link rel="shortcut icon" hreflang="fa" href="http://www.aanidarman.com/static/Aanisite/media/3.ico"/>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" hreflang="fa" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" hreflang="fa" href="{% static 'Aanisite/main.css' %}">
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" hreflang="fa" rel="stylesheet" type="text/css">
+    <link href="//db.onlinewebfonts.com/c/3671adca6f650c92b83f906e49656986?family=B+Nazanin" hreflang="fa" rel="stylesh0eet"
+        type="text/css" />
+    <link href="//db.onlinewebfonts.com/c/4527bde76d8fc7aed09f15a9ebfb7a75?family=Edwardian+Script+ITC" hreflang="fa" rel="stylesheet" type="text/css"/>
+    <link href="//db.onlinewebfonts.com/c/f8deb3c1a029ec56b15bb462c1518f07?family=SnellRoundhandW01-Script" hreflang="fa" rel="stylesheet" type="text/css"/>
+    <style>
+        {% if LANGUAGE_CODE == 'en' %}
+
+        * {
+            font-family: 'Times New Roman', Times, serif;
+        }
+        p {
+            direction: ltr;
+        }
+        h4 {
+        direction: ltr;
+        }
+            {% else %}
+
+        * {
+            font-family: "B Nazanin";
+        }
+        p {
+            direction: rtl;
+        }
+        h4{
+        direction: rtl;
+        }
+            {% endif %}
+    </style>
+    {% block extra_style %}
+    {% endblock %}
+</head>
+
+<body>
+    <div class="spinner-wrapper">
+        <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+        </div>
+    </div>
+    <!-- Preloading animation -->
+
+    <!--header-->
+
+    <div class="container-fluid" id="drop-menu">
+        <div id="dropdown-bars" class="col-2 col-sm-1 p-2">
+            <img width=35 src="{% static 'Aanisite\media\bars-solid.svg' %}">
+        </div>
+    </div>
+
+      <!-- Dropdown Menu -->
+          <div id="dropdown-menu" class="dropdown-menu py-sm-4 py-xs-4">
+             <ul>
+                 <a href="{% url "index" %}">
+                     <li class="pt-2 pr-4">{% trans "Homepage" %}</li>
+                 </a>
+                 <a href="{% url "products"%}">
+                     <li class="pt-2 pr-4">{% trans "Products" %}</li>
+                 </a>
+                 <a href="{% url "about_us" %}">
+                     <li class="pt-2 pr-4">{% trans "About us" %}</li>
+                 </a>
+                 <a href="{% url "contact_us" %}">
+                     <li class="pt-2 pr-4">{% trans "Contact us" %}</li>
+                 </a>
+                <a href="{% url "hire" %}">
+                    <li class="pt-2 pr-4">{% trans "Join us" %}</li>
+                </a>
+             </ul>
+          </div>
+    
+<div class="container-fluid header mh-100" id="header">
+    <div class="row">
+        <div class="d-flex col-5 col-sm-4 col-md-3 col-lg-2 col-xl-2 p-0" id="logo" style="z-index:10000;" >
+            <img class="pt-2 p-0" width=95% height=75% src="{% static "Aanisite/media/logo3.jpg" %}" alt="logo">
+        </div>
+        <div id="logo-company-name" class="col-7 col-sm-8 col-md-9 col-lg-8 col-xl-8">
+            <div class="row">
+                <div id="link-company" class="col-xl-4 col-lg-4 d-flex" >
+                    <div class="m-auto">
+                       <a href="#" style="text-decoration: none"> <img class="icons" src="{% static "Aanisite/media/telegram.svg" %}" alt=""> </a>
+                       <a href="#" style="text-decoration: none"> <img class="icons"  src="{% static "Aanisite/media/linkedin.svg" %}" alt=""> </a>
+                       <a href="#" style="text-decoration: none"> <img class="icons" src="{% static "Aanisite/media/whatsapp.svg" %}" alt=""> </a>
+                    </div>                
+                </div>
+                <div id="company-name1"
+                    class="col-xl-4 col-lg-4 col-md-8 col-sm-8 col-12 navbar-brand text-center pt-xl-2 pt-lg-2 pt-md-2">
+                    <a id="company-name" href="http://aanidarman.com">
+                        <h2><b
+                                style="color:rgba(50, 145, 31, 0.877);">{% trans "AaniDarman <br> Pharmaceutical Company" %}</b>
+                        </h2>
+                    </a>
+                </div>
+                 <div class="d-flex col-xl-4 col-lg-4 col-md-3 col-sm-4 col-12" id="switcher-container">
+                     <form class="m-auto" action="{% url 'set_language' %}" method="post" >
+                         {% csrf_token %}
+                         <input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}" />
+                         {% for language in languages %}
+                         <button id="{{ language.code }}" class="{{ language.code }}-responsive" type="submit"
+                             name="language" value="{{ language.code }}"
+                             class="{% if language.code == LANGUAGE_CODE %}selected{% endif %}">
+                             {{ language.code }}
+                         </button>
+                         {% endfor %}
+                     </form>
+                 </div>
+            </div>
+        </div>
+        <div id="logo2" class="col-lg-2 col-xl-2 pt-4 p-0 text-center " style="z-index:10000;">
+            <img width=55% height=65% src="{% static "Aanisite/media/logoah1.jpg" %}" alt="logo">
+            <p class="pt-2" style="font-family:SnellRoundhandW01-Script; color: green; font-size:1.4vw;">{% trans "Affiliated with Ahran Group" %}</p>
+        </div>
+    </div>
+</div>
+<div class="container-fluid header">
+    <div class="row position-sticky sticky-top" id="menumenu" style="margin-top:-4%; ">
+        <div class="col-xl-2 col-lg-2"></div>
+        <div class="menu d-flex flex-row col-xl-8 col-lg-8 col-md-12">
+            <nav class="header-navbar navbar navbar-expand navbar-default m-auto">
+                <uL id="navbar" class="nav navbar-nav "
+                    style="{% if LANGUAGE_CODE == 'fa' %} flex-direction: row-reverse; {% endif %}">
+                    <li class="navbar-item" id="main-tag"><a href="{% url "index" %}"><b>{% trans "Homepage" %}</b></a>
+                    </li>
+                    <li class="navbar-item" id="products-tag"><a
+                            href="{% url "products" %}"><b>{% trans "Products" %}</b>
+                        </a><span class="caret"></span></li>
+                    <li class="navbar-item" id="about-us-tag"><a
+                            href="{% url "about_us" %}"><b>{% trans "About us" %}</b></a>
+                    </li>
+                    <li class="navbar-item" id="contact-us-tag"><a
+                            href="{% url "contact_us" %}"><b>{% trans "Contact us" %}</b></a>
+                    </li>
+                    <li class="navbar-item" id="hire-tag"><a href="{% url "hire" %}"><b>{% trans "Join us" %}</b></a>
+                    </li>
+                    <!--<li class="navbar-item" id="contract-tag"><a href="#"><b>{% trans "Contract Manufactury" %}</b></a>-->
+                    <!--</li>-->
+                </ul>
+            </nav>
+        </div>
+        <div class="col-lg-2 col-xl-2"></div>
+    </div>
+</div>
+
+    {% block content %}
+    {% endblock %}
+
+    <footer class="container-fluid">
+        
+        <div class="footer row">
+            <div id="footer-img" class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
+                <img width=70% height=70% src="{% static "Aanisite/media/34.svg" %}" alt="logo">
+            </div>
+            <div id="footer-contact" class="d-flex col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                <div class="m-auto">
+                    <p class="footer-txt mb-0">{% blocktrans %}Factory: No.244,Golestan9 Ave,Phase2,Baharestan Industrial
+                        Estate,Karaj,Iran{% endblocktrans %}</p>
+                    <p class="footer-txt">{% trans "Tel: +98-2634762174" %}</p>
+                    <p class="footer-txt mb-0">{% trans "Headquarter: No.2,Navak St,Africa Blvd,Tehran,Iran" %}</p>
+                    <p class="footer-txt">{% trans "Tel: +98-2188659420" %}</p>
+               </div>
+            </div>
+            <div id="footer-link" class="d-flex col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
+                <div class="m-auto">
+                     <div class="mb-1">
+                        <a  href="http://behdasht.gov.ir/">{% trans "www.behdasht.gov.ir" %}</a><br />
+                        <a id="link1" href="https://www.fda.gov.ir/">{% trans "www.fda.gov.ir" %}</a><br />
+                        <a href="https://ispe.org/">{% trans "www.ispe.org" %}</a>
+                     </div>
+                     <div class="mt-1">
+                         <a href="#" style="text-decoration: none"> <img class="icons2"
+                                 src="{% static "Aanisite/media/telegram.svg" %}" alt=""> </a>
+                         <a href="#" style="text-decoration: none"> <img class="icons2"
+                                 src="{% static "Aanisite/media/instagram.svg" %}" alt=""> </a>
+                         <a href="#" style="text-decoration: none"> <img class="icons2"
+                                 src="{% static "Aanisite/media/whatsapp.svg" %}" alt=""> </a>
+                     </div>
+                </div>
+            </div>
+            
+            <div class="row">
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+            </div>
+            
+            <div id="footer-lastline" class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                &copy;&nbsp;{% trans "Copyright Aani Darman CO." %}
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://use.fontawesome.com/372e216742.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script src="{% static 'Aanisite/main.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    {% block extra_js %}
+    {% endblock %}
+
+</body>
+
+</html>

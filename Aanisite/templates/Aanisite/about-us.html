@@ -1,0 +1,580 @@
+{% extends 'Aanisite/base.html' %}
+{% load i18n %}
+{% load static %}
+{% block content %}
+{% get_current_language as LANGUAGE_CODE %}
+
+
+{% block extra_style %}
+
+    <style>
+         #QA {
+                   background-image: url("{% static "Aanisite/media/1044.jpg" %}");
+                    /* clip-path: polygon(0 0, 100% 0, 100% 60%, 0 100%); */
+
+        }
+        #QC {
+                   background-image: url("{% static "Aanisite/media/6969.jpg" %}");
+                    /* clip-path: polygon(0 40%, 100% 0, 100% 100%, 0 100%);
+                    margin-top:-18rem; pic5911*/
+        }
+        #RD {
+                   background-image: url("{% static "Aanisite/media/20.jpg" %}");
+                    /* clip-path: polygon(0 0,100% 0,100% 60%,0 100%); */
+
+        }
+        #Mission {
+                   background-image: url("{% static "Aanisite/media/22.jpg" %}");
+                    /* clip-path: polygon(0 40%,100% 0,100% 100%,0 100%);
+                    margin-top:-18rem; */
+                     background-size: cover;
+
+        } 
+        #history {
+                   background-image: url("{% static "Aanisite/media/6969.jpg" %}");
+                    /* clip-path: polygon(0 40%,100% 0,100% 100%,0 100%);
+                    margin-top:-18rem; */
+
+        } 
+    </style>
+{% endblock %}
+    
+    
+<div id="accordion" class="mt-3">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link btn-lg btn-block" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          <div class="about-us-details "><h4 class="about-us-detailp">{% trans 'Mission & Vission' %}</h4></div>
+        </button>
+      </h5>
+    </div>
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body">
+            <div class="about-us-details pl-4 pr-3">
+                <p class="about-us-detailp">
+                    {% blocktrans %}
+                    We aim to provide our country with quality drug treatment at affordable prices.
+                    Our mission is to find solutions to some of the major challenges of our time
+                    and improve quality of life for our growing population by focusing our research and
+                    development activities on preventing, alleviating and treating diseases.
+                    The power behind Aani Darman Pharmaceutical Co. (PJS) is our talented and quality-focused
+                    employees, who work with passion and put all of their effort to provide the best for the
+                    patients.
+                    Our vision is to combine modern pharmaceutical research with medicine to improve patients'
+                    lives and to be a trusted source. We are passionate in both decision and action and we
+                    believe that good business means a better population.
+                    {% endblocktrans %}
+                </p>
+            </div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed btn-lg btn-block" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <div class="about-us-details ">
+                 <h4 class="about-us-detailp">{% trans 'History' %}</h4></div>
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body">
+             <div class="about-us-details pl-4 pr-3">
+                 <p class="about-us-detailp " >
+                     {% blocktrans %}
+                     Aani Darman Co was registered in 2014 in affiliation with Ahran Group which is
+                     considered as one of the largest Iranian pharmaceutical groups,
+                     and obtained establishment license in 2018 , during march 2018 was officially 
+                     authorized to implement their solid oral dosage forms production line(Tablet and Capsule)
+                     Aani Darman was granted the GMP certificate from the iranian FDA after inspection
+                     and meeting with their approval and is prepared for and capable of contract manufacturing and analysis.
+                     {% endblocktrans %}
+                 </p>
+             </div>  
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingSix">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed btn-lg btn-block" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+          <div class="about-us-details ">
+                <h4 class="about-us-detailp">{% trans 'Certificates' %}</h4></div>
+        </button>
+      </h5>
+    </div>
+       <div id="collapseSix" class="collapse pt-3" aria-labelledby="headingSix" data-parent="#accordion">
+      <div class="card-body">
+            <div class="col-12 col-sm-12 col-md-12 m-auto">
+            <div style="display: flex;">
+                 <img  src="{% static 'Aanisite/media/08080.jpg' %}" style="margin:auto; max-width:66%;" alt="">
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed btn-lg btn-block" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+         <div class="about-us-details ">
+                  <h4 class="about-us-detailp" >{% trans 'Quality Assurance' %}</h4></div>
+        </button>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+      <div class="card-body">
+             <div class="about-us-details pl-4 pr-3">
+                <p class="about-us-detailp" >
+                    {% blocktrans %}
+                        Our first task is to ensure the safety and effectiveness of our products at all stages of product preparation and also
+                        before and after entering the market . To achieve this, our quality assurance department at Aani Darman has continuous
+                        and effective oversight of control and commitment to producing high quality products, with a strong support from the
+                        experienced management and talented personnel, to complete the quality assessment of the manufactured products.
+                    {% endblocktrans %}
+                </p>
+             </div>  
+      </div>
+    </div>
+  </div>
+   <div class="card">
+    <div class="card-header" id="headingFour">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed btn-lg btn-block" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            <div class="about-us-details ">
+                <h4 class="about-us-detailp">{% trans 'Quality Control' %}</h4></div>
+        </button>
+      </h5>
+    </div>
+    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+      <div class="card-body">
+             <div class="about-us-details pl-4 pr-3">
+                <p class="about-us-detailp">
+                    
+                    {% blocktrans %}
+                       The primary duty of every pharmaceutical manufacturer is to ensure the safety and efficacy of
+                       their products at all stages of preparation - before and after market entry. The Quality Control
+                       Department of Aani Darman supported by the continuous supervision of the
+                       experienced management and the effective effort of expert employees keeps assessing the
+                       manufactured products and helps provide high quality products.
+                       Our QC Department consists of microbial control laboratories, device analysis, in
+                       process quality control (IPQC), packaging control, physicochemical control of raw materials and
+                       products units.Our laboratories located in an appropriate area, designed and equipped with
+                       advanced equipment according to the latest FDA quality control guidelines and international
+                       standards.
+                       The mission of all staff is to pay special attention to safety, focusing on the quality of the
+                       manufactured products, environmental protection, human, organizational and community values,
+                       education, innovation, improvement and to help raising the health level and awareness of the
+                       community; which contribute to the high quality of Aani Darman Products.
+                    {% endblocktrans %}
+                </p>
+            </div>
+      </div>
+    </div>
+  </div>
+    <div class="card">
+    <div class="card-header" id="headingFive">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed btn-lg btn-block" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+          <div class="about-us-details ">
+                <h4 class="about-us-detailp">{% trans 'Research & Development' %}</h4></div>
+        </button>
+      </h5>
+    </div>
+    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+      <div class="card-body">
+             <div class="about-us-details pl-4 pr-3">
+                <p class="about-us-detailp">
+                    {% blocktrans %}
+                        The Research and Development Department (R&D) at Aani Darman has begun to
+                        work with the aim of actualizing national resolve and independency of the pharmaceutical
+                        industry of the country as one of the main departments of the company.
+                        We are able to design and develop new formulations with the practical capability to our existing production lines as well
+                        as constantly improving the quality of the company’s products and reducing the errors thanks to
+                        the experienced specialists, the latest international scientific achievements and proper
+                        equipment.
+                        Aani Darman is proud of being capable of designing, manufacturing and
+                        distributing high-quality medicinal products that facilitate patient’s access to affordable and
+                        high-quality healthcare.
+                    {% endblocktrans %}
+                </p>
+            </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+    
+
+<!--safhe darbare ma-->
+<div style=" background-color: #f5f6f6;">
+<div id="about-us" class="container-fluid pt-4 px-5">
+     
+        <div id="myModal" class="modal">
+                     <span class="close">
+                         &times
+                     </span>
+                     <img class="modal-content" id="img01">
+                     <div id="caption">
+                     </div>
+                 </div>
+     
+     <div id="Mission" class="row parallax-main1 backgroundAboutUs" style="filter: brightness(0.8)">
+        <div class="d-flex col-6 col-lg-6 col-md-6 col-sm-12 col-12">
+            <div class="about-us-details ">
+                <h4 class="about-us-detailp">{% trans 'Mission & Vission' %}</h4>
+                <p class="about-us-detailp">
+                    {% blocktrans %}
+                    We aim to provide our country with quality drug treatment at affordable prices.
+                    Our mission is to find solutions to some of the major challenges of our time
+                    and improve quality of life for our growing population by focusing our research and
+                    development activities on preventing, alleviating and treating diseases.
+                    The power behind Aani Darman Pharmaceutical Co. (PJS) is our talented and quality-focused
+                    employees, who work with passion and put all of their effort to provide the best for the
+                    patients.
+                    Our vision is to combine modern pharmaceutical research with medicine to improve patients'
+                    lives and to be a trusted source. We are passionate in both decision and action and we
+                    believe that good business means a better population.
+                    {% endblocktrans %}
+                </p>
+            </div>
+        </div>
+        <div class="d-flex col-6 col-lg-6 col-md-6 space-divs"></div>
+    </div>
+    
+    <div id="history" class="row parallax-main6 backgroundAboutUs py-auto pt-2" style="filter: brightness(0.8)">
+        <div class="col-12 col-sm-12 col-xl-6 col-lg-6 col-md-12 m-auto">
+            <div style="display: flex;">
+                 <!-- <h4 class="about-us-detailp">{% trans 'Certificates' %}</h4> -->
+                 <img  id="Certificates" src="{% static 'Aanisite/media/08080.jpg' %}" style="margin:auto; max-width:66%;" alt="">
+            </div>
+        </div>
+         <div class="d-flex col-6 col-lg-6 col-md-12 col-sm-12 col-12">
+             <div class="about-us-details m-auto">
+                 <h4 class="about-us-detailp m-auto hst" style="width:70%;">{% trans 'History' %}</h4>
+                 <p class="about-us-detailp m-auto hst" style="width:70%;">
+                     {% blocktrans %}
+                     Aani Darman Co was registered in 2014 in affiliation with Ahran Group which is
+                     considered as one of the largest Iranian pharmaceutical groups,
+                     and obtained establishment license in 2018 , during march 2018 was officially 
+                     authorized to implement their solid oral dosage forms production line(Tablet and Capsule)
+                     Aani Darman was granted the GMP certificate from the iranian FDA after inspection
+                     and meeting with their approval and is prepared for and capable of contract manufacturing and analysis.
+                     {% endblocktrans %}
+                 </p>
+             </div>
+         </div>
+         
+         <div class="row">
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+        </div>
+         
+    <div id="CISO" class="row col-11 m-auto py-auto pt-2 pb-2">
+        <div class="col-6 col-sm-4 col-xl-2 col-lg-4 col-md-4 ">
+             <img id="C1"  src="{% static 'Aanisite/media/c1.jpg' %}" style="margin:auto; width:100%;" alt="">
+        </div>
+        <div class="col-6 col-sm-4 col-xl-2 col-lg-4 col-md-4 ">
+             <img id="C2"  src="{% static 'Aanisite/media/c2.jpg' %}" style="margin:auto; width:100%;" alt="">
+        </div>
+        <div class="col-6 col-sm-4 col-xl-2 col-lg-4 col-md-4 ">
+             <img id="C3"  src="{% static 'Aanisite/media/c3.jpg' %}" style="margin:auto; width:100%;" alt="">
+        </div>
+        <!--<div class="col-6 col-sm-4 col-xl-2 col-lg-3 col-md-3 ">-->
+        <!--     <img id="C4"  src="{% static 'Aanisite/media/c4.jpg' %}" style="margin:auto; width:100%;" alt="">-->
+        <!--</div>-->
+        <div class="col-6 col-sm-4 col-xl-2 col-lg-4 col-md-4 ">
+             <img id="C5"  src="{% static 'Aanisite/media/c5.jpg' %}" style="margin:auto; width:100%;" alt="">
+        </div>
+        <div class="col-6 col-sm-4 col-xl-2 col-lg-4 col-md-4">
+             <img id="C6"  src="{% static 'Aanisite/media/c6.jpg' %}" style="margin:auto; width:100%;" alt="">
+        </div>
+        <div class="col-6 col-sm-4 col-xl-2 col-lg-4 col-md-4 ">
+             <img id="C7"  src="{% static 'Aanisite/media/c7.jpg' %}" style="margin:auto; width:100%;" alt="">
+        </div>
+     </div>
+     
+      <div class="row">
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+    </div>
+  </div>
+     
+
+    <div id="QA" class="row parallax-main4 backgroundAboutUs" style="filter: brightness(1.4)">
+        <div class="d-flex col-6 col-lg-6 col-md-6 space-divs"></div>
+        <div class="d-flex col-6 col-lg-6 col-md-6 col-sm-12 col-12 ">
+            <div class="about-us-details ">
+                <h4 class="about-us-detailp" style="width:90%">{% trans 'Quality Assurance' %}</h4>
+                <p class="about-us-detailp"  style="width:90%" >
+                    {% blocktrans %}
+                        Our first task is to ensure the safety and effectiveness of our products at all stages of product preparation and also
+                        before and after entering the market . To achieve this, our quality assurance department at Aani Darman has continuous
+                        and effective oversight of control and commitment to producing high quality products, with a strong support from the
+                        experienced management and talented personnel, to complete the quality assessment of the manufactured products.
+                    {% endblocktrans %}
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="QC" class="row parallax-main6 backgroundAboutUs" style="filter: brightness(0.8);">
+        <div class="d-flex col-6 col-lg-6 col-md-12 col-sm-12 col-12">
+            <div class="about-us-details pl-4">
+                <h4 class="about-us-detailp">{% trans 'Quality Control' %}</h4>
+                <p class="about-us-detailp">
+                    
+                    {% blocktrans %}
+                       The primary duty of every pharmaceutical manufacturer is to ensure the safety and efficacy of
+                       their products at all stages of preparation - before and after market entry. The Quality Control
+                       Department of Aani Darman supported by the continuous supervision of the
+                       experienced management and the effective effort of expert employees keeps assessing the
+                       manufactured products and helps provide high quality products.
+                       Our QC Department consists of microbial control laboratories, device analysis, in
+                       process quality control (IPQC), packaging control, physicochemical control of raw materials and
+                       products units.Our laboratories located in an appropriate area, designed and equipped with
+                       advanced equipment according to the latest FDA quality control guidelines and international
+                       standards.
+                       The mission of all staff is to pay special attention to safety, focusing on the quality of the
+                       manufactured products, environmental protection, human, organizational and community values,
+                       education, innovation, improvement and to help raising the health level and awareness of the
+                       community; which contribute to the high quality of Aani Darman Products.
+                    {% endblocktrans %}
+                </p>
+            </div>
+        </div>
+        <div id="img-qc" class="col-12 col-sm-12 col-xl-6 col-lg-6 col-md-12 m-auto">
+            <div style="display: flex;">
+                 <img src="{% static 'Aanisite/media/IA1.jpg' %}" style="margin:auto; max-width:66%;" alt="">
+            </div>
+        </div>
+    </div>
+    <div id="RD" class="row parallax-main4 backgroundAboutUs" style="filter: brightness(0.9);" >
+        <div class="d-flex col-6 col-lg-6 col-md-6 space-divs"></div>
+        <div class="d-flex col-6 col-lg-6 col-md-6 col-sm-12 col-12">
+            <div class="about-us-details ">
+                <h4 class="about-us-detailp">{% trans 'Research & Development' %}</h4>
+                <p class="about-us-detailp">
+                    
+                    {% blocktrans %}
+                        The Research and Development Department (R&D) at Aani Darman has begun to
+                        work with the aim of actualizing national resolve and independency of the pharmaceutical
+                        industry of the country as one of the main departments of the company.
+                        We are able to design and develop new formulations with the practical capability to our existing production lines as well
+                        as constantly improving the quality of the company’s products and reducing the errors thanks to
+                        the experienced specialists, the latest international scientific achievements and proper
+                        equipment.
+                        Aani Darman is proud of being capable of designing, manufacturing and
+                        distributing high-quality medicinal products that facilitate patient’s access to affordable and
+                        high-quality healthcare.
+                    {% endblocktrans %}
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-lg-12 col-xl-12 col-md-12 col-sm-12 col-12">
+    <div style="visibility: hidden">
+    <h4 class="about-us-detailp">{% trans 'History' %}</h4>
+    <h4 class="about-us-detailp" style="visibility:visible;">{% trans 'Gallery' %}</h4>
+    <h4 class="about-us-detailp">{% trans 'Certificates' %}</h4>
+    <h4 class="about-us-detailp">{% trans 'Research & Development' %}</h4>
+    </div>
+<div style=" background-color: #f5f6f6;" class="pt-5 w-gallery">
+    <section id="responsiveGallery-container" class="pt-xl-5 pt-lg-5 responsiveGallery-container">
+        <a class="responsiveGallery-btn responsiveGallery-btn_prev" href="javascript:void(0);"><img
+                src="{% static 'Aanisite/media/angle-double-left-solid.svg' %}" alt=""></a>
+        <a class="responsiveGallery-btn responsiveGallery-btn_next" href="javascript:void(0);"><img
+                src="{% static 'Aanisite/media/angle-double-right-solid.svg' %}" alt=""></a>
+        <ul class="responsiveGallery-wrapper">
+             <li class="responsiveGallery-item"> <a href="javascript:void(0);" class="responsivGallery-link"><img style="filter:brightness(1.5);"
+                         src="{% static 'Aanisite/media/fbe.jpg' %}" height="320" width="320" alt=""
+                         class="responsivGallery-pic"></a>
+                 <div class="w-responsivGallery-info">
+                     <h2 style="color: black" class="responsivGallery-name"></h2>
+                     <h3 style="color: black" class="responsivGallery-position"></h3>
+                 </div>
+             </li>
+             <li class="responsiveGallery-item"> <a href="javascript:void(0);" class="responsivGallery-link"><img style="filter:brightness(1.2);"
+                         src="{% static 'Aanisite/media/tp1.jpg' %}" height="320" width="320" alt=""
+                         class="responsivGallery-pic"></a>
+                 <div class="w-responsivGallery-info">
+                     <h2 style="color: black" class="responsivGallery-name"></h2>
+                     <h3 style="color: black" class="responsivGallery-position"></h3>
+                 </div>
+             </li>
+               <li class="responsiveGallery-item"> <a href="javascript:void(0);" class="responsivGallery-link"><img style="filter:brightness(1.1);"
+                           src="{% static 'Aanisite/media/114.jpg' %}" height="320" width="320" alt=""
+                           class="responsivGallery-pic"></a>
+                   <div class="w-responsivGallery-info">
+                       <h2 style="color: black" class="responsivGallery-name"></h2>
+                       <h3 style="color: black" class="responsivGallery-position"></h3>
+                   </div>
+               </li>
+             <li class="responsiveGallery-item"> <a href="javascript:void(0);" class="responsivGallery-link"><img style="filter:brightness(1.11);"
+                         src="{% static 'Aanisite/media/112.jpg' %}" height="320" width="320" alt=""
+                         class="responsivGallery-pic"></a>
+                 <div class="w-responsivGallery-info">
+                     <h2 style="color: black" class="responsivGallery-name"></h2>
+                     <h3 style="color: black" class="responsivGallery-position"></h3>
+                 </div>
+             </li>
+              <li class="responsiveGallery-item"> <a href="javascript:void(0);" class="responsivGallery-link"><img style="filter:brightness(1.11);"
+                        src="{% static 'Aanisite/media/169.jpg' %}" height="320" width="320" alt=""
+                        class="responsivGallery-pic"></a>
+                <div class="w-responsivGallery-info">
+                    <h2 style="color: black" class="responsivGallery-name"></h2>
+                    <h3 style="color: black" class="responsivGallery-position"></h3>
+                </div>
+            </li>
+            <li class="responsiveGallery-item"> <a href="javascript:void(0);" class="responsivGallery-link"><img style="filter:brightness(1.06);"
+                        src="{% static 'Aanisite/media/777.jpg' %}" height="320" width="320" alt=""
+                        class="responsivGallery-pic"></a>
+                <div class="w-responsivGallery-info">
+                    <h2 style="color: black" class="responsivGallery-name"></h2>
+                    <h3 style="color: black" class="responsivGallery-position"></h3>
+                </div>
+            </li>
+             <li class="responsiveGallery-item"> <a href="javascript:void(0);" class="responsivGallery-link"><img style="filter:brightness(1.4);"
+                        src="{% static 'Aanisite/media/117.jpg' %}" height="320" width="320" alt=""
+                        class="responsivGallery-pic"></a>
+                <div class="w-responsivGallery-info">
+                    <h2 style="color: black" class="responsivGallery-name"></h2>
+                    <h3 style="color: black" class="responsivGallery-position"></h3>
+                </div>
+            </li>
+              <li class="responsiveGallery-item"> <a href="javascript:void(0);" class="responsivGallery-link"><img style="filter:brightness(1.21);"
+                        src="{% static 'Aanisite/media/115.jpg' %}" height="320" width="320" alt=""
+                        class="responsivGallery-pic"></a>
+                <div class="w-responsivGallery-info">
+                    <h2 style="color: black" class="responsivGallery-name"></h2>
+                    <h3 style="color: black" class="responsivGallery-position"></h3>
+                </div>
+            </li>
+             <li class="responsiveGallery-item"> <a href="javascript:void(0);" class="responsivGallery-link"><img style="filter:brightness(1.26);"
+                        src="{% static 'Aanisite/media/163.jpg' %}" height="320" width="320" alt=""
+                        class="responsivGallery-pic"></a>
+                <div class="w-responsivGallery-info">
+                    <h2 style="color: black" class="responsivGallery-name"></h2>
+                    <h3 style="color: black" class="responsivGallery-position"></h3>
+                </div>
+            </li>
+             <li class="responsiveGallery-item"> <a href="javascript:void(0);" class="responsivGallery-link"><img style="filter:brightness(1.31);"
+                        src="{% static 'Aanisite/media/164.jpg' %}" height="320" width="320" alt=""
+                        class="responsivGallery-pic"></a>
+                <div class="w-responsivGallery-info">
+                    <h2 style="color: black" class="responsivGallery-name"></h2>
+                    <h3 style="color: black" class="responsivGallery-position"></h3>
+                </div>
+            </li>
+              <li class="responsiveGallery-item"> <a href="javascript:void(0);" class="responsivGallery-link"><img style="filter:brightness(1.5);"
+                        src="{% static 'Aanisite/media/168.jpg' %}" height="320" width="320" alt=""
+                        class="responsivGallery-pic"></a>
+                <div class="w-responsivGallery-info">
+                    <h2 style="color: black" class="responsivGallery-name"></h2>
+                    <h3 style="color: black" class="responsivGallery-position"></h3>
+                </div>
+            </li>
+             <li class="responsiveGallery-item"> <a href="javascript:void(0);" class="responsivGallery-link"><img style="filter:brightness(1.22);"
+                        src="{% static 'Aanisite/media/165.jpg' %}" height="320" width="320" alt=""
+                        class="responsivGallery-pic"></a>
+                <div class="w-responsivGallery-info">
+                    <h2 style="color: black" class="responsivGallery-name"></h2>
+                    <h3 style="color: black" class="responsivGallery-position"></h3>
+                </div>
+            </li>
+             <li class="responsiveGallery-item"> <a href="javascript:void(0);" class="responsivGallery-link"><img style="filter:brightness(1.19);"
+                        src="{% static 'Aanisite/media/113.jpg' %}" height="320" width="320" alt=""
+                        class="responsivGallery-pic"></a>
+                <div class="w-responsivGallery-info">
+                    <h2 style="color: black" class="responsivGallery-name"></h2>
+                    <h3 style="color: black" class="responsivGallery-position"></h3>
+                </div>
+            </li>
+            <li class="responsiveGallery-item"> <a href="javascript:void(0);" class="responsivGallery-link"><img style="filter: brightness(1.19);"
+                        src="{% static 'Aanisite/media/116.jpg' %}" height="320" width="320" alt=""
+                        class="responsivGallery-pic"></a>
+                <div class="w-responsivGallery-info">
+                    <h2 style="color: black" class="responsivGallery-name"></h2>
+                    <h3 style="color: black" class="responsivGallery-position"></h3>
+                </div>
+            </li>
+             <li class="responsiveGallery-item"> <a href="javascript:void(0);" class="responsivGallery-link"><img style="filter:brightness(1.06);"
+                        src="{% static 'Aanisite/media/167.jpg' %}" height="320" width="320" alt=""
+                        class="responsivGallery-pic"></a>
+                <div class="w-responsivGallery-info">
+                    <h2 style="color: black" class="responsivGallery-name"></h2>
+                    <h3 style="color: black" class="responsivGallery-position"></h3>
+                </div>
+            </li>
+            
+        </ul>
+    </section>
+    
+     <div class="row">
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+	            <p class="col-1"><h6 style="font-size:0.1px; color:#f5f6f6; visibility:hidden;">آنی درمان,انی درمان, داروسازی انی درمان, داروسازی آنی درمان, داروسازی ,آنی, درمان ,انی, شرکت آنی درمان,شرکت انی درمان </h6></p>
+    </div>
+  
+    
+</div>
+{% endblock %}
+{% block extra_js %}
+<script type="text/javascript">
+    $(function () {
+        $('.responsiveGallery-wrapper').responsiveGallery({
+            animatDuration: 400,
+            $btn_prev: $('.responsiveGallery-btn_prev'),
+            $btn_next: $('.responsiveGallery-btn_next')
+        });
+    });
+</script>
+<script>
+    
+        var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("Certificates");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+</script>
+<script type="text/javascript" src="{% static "Aanisite/modernizr.custom.js" %}"></script>
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="{% static "Aanisite/jquery.responsiveGallery.js" %}"></script>
+{% endblock %}

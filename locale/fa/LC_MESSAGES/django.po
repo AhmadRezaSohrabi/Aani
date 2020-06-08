@@ -1,0 +1,459 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-08 21:41+0330\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: .\AaniDarman\settings.py:113
+msgid "English"
+msgstr "انگلیسی"
+
+#: .\AaniDarman\settings.py:114
+msgid "Persian"
+msgstr "فارسی"
+
+#: .\Aanisite\templates\Aanisite\about-us.html:58
+msgid "Mission & Vission"
+msgstr "ماموریت و چشم انداز"
+
+#: .\Aanisite\templates\Aanisite\about-us.html:60
+msgid ""
+"\n"
+"                    We aim to provide our country with quality drug "
+"treatment at affordable prices.\n"
+"                    Our mission is to find solutions to some of the major "
+"challenges of our time\n"
+"                    and improve quality of life for our growing population "
+"by focusing our research and\n"
+"                    development activities on preventing, alleviating and "
+"treating diseases.\n"
+"                    The power behind Aani Darman Pharmaceutical Co. (PJS) is "
+"our talented and quality-focused\n"
+"                    employees, who work with passion and put all of their "
+"effort to provide the best for the\n"
+"                    patients.\n"
+"                    Our vision is to combine modern pharmaceutical research "
+"with medicine to improve patients'\n"
+"                    lives and to be a trusted source. We are passionate in "
+"both decision and action and we\n"
+"                    believe that good business means a better population.\n"
+"                    "
+msgstr ""
+"\n"
+"                     دیدگاه ما در شرکت دارویی آنی درمان، ارائه ی درمان "
+"دارویی با کیفیت و مقرون به صرفه می باشد. \n"
+"                     با نو آوری و تمرکز بر تحقیقات و فعالیت های پیشرفته در "
+"زمینه ی پیشگیری، کاهش \n"
+"                     و درمان بیماری ها به دنبال راه حل برای  چالش های موجود "
+"و بهبود\n"
+"                     کیفیت زندگی جمعیت رو  به رشد مان هستیم. نیروی پنهان "
+"شرکت.\n"
+"                     داروسازی آنی درمان را کارمندان با استعداد و توانمند "
+"تحقق می بخشند، که با عشق \n"
+"                     و جدیت کار می کنند تا  بهترین را برای بیماران\n"
+"                      فراهم آورند.\n"
+"                    دیدگاه ما آمیختن تحقیقات مدرن دارویی با علم پزشکی برای "
+"بهبود زندگی بیماران و تبدیل شدن\n"
+"                     به منبعی قابل اعتماد است. ما به تصمیمِ همراه با عمل "
+"معتقدیم و باور داریم \n"
+"                      که کسب و کار خوب به معنی جمعیتی بهتر است.\n"
+"                     "
+
+#: .\Aanisite\templates\Aanisite\about-us.html:81
+#: .\Aanisite\templates\Aanisite\about-us.html:178
+msgid "Certificates"
+msgstr "گواهی ها"
+
+#: .\Aanisite\templates\Aanisite\about-us.html:87
+#: .\Aanisite\templates\Aanisite\about-us.html:176
+msgid "History"
+msgstr "تاریخچه"
+
+#: .\Aanisite\templates\Aanisite\about-us.html:89
+msgid ""
+"\n"
+"                     Aani Darman Co was registered in 2014 in affiliation "
+"with Ahran Group which is\n"
+"                     considered as one of the largest Iranian pharmaceutical "
+"groups,\n"
+"                     and obtained establishment license in 2018 , during "
+"march 2018 was officially \n"
+"                     authorized to implement their solid oral dosage forms "
+"production line(Tablet and Capsule)\n"
+"                     Aani Darman was granted the GMP certificate from the "
+"iranian FDA after inspection\n"
+"                     and meeting with their approval and is prepared for and "
+"capable of contract manufacturing and analysis.\n"
+"                     "
+msgstr ""
+"\n"
+"                     شرکت داروسازی آنی درمان در سال 1393 تحت  پوش گروه "
+"دارویی اهران ، یکی از سه گروه \n"
+"                      برتر دارویی ایران  ثبت گردید\n"
+"                     و درسال 97 پروانه تاسیس خودرا اخذ نمودو در فروردین ماه "
+"98 \n"
+"                     خط تولید داروی جامد خوراکی به صورت کپسول و قرص را راه "
+"اندازی  نمود.\n"
+"                        پس از اتمام بازرسی های سازمان غذاودارو شرکت "
+"گواهینامه GMP خود را اخذ نمود\n"
+"                     و اکنون آمادگی جهت تولید و آنالیز قراردادی را دارا می "
+"باشد.\n"
+"                     "
+
+#: .\Aanisite\templates\Aanisite\about-us.html:106
+msgid "Quality Assurance"
+msgstr "تضمین کیفیت"
+
+#: .\Aanisite\templates\Aanisite\about-us.html:108
+msgid ""
+"\n"
+"                        Our first task is to ensure the safety and "
+"effectiveness of our products at all stages of product preparation and also\n"
+"                        before and after entering the market . To achieve "
+"this, our quality assurance department at Aani Darman has continuous\n"
+"                        and effective oversight of control and commitment to "
+"producing high quality products, with a strong support from the\n"
+"                        experienced management and talented personnel, to "
+"complete the quality assessment of the manufactured products.\n"
+"                    "
+msgstr ""
+"\n"
+"                        اولین مسئولیت ما حصول اطمینان از تاثیرگذاری و ایمنی  "
+"محصولات در تمامی مراحل تولید، و قبل و بعد از بازاریابی می باشد. برای نیل\n"
+"                        به این مهم، واحد تضمین کیفیت  به طور پیوسته و هشیار  "
+"نظارت و کنترل بر تمامی مراحل تولید را\n"
+"                        عهده دار بوده و با پشتیبانی مدیریت   مجرب و کادر "
+"مستعد تولید محصول با کیفیت\n"
+"                        را در شرکت آنی درمان   تضمین می نماید.\n"
+"                    "
+
+#: .\Aanisite\templates\Aanisite\about-us.html:121
+msgid "Quality Control"
+msgstr "کنترل کیفیت"
+
+#: .\Aanisite\templates\Aanisite\about-us.html:124
+msgid ""
+"\n"
+"                       The primary duty of every pharmaceutical manufacturer "
+"is to ensure the safety and efficacy of\n"
+"                       their products at all stages of preparation - before "
+"and after market entry. The Quality Control\n"
+"                       Department of Aani Darman supported by the continuous "
+"supervision of the\n"
+"                       experienced management and the effective effort of "
+"expert employees keeps assessing the\n"
+"                       manufactured products and helps provide high quality "
+"products.\n"
+"                       Our QC Department consists of microbial control "
+"laboratories, device analysis, in\n"
+"                       process quality control (IPQC), packaging control, "
+"physicochemical control of raw materials and\n"
+"                       products units.Our laboratories located in an "
+"appropriate area, designed and equipped with\n"
+"                       advanced equipment according to the latest FDA "
+"quality control guidelines and international\n"
+"                       standards.\n"
+"                       The mission of all staff is to pay special attention "
+"to safety, focusing on the quality of the\n"
+"                       manufactured products, environmental protection, "
+"human, organizational and community values,\n"
+"                       education, innovation, improvement and to help "
+"raising the health level and awareness of the\n"
+"                       community; which contribute to the high quality of "
+"Aani Darman Products.\n"
+"                    "
+msgstr ""
+"\n"
+"                       اولين‌ وظيفه‌ توليد كنندگان‌ دارويي‌ اطمينان‌ از ايمني‌ و "
+"اثر بخشي‌ \n"
+"                       محصولات‌ خويش‌  در تمامی مراحل آماده سازی محصول،  جهت "
+"عرضه به بازار و پس از عرضه به بازار می‌باشد. برای نیل به اين ‌مهم‌ آزمايشگاه "
+"هاي‌ کنترل كيفيت\n"
+"                       شركت‌ داروسازي‌ آنی درمان با نظارت و کنترل مستمر و موثر "
+"و تعهد به تولید محصول باکیفیت ، با پشتيباني‌ قوي \n"
+"                       از مدیریت کارآزموده   و پرسنل‌  مـجرب‌ خـود ، نسبت\n"
+"                       به ارزيابي‌ كيفي محصولات ساخته شده اهتمام  کامل دارد.\n"
+"                       واحد کنترل کیفیت ما از آزمایشگاه های کنترل "
+"میکروبیولوژی،  تجزیه دستگاهی، \n"
+"                       کنترل حین تولید IPQC، کنترل مواد بسته بندی و کنترل "
+"فیزیکوشیمی مواد اولیه و محصول تشکیل شده \n"
+"                       که با بهره گیری از فضای مناسب و تجهیزات پیشرفته مطابق "
+"آخرین دستورالعمل های \n"
+"                       کنترل کیفی PIC/S و استاندارد های  بین المللی فعالیت "
+"های خود را \n"
+"                       صورت می دهد.\n"
+"                       شالوده رسالت و ماموریت تمامي‌ پرسنل  اين‌ واحد توجه‌ خاص‌ "
+"نسبت‌ به‌ ايمنـي‌ درمـاني‌ \n"
+"                       تمرکز بر کیفیت  فرآورده‌هاي‌ تـوليد شده‌، حفظ و  صیانت "
+"از محیط زیست، وفاداری به ارزش‌های انسانی، \n"
+"                       سازمانی و جامعه، یادگیری، رشد، نوآوری، بهبود مستمر  و "
+"کمک به ارتقاء سطح سلامت و آگاهی جامعه \n"
+"                       می باشد که این امر باعث می شود‌ نام‌ محصولات‌ آنی درمان "
+"با كيفيت همراه‌ و معادل‌ گردد.\n"
+"                    "
+
+#: .\Aanisite\templates\Aanisite\about-us.html:153
+#: .\Aanisite\templates\Aanisite\about-us.html:179
+msgid "Research & Development"
+msgstr "تحقیق و توسعه"
+
+#: .\Aanisite\templates\Aanisite\about-us.html:156
+msgid ""
+"\n"
+"                        The Research and Development Department (R&D) at "
+"Aani Darman has begun to\n"
+"                        work with the aim of actualizing national resolve "
+"and independency of the pharmaceutical\n"
+"                        industry of the country as one of the main "
+"departments of the company.\n"
+"                        We are able to design and develop new formulations "
+"with the practical capability to our existing production lines as well\n"
+"                        as constantly improving the quality of the company’s "
+"products and reducing the errors thanks to\n"
+"                        the experienced specialists, the latest "
+"international scientific achievements and proper\n"
+"                        equipment.\n"
+"                        Aani Darman is proud of being capable of designing, "
+"manufacturing and\n"
+"                        distributing high-quality medicinal products that "
+"facilitate patient’s access to affordable and\n"
+"                        high-quality healthcare.\n"
+"                    "
+msgstr ""
+"\n"
+"                        واحد تحقیقات شرکت داروسازی آنی درمان بعنوان یک از "
+"ارکان  اصلی شرکت ، با هدف عینیت بخشیدن به عزم ملی \n"
+"                        و مدیریت جهادی در صنعت دارویی و و قطع وابستگی \n"
+"                        دارویی کشور آغاز به   کار نموده است.\n"
+"                        این واحد با بهره گیری از‌ متخصصين‌ مجرب و آخرین دست "
+"آوردهای علمی بین المللی و در اختیار داشتن تجهیزات \n"
+"                        مناسب، طراحی و توسعه  فرمولاسیون داروهای \n"
+"                        جدید با قابلیت عملی پیاده سازی و تطابق  با خطوط "
+"تولید موجود و نیز بهبود \n"
+"                        کیفیت محصولات \n"
+"                        جاری شرکت و  رفع اشکالات \n"
+"                        در مسیر  تولید را \n"
+"                        عهده‌دار می‌باشد. \n"
+"                    "
+
+#: .\Aanisite\templates\Aanisite\about-us.html:177
+msgid "Gallery"
+msgstr "گالری تصاویر"
+
+#: .\Aanisite\templates\Aanisite\base.html:11
+msgid "AaniDarman Pharmaceutical Company"
+msgstr "شرکت داروسازی آنی درمان"
+
+#: .\Aanisite\templates\Aanisite\base.html:79
+#: .\Aanisite\templates\Aanisite\base.html:146
+msgid "Homepage"
+msgstr "صفحه اصلی"
+
+#: .\Aanisite\templates\Aanisite\base.html:82
+#: .\Aanisite\templates\Aanisite\base.html:149
+msgid "Products"
+msgstr "محصولات"
+
+#: .\Aanisite\templates\Aanisite\base.html:85
+#: .\Aanisite\templates\Aanisite\base.html:152
+msgid "About us"
+msgstr "درباره ما"
+
+#: .\Aanisite\templates\Aanisite\base.html:88
+#: .\Aanisite\templates\Aanisite\base.html:155
+msgid "Contact us"
+msgstr "تماس با ما"
+
+#: .\Aanisite\templates\Aanisite\base.html:91
+#: .\Aanisite\templates\Aanisite\base.html:157
+msgid "Join us"
+msgstr "فرصت شغلی"
+
+#: .\Aanisite\templates\Aanisite\base.html:114
+msgid "AaniDarman <br> Pharmaceutical Company"
+msgstr ""
+
+#: .\Aanisite\templates\Aanisite\base.html:135
+msgid "Affiliated with Ahran Group"
+msgstr ""
+
+#: .\Aanisite\templates\Aanisite\base.html:176
+msgid ""
+"Factory: No.244,Golestan9 Ave,Phase2,Baharestan Industrial\n"
+"                        Estate,Karaj,Iran"
+msgstr ""
+"کارخانه: استان البرز،کرج، شهرک صنعتی بهارستان، فاز دوم، خیابان\n"
+"                        گلستان نهم،پلاک 244"
+
+#: .\Aanisite\templates\Aanisite\base.html:178
+#: .\Aanisite\templates\Aanisite\contact-us.html:49
+msgid "Tel: +98-2634762174"
+msgstr "تلفن: 34762174-026"
+
+#: .\Aanisite\templates\Aanisite\base.html:179
+msgid "Headquarter: No.2,Navak St,Africa Blvd,Tehran,Iran"
+msgstr "دفتر مرکزی: تهران، بلوار آفریقا، خیابان ناوک، پلاک2 "
+
+#: .\Aanisite\templates\Aanisite\base.html:180
+#: .\Aanisite\templates\Aanisite\contact-us.html:38
+msgid "Tel: +98-2188659420"
+msgstr "تلفن: 88659420-021"
+
+#: .\Aanisite\templates\Aanisite\base.html:186
+msgid "www.behdasht.gov.ir"
+msgstr ""
+
+#: .\Aanisite\templates\Aanisite\base.html:187
+msgid "www.fda.gov.ir"
+msgstr ""
+
+#: .\Aanisite\templates\Aanisite\base.html:188
+msgid "www.ispe.org"
+msgstr ""
+
+#: .\Aanisite\templates\Aanisite\base.html:201
+msgid "Copyright Aani Darman CO."
+msgstr ""
+
+#: .\Aanisite\templates\Aanisite\contact-us.html:36
+msgid "Headquarter"
+msgstr "دفتر مرکزی"
+
+#: .\Aanisite\templates\Aanisite\contact-us.html:37
+msgid "Address: No.2,Navak St,Africa Blvd,Tehran,Iran"
+msgstr " تهران، بلوار آفریقا،خیابان ناوک،پلاک2"
+
+#: .\Aanisite\templates\Aanisite\contact-us.html:39
+msgid "Email: info@aanidarman.com"
+msgstr "info@aanidarman.com :ایمیل"
+
+#: .\Aanisite\templates\Aanisite\contact-us.html:46
+msgid "Factory"
+msgstr "کارخانه"
+
+#: .\Aanisite\templates\Aanisite\contact-us.html:47
+msgid ""
+"Address: No.244,Golestan9 Ave,Phase2,Baharestan Industrial Estate,Karaj,Iran"
+msgstr "آدرس: کرج، شهرک صنعتی بهارستان، فاز2، خیابان گلستان نهم، پلاک244"
+
+#: .\Aanisite\templates\Aanisite\index.html:91
+msgid ""
+"\n"
+"                            The Name “Aani Darman” was inspired by our "
+"motivation to provide the\n"
+"                            patients with effective and accessible medicinal "
+"treatment;\n"
+"                            Aani Darman brings immediate treatment to mind.\n"
+"                            Each talented member of our team, working "
+"collaboratively, comes together\n"
+"                            to contribute to a common goal: improving "
+"patients’ lives.\n"
+"                            we work each day to provide medical services for "
+"all with invulnerable ethics,\n"
+"                            we do this now to build what patients need "
+"tomorrow.\n"
+"                            We are many, working as one unit and this is why "
+"we are proud of ourselves and our customers\n"
+"                            for choosing us.                            \n"
+"                         "
+msgstr ""
+"\n"
+"                            شرکت داروسازی آنی درمان با تلاش بی وقفه مدیران "
+"اجرایی\n"
+"                            و داروسازان و سایر متخصصین ایرانی روز به روز در "
+"حال توسعه و بهبود\n"
+"                            می باشد. بخش فرمولاسیون شرکت در کنار تولید از یک "
+"رو و نظارت دقیق\n"
+"                            آزمایشگاه کنترل کیفیت از سویی دیگر\n"
+"                            واحد تضمین کیفیت را بنحوی شایسته، یاری نموده\n"
+"                            تا به رویای دسترسی به دارودرمانی\n"
+"                            با کیفیت برای همه ی\n"
+"                            اقشار هموطنانمان جامه ی عمل\n"
+"                            بپوشاند.                            \n"
+"                         "
+
+#: .\Aanisite\templates\Aanisite\index.html:128
+msgid "Content title"
+msgstr "عنوان مطلب"
+
+#: .\Aanisite\templates\Aanisite\index.html:129
+msgid "More"
+msgstr "ادامه"
+
+#: .\Aanisite\templates\Aanisite\products.html:14
+msgid ""
+"\n"
+"                        Aani Darman Pharmaceutical Co. is designed and "
+"implemented to produce oral solid\n"
+"                        dosage forms.Our future products can be classified "
+"into several main therapeutic\n"
+"                        categories; including medicinal products aimed at "
+"the treatment cardiovascular\n"
+"                        diseases, drugs for the treatment of the diseases of "
+"the central nervous diseases,\n"
+"                        Analgesics, and drugs for the treatment of the "
+"digestive tract.\n"
+"                        "
+msgstr ""
+"\n"
+"                        شركت داروسازي آني درمان به منظور توليد  اشكال دارويي "
+"خوراكي جامد\n"
+"                        طراحي و ساخته شده است.  محصولات ما در چند دسته\n"
+"                         درماني مختلف طبقه بندي مي شوند؛  كه شامل داروهاي "
+"قلب و عروق، \n"
+"                        داروهاي سيستم اعصاب مركزي،  داروهاي گوارشي و \n"
+"                        مسكن ها  مي باشند.\n"
+"                        "
+
+#: .\Aanisite\templates\Aanisite\products.html:44
+msgid "Therapeutic Category"
+msgstr "گروه درمانی"
+
+#: .\Aanisite\templates\Aanisite\products.html:49
+msgid "Cardiovascular Drugs"
+msgstr "قلبی عروقی"
+
+#: .\Aanisite\templates\Aanisite\products.html:54
+msgid "CNS Drugs"
+msgstr "مغز و اعصاب"
+
+#: .\Aanisite\templates\Aanisite\products.html:58
+msgid "Antidiabetic Drugs"
+msgstr "ضد دیابت"
+
+#: .\Aanisite\templates\Aanisite\products.html:62
+msgid "Analgesics"
+msgstr "ضد درد"
+
+#: .\Aanisite\templates\Aanisite\products.html:66
+msgid "Gastrointestinal Drugs"
+msgstr "گوارشی"
+
+#: .\Aanisite\templates\Aanisite\products.html:69
+msgid "Miscellaneous"
+msgstr "سایرموارد"
+
+#: .\Aanisite\templates\Aanisite\products.html:79
+msgid "Shape"
+msgstr "شکل دارو"
+
+#: .\Aanisite\templates\Aanisite\products.html:85
+msgid "Capsule"
+msgstr "کپسول"
+
+#: .\Aanisite\templates\Aanisite\products.html:88
+msgid "Tablet"
+msgstr "قرص"

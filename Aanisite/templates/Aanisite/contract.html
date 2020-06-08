@@ -1,0 +1,943 @@
+{% extends 'Aanisite/base.html' %}
+{% load i18n %}
+{% load static %}
+{% block extra_style %}
+{% get_current_language as LANGUAGE_CODE %}
+
+{% endblock %}
+{% block content %}
+
+<div class="container-fluid pb-5 pt-5" style="background-color:#f5f6f6;">
+    <h1 class="page-title" style="text-align:center" >Contract Manufacturing</h1> 
+     <!--<img width="10%" src="{% static "Aanisite/media/Contractsvg.svg" %}">-->
+  <!-- <img src='contract-manufactoring.jpg' class='back-ground' > -->
+  <div class="row" style="margin-top: 48px;">
+    <div class="col-2" style="display: -webkit-inline-box;">
+    </div>
+    <div class="col-9">
+      <div id="iranianCard" class="card-c">
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group custom-form">
+              <label>{% trans "Generic Name" %}</label>
+              <input id="genericName" class="form-control" placeholder="Enter Generic Name:" autocomplete="off">
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group custom-form">
+              <label>{% trans "Trade Name" %}</label>
+              <input id="tradeName" class="form-control" placeholder="Enter Trade Name" autocomplete="off">
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group custom-form">
+              <label>{% trans "Company Name" %}</label>
+              <input id="companyName" class="form-control" placeholder="Enter Company Name:" autocomplete="off">
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group custom-form">
+              <label>{% trans "Company Type" %}</label>
+              <input id="companyType" class="form-control" placeholder="Enter Company Type" autocomplete="off">
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group custom-form">
+              <label>{% trans "Phone Number" %}</label>
+              <input id="Phone" class="form-control number" maxlength="11" placeholder="Enter Phone No."
+                autocomplete="off">
+            </div>
+          </div>
+          <div class="col-9" >
+            <div class="form-group custom-form">
+              <label>{% trans "Address" %}</label>
+              <textarea id="address" class="form-control" placeholder="Enter Your Address"></textarea>
+            </div>
+          </div>
+          <div class="col-6" style="margin-top: 26px;">
+            <div class="form-group custom-form">
+              <label>{% trans "Product Type" %}</label>
+              <select id="productType" class="form-control">
+                <option value="-1">{% trans "Please select your option" %}</option>
+                <option value="Medicine">{% trans "Medicine" %}</option>
+                <option value="Supplement">{% trans "Supplement" %}</option>
+                <option value="Herbal remedy">{% trans "Herbal remedy" %}</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-6" style="margin-top: 26px;">
+            <div class="form-group custom-form">
+              <label>{% trans "Terapeutic Category" %}</label>
+              <select id="terapeuticCategory" class="form-control">
+                <option value="-1">{% trans "Please select your option" %}</option>
+                <option value="Hormonal">{% trans "Hormonal" %}</option>
+                <option value="Non-hormonal product">{% trans "Non-hormonal product" %}</option>
+                <option value="Non-antibiotics">{% trans "Non-antibiotics" %}</option>
+                <option value="Antibiotics">{% trans "Antibiotics" %}</option>
+                <option value="Hazardous">{% trans "Hazardous" %}</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-6" style="margin-top: 6px;">
+            <div class="form-group custom-form">
+              <label> {% trans "Food and Drug Administration Licenses" %}</label>
+              <select id="fdaLicenses" class="form-control">
+                <option value="-1">{% trans "Please select your option" %}</option>
+                <option value="Product license">{% trans "Product license" %}</option>
+                <option value="Contract manufacturing license">{% trans "Contract manufacturing license" %}</option>
+                <option value="None">{% trans "None" %}</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-6"></div>
+          
+        <div class="col-12 px-0 mt-3 ">
+  		<div class="col-12 px-0" id="acc" >
+    		   <div class="mt-1" id="formSt1">
+     			 <h5 class="mb-0">
+        		 <button class="btn btn-lg btn-block btn-outline-secondary" data-toggle="collapse" data-target="#putFormOne" aria-expanded="false" aria-controls="putFormOne">
+       		       <h5 class="col-12">{% trans "Raw Materials & Excipients Specifications:" %}</h5>
+                   <h6 class="col-12">{% trans "Physicochemical specifications of API & Excipients" %}</h6>
+        		</button>
+     			 </h5>
+   		       </div>
+    		<div id="putFormOne" style="border:2px solid yellowgreen; border-radius:2px;" class="collapse px-5 py-5 my-3" aria-labelledby="formSt1" data-parent="#acc">
+      			<div class="row">
+          <div class="col-6 ">
+            <div class="form-group custom-form">
+              <label>{% trans "Temperature/ Humidity Sensitive" %}</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="checkbox" class="form-check-input" id="thSensitive" autocomplete="off">
+              <input type="text" placeholder="allowed humidity/temperature range" class="form-control" id="thRange">
+              &#8226;<small> {% trans "If temperature-sensitive materials are used in the product formulation, mention the allowed humidity / temperature range." %}</small>
+            </div>
+          </div>
+          <div class="col-6 ">
+            <div class="form-group custom-form">
+              <label>{% trans "Light Sensitive" %}</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="checkbox" class="form-check-input" id="lightSensitive" autocomplete="off">
+              <input type="text" placeholder="light conditions" class="form-control" id="lightRange">
+              &#8226;<small> {% trans "If specific light conditions are required during production, filling, pressing,coating and packaging operations, please mention." %}</small>
+            </div>
+          </div>
+          <div class="col-12" style="margin-top: 16px;">
+            <div class="form-group form-inline custom-form">
+              <label>{% trans "API is a Potent or high toxicity substance (Cytotoxic, Hormonal, Hazardous or ...)" %}</label>&nbsp;
+              <input type="checkbox" class="form-check-input" id="apiCondition" autocomplete="off">
+            </div>
+          </div>
+          <div class="col-12" style="margin-top: -12px;">
+            <div class="form-group form-inline custom-form">
+              <label>{% trans "OEL and OEB are specified" %}</label>&nbsp;
+              <input type="checkbox" class="form-check-input" id="oeLB" autocomplete="off">
+              <input id="oeValue" class="form-control" placeholder="Mention the value" autocomplete="off">
+            </div>
+          </div>
+
+          <div class="col-12" style="margin-top: 16px;">
+            <div class="form-group form-inline custom-form">
+              <label>{% trans "Presentation of a Valid MSDS for all Active Materials and Excipients" %}</label>&nbsp;
+              <input type="checkbox" class="form-check-input" id="MSDS" autocomplete="off">
+              <!-- <input type="attach" class="form-control" id="filefield" autocomplete="off"> -->
+            </div>
+          </div>
+          <div class="col-6" style="margin-top: 6px;">
+            <div class="form-group custom-form">
+              <label>{% trans "Source/ Country of Raw Material" %}</label>
+              <input id="rawSource" class="form-control" placeholder="" autocomplete="off">
+            </div>
+          </div>
+          <div class="col-6" style="margin-top: 6px;">
+            <div class="form-group custom-form">
+              <label>{% trans "Type of Raw Material" %} </label>
+              <select id="typeRaw" class="form-control">
+                <option value="-1">{% trans "Please select your option" %}</option>
+                <option value="Powder">{% trans "Powder" %}</option>
+                <option value="Granules ready for press">{% trans "Granules ready for press" %}</option>
+                <option value="Pellet">{% trans "Pellet" %}</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-12" style="margin-top: 6px;">
+            <div class="form-group custom-form">
+              <label>{% trans "Presentation of washing method, mention of used solvent or detergent, Dilution method and also standard method of tracing washing residues" %}</label>
+              <input id="rawMethod" class="form-control" placeholder="" autocomplete="off">
+            </div>
+          </div>
+        </div>
+	   </div>
+	   
+	         <div class="mt-1" id="formSt2">
+     			 <h5 class="mb-0">
+        		 <button class="btn btn-lg btn-block btn-outline-secondary" data-toggle="collapse" data-target="#putFormTwo" aria-expanded="false" aria-controls="putFormTwo">
+       		       <h5 class="col-12">{% trans "Specifications of Devices and Equipment Used in Production:" %}</h5>
+                   <h6 class="col-12">{% trans "Granulation stage" %}</h6>
+        		</button>
+     			 </h5>
+   		       </div>
+    		<div id="putFormTwo" class="collapse px-5 py-5 my-3" style="border:2px solid yellowgreen; border-radius:2px;" aria-labelledby="formSt2" data-parent="#acc">
+      			<div class="row">
+          <h5 class="col-12">{% trans "Product Specifications:" %}</h5>
+          <div class="col-6">
+            <div class="form-group custom-form">
+              <label>{% trans "Producr Batch Size" %}</label>
+              <div class="form-inline">
+                <input id="batchWeight" class="form-control col-4" placeholder="" autocomplete="off">&nbsp;
+                <p style="font-size:0.8rem; margin-top:8px;">{% trans "Kg /" %}</p>&nbsp;
+                <input id="batchNumber" class="form-control col-4" placeholder="" autocomplete="off">&nbsp;
+                <p style="font-size:0.8rem; margin-top:8px;">{% trans "box" %}</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group custom-form">
+              <label>{% trans "Production Anticipation" %}</label>
+              <div class="form-inline">
+               <input id="productApp" class="form-control col-6" placeholder="" autocomplete="off">
+               <p class="col-6" style="font-size:0.8rem; margin-top:8px;">{% trans "(Number per Year)" %}</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="form-group form-inline custom-form">
+              <select id="taCa" class="form-control col-4">
+                <option value="-1">{% trans "Please select your option" %}</option>
+                <option value="Tablet">{% trans "Tablet" %}</option>
+                <option value="Capsule">{% trans "Capsule" %}</option>
+              </select>
+              <select id="tabKind" class="form-control col-8">
+                <option value="-1">{% trans "Please select your option" %}</option>
+                <option value="Uncoated">{% trans "Uncoated" %}</option>
+                <option value="Coated">{% trans "Coated" %}</option>
+                <option value="Slow release">{% trans "Slow release" %}</option>
+                <option value="Continuous release">{% trans "Continuous release" %}</option>
+                <option value="Other">{% trans "Other" %}</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group custom-form">
+               <input id="description" class="form-control number" placeholder="Description:" autocomplete="off">
+            </div>
+          </div>
+          
+          <div class="col-6">
+            <div class="form-group custom-form">
+              <label>{% trans "Granule Production Method" %}</label>
+              <select id="gpMethod" class="form-control">
+                <option value="-1">{% trans "Please select your option" %}</option>
+                <option value="Wet granulation">{% trans "Wet granulation" %}</option>
+                <option value="Dry mix">{% trans "Dry mix" %}</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-6">
+          </div>
+          
+          
+          <div class="col-6">
+            <div class="form-group custom-form">
+              <label>{% trans "Granulator Type" %}</label>
+              <select id="granulatorType" class="form-control">
+                <option value="-1">{% trans "Please select your option" %}</option>
+                <option value="HMG">{% trans "HMG" %}</option>
+                <option value="FBD/G">{% trans "FBD/G" %}</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-6 ">
+            <div class="form-group custom-form">
+              <label>{% trans "Moisture Percentage of Granule Exited from Granulator" %}</label>
+              <input id="moisturePer" class="form-control" placeholder="" autocomplete="off">
+            </div>
+          </div>
+          <div class="col-6" style="margin-top: 9px;">
+            <div class="form-group custom-form">
+              <label>{% trans "Required Granulator Tank (Kg)" %}</label>
+              <input id="granuleTank" class="form-control" placeholder="With Actual Capacity of:" autocomplete="off">
+            </div>
+          </div>
+          <div class="col-6" style="margin-top: 9px;">
+            <div class="form-group custom-form">
+              <label>{% trans "Glue Making Tank Required (Kg)" %}</label>
+              <input id="glueTank" class="form-control" placeholder="With Actual Capacity of:" autocomplete="off">
+            </div>
+          </div>
+          <div class="col-6" style="margin-top: 9px;">
+            <div class="form-group custom-form">
+              <label>{% trans "Temperature Range of Glue Used in Granulation" %}</label>
+              <select id="tempGlue" class="form-control">
+                <option value="-1">{% trans "Please select your option" %}</option>
+                <option value="45-65 oC">{% trans "45-65 oC" %}</option>
+                <option value="18-28  oC">{% trans "18-28 oC" %}</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-6" style="margin-top: 9px;">
+            <div class="form-group custom-form">
+              <label>{% trans "Type of Mill and Mesh Size Required for Granule Sieve" %}</label>
+              <input id="millMeshSize" class="form-control" placeholder="" autocomplete="off">
+            </div>
+          </div>
+          <div class="col-12" style="margin-top: 9px;">
+            <div class="form-group form-inline custom-form">
+              <label>{% trans "Drying Machine: FBD" %} </label>&nbsp;
+              <input type="checkbox" class="form-check-input" id="fbd" autocomplete="off">
+            </div>
+          </div>
+          <h6 style="margin-top:16px;" class="col-12">{% trans "(Raw Materials) Mill and Sieve Stage" %}</h6>
+          <div class="col-6" style="margin-top: 9px;">
+            <div class="form-group custom-form">
+              <label>{% trans "Mesh Size Required for API Sieving" %}</label>
+              <input id="apiMeshSize" class="form-control" placeholder="" autocomplete="off">
+            </div>
+          </div>
+          <div class="col-6" style="margin-top: 9px;">
+            <div class="form-group custom-form">
+              <label>{% trans "Mesh Size Required for Excipients Sieving" %}</label>
+              <input id="excMeshSize" class="form-control" placeholder="" autocomplete="off">
+            </div>
+          </div>
+          <h6 style="margin-top:16px;" class="col-12">{% trans "Blending Stage" %}</h6>
+          <div class="col-6" style="margin-top: 9px;">
+            <div class="form-group custom-form">
+              <label>{% trans "Required Bin Blender (Kg)" %}</label>
+              <input id="blenderReq" class="form-control" placeholder="With Actual Capacity of:" autocomplete="off">
+            </div>
+          </div>
+          <div class="col-6" style="margin-top: 9px;">
+           
+          </div>
+          <h6 style="margin-top:16px;" class="col-12">{% trans "Pressing Stage" %}</h6>
+          <div class="col-2" style="margin-top: 9px;">
+            <div class="form-group custom-form">
+              <label>Size</label>
+              <input id="pressSize" class="form-control" placeholder="Enter Size" autocomplete="off">
+            </div>
+          </div>
+          <div class="col-4" style="margin-top: 9px;">
+            <div class="form-group custom-form">
+              <label>{% trans "Shape" %}</label>
+              <select id="pressShape" class="form-control">
+                <option value="-1">{% trans "Please select your option" %}</option>
+                <option value="Normal Concave">{% trans "Normal Concave" %}</option>
+                <option value="Flat">{% trans "Flat" %}</option>
+                <option value="Oblong">{% trans "Oblong" %}</option>
+              </select>  
+            </div>
+          </div>
+          <div class="col-6" style="margin-top: 9px;">
+            <div class="form-group custom-form">
+              <label>{% trans "Punch Specifications" %}</label>
+              <select id="punchSpec" class="form-control">
+                <option value="-1">{% trans "Please select your option" %}</option>
+                <option value="Non Scored Tablet">{% trans "Non Scored Tablet" %}</option>
+                <option value="Scored Tablet">{% trans "Scored Tablet" %}</option>
+              </select> 
+            </div>
+          </div>
+          <div class="col-6" style="margin-top: 9px;">
+            <div class="form-group custom-form">
+              <label>{% trans "Hardness Range Required for Tablet Press" %}</label>
+              <input id="hardnessRange" class="form-control" placeholder="Enter Hardness Range" autocomplete="off">
+            </div>
+          </div>
+          <div class="col-6" style="margin-top: 9px;">
+            <div class="form-group custom-form">
+              <label>{% trans "Diameter Range Required for Tablet Press" %}</label>
+              <input id="diameterRange" class="form-control" placeholder="Enter Diameter Range" autocomplete="off">
+            </div>
+          </div>
+          <div class="col-6" style="margin-top: 9px;">
+            <div class="form-group custom-form">
+              <label>{% trans "Thickness Range Required for Tablet Press" %}</label>
+              <input id="thickRange" class="form-control" placeholder="Enter Thickness Range" autocomplete="off">
+            </div>
+          </div>
+          <div class="col-6" style="margin-top: 9px;">
+            <div class="form-group custom-form">
+              <label>{% trans "Tablet Weight Range" %}</label>
+              <input id="weightRange" class="form-control" placeholder="Enter Weight Ranges" autocomplete="off">
+            </div>
+          </div>
+          <h6 style="margin-top:16px;" class="col-12">{% trans "Capsule Filling" %}</h6>
+          <div class="col-6 form-group custom-form pt-3">
+              <label>{% trans "Specification of capsule’s content" %}</label>
+              <select id="specContent" class="form-control">
+                <option value="-1">{% trans "Please select your option" %}</option>
+                <option value="Granule">{% trans "Granule" %}</option>
+                <option value="Pellet">{% trans "Pellet" %}</option>
+              </select>
+         </div><div class="col-6"></div>
+          <div class="col-2" style="margin-top: 9px;">
+             <div class="form-group custom-form">
+               <label>{% trans "Capsule Size" %}</label>
+               <select id="capsuleSize" class="form-control">
+                 <option value="-1">{% trans "Please select your option" %}</option>
+                 <option value="0E">{% trans "0E" %}</option>
+                 <option value="0">{% trans "0" %}</option>
+                 <option value="1">{% trans "1" %}</option>
+                 <option value="2">{% trans "2" %}</option>
+                 <option value="3">{% trans "3" %}</option>
+               </select>
+             </div>
+          </div>
+          <div class="col-4" style="margin-top: 9px;">
+            <div class="form-group custom-form">
+              <label>{% trans "Empty Shell Weight" %}</label>
+              <input id="emptyWeight" class="form-control" placeholder="Enter Empty Shell Weight" autocomplete="off">
+            </div>
+          </div>
+          <div class="col-6" style="margin-top: 9px;">
+            <div class="form-group custom-form">
+              <label>{% trans "Range of Granule Weight in Capsule" %}</label>
+              <input id="capsuleRange" class="form-control" placeholder="Enter Range of Granule Weight" autocomplete="off">
+            </div>
+          </div>
+          <h5 style="margin-top:36px;" class="col-12">{% trans "Storage Conditions:" %}</h5>
+          <h6 style="margin-top:9px;" class="col-12">{% trans "Storage Conditions" %}</h6>
+          <div class="col-3" style="margin-top: 9px;">
+            <div class="form-group custom-form">
+              <label>{% trans "Temperature" %}</label>
+              <input id="stTemp" class="form-control" placeholder="Enter Temperature" autocomplete="off">
+            </div>
+          </div>
+          <div class="col-3" style="margin-top: 9px;">
+            <div class="form-group custom-form">
+              <label>{% trans "Humidity" %}</label>
+              <input id="stHumid" class="form-control" placeholder="Enter Humidity" autocomplete="off">
+            </div>
+          </div>
+          <div class="col-6" style="margin-top: 9px;">
+            <div class="form-group custom-form">
+              <label>{% trans "Containers" %}</label>
+              <input id="stContainers" class="form-control" placeholder="Enter Containers" autocomplete="off">
+            </div>
+          </div>
+          <h6 style="margin-top:16px;" class="col-12">{% trans "Allowed Maintenance Period at Each Stage" %}</h6>
+          <div class="col-4" style="margin-top: 7px;">
+            <div class="form-group custom-form">
+              <label>{% trans "Press" %}</label>
+              <input id="pressPeriod" class="form-control" placeholder="" autocomplete="off">
+            </div>
+          </div>
+          <div class="col-4" style="margin-top: 7px;">
+            <div class="form-group custom-form">
+              <label>{% trans "Capsule Filling" %}</label>
+              <input id="cFillPeriod" class="form-control" placeholder="" autocomplete="off">
+            </div>
+          </div>
+          <div class="col-4" style="margin-top:7px;">
+            <div class="form-group custom-form">
+              <label>{% trans "Coat" %}</label>
+              <input id="coatPeriod" class="form-control" placeholder="" autocomplete="off">
+            </div>
+          </div>
+        </div>
+	    </div>
+	   
+	         <div class="mt-1" id="formSt3">
+     			 <h5 class="mb-0">
+        		 <button class="btn btn-lg btn-block btn-outline-secondary" data-toggle="collapse" data-target="#putFormThree" aria-expanded="false" aria-controls="putFormThree">
+       		       <h5 class="col-12">{% trans "Packaging Materials Specifications:" %}</h5>
+                   <h6 class="col-12">{% trans "Primary Packaging Specifications" %}</h6>
+        		</button>
+     			 </h5>
+   		       </div>
+    		<div id="putFormThree" class="collapse px-5 py-5 my-3" style="border:2px solid yellowgreen; border-radius:2px;" aria-labelledby="formSt3" data-parent="#acc">
+      			<div class="row">
+          <div class="col-12" >
+            <div class="form-group form-inline custom-form">
+              <select id="toC" class="form-control col-4">
+                <option value="-1">{% trans "Please select your option" %}</option>
+                <option value="Tablet">{% trans "Tablet" %}</option>
+                <option value="Capsule">{% trans "Capsule" %}</option>
+              </select>
+              <div class="col-2 form-inline">
+                 <label>{% trans "Container" %}</label>&nbsp;
+                 <input type="checkbox" class="form-check-input" id="containerCheck" autocomplete="off">
+              </div>
+              <div class="col-6 form-inline">
+                 <label>{% trans "Material of Container" %}</label>&nbsp;
+                 <select id="contMaterial" class="form-control">
+                     <option value="-1">{% trans "Please select your option" %}</option>
+                     <option value="Plastic">{% trans "Plastic" %}</option>
+                     <option value="Glass">{% trans "Glass" %}</option>
+                  </select>
+              </div>
+             </div>
+          </div>
+          <h6 style="margin-top:16px;" class="col-12">{% trans "Required Container" %}</h6>
+          <div class="col-4" style="margin-top: 7px;">
+            <div class="form-group custom-form">
+              <label>{% trans "Size" %}</label>
+              <input id="sizeContainer" class="form-control" placeholder="Enter Size" autocomplete="off">
+            </div>
+          </div>
+          <div class="col-4" style="margin-top: 7px;">
+            <div class="form-group custom-form">
+              <label>{% trans "Height" %}</label>
+              <input id="heightContainer" class="form-control" placeholder="Enter Height" autocomplete="off">
+            </div>
+          </div>
+          <div class="col-4" style="margin-top:7px;">
+            <div class="form-group custom-form">
+              <label>{% trans "Opening Diameter" %}</label>
+              <input id="openDiameter" class="form-control" placeholder="Enter Opening diameter" autocomplete="off">
+            </div>
+          </div>
+          <div class="col-6" style="margin-top: 9px;">
+            <div class="form-group custom-form">
+              <label>{% trans "Container Cap Model" %}</label>
+              <select id="capModel" class="form-control">
+                <option value="-1">{% trans "Please select your option" %}</option>
+                <option value="Childproof">{% trans "Childproof" %}</option>
+                <option value="Simple">{% trans "Simple" %}</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-6" style="margin-top:9px;">
+            <div class="form-group custom-form">
+              <label>{% trans "Number of Tablets / Capsules per Container" %}</label>
+              <input id="contNumber" class="form-control" placeholder="" autocomplete="off">
+            </div>
+          </div>
+          <div class="col-6" style="margin-top: 18px;">
+            <div class="form-group custom-form">
+              <label>{% trans "Type of Humidity Control" %}</label>
+              <select id="cotSil" class="form-control">
+                <option value="-1">{% trans "Please select your option" %}</option>
+                <option value="Plastic">{% trans "Cotton" %}</option>
+                <option value="Glass">{% trans "Silica Gel" %}</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-6" style="margin-top:9px;">
+            <div class="form-group custom-form">
+              <label>{% trans "Number of Silica Gel Required" %}</label>
+              <input id="siliGelNumber" class="form-control" placeholder="Number of Silica Gel Required" autocomplete="off">
+            </div>
+          </div>
+          <h6 style="margin-top:16px;" class="col-12">{% trans "Blister" %}</h6>
+          <div class="col-6" style="margin-top: 9px;">
+            <div class="form-group custom-form">
+              <label>{% trans "Blister Type" %}</label>
+              <select id="blisterType" class="form-control">
+                <option value="-1">{% trans "Please select your option" %}</option>
+                <option value="Alu-Alu">{% trans "Alu-Alu" %}</option>
+                <option value="Alu-PVC">{% trans "Alu-PVC" %}</option>
+                <option value="Alu-PVDC">{% trans "Alu-PVDC" %}</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-6" style="margin-top: 9px;">
+            <label>{% trans "PVC & PVDC Type" %}</label>
+            <div class="form-group custom-form form-inline">
+              <select id="pvcType" class="form-control">
+                <option value="-1">{% trans "Please select your option" %}</option>
+                <option value="Opaque">{% trans "Opaque" %}</option>
+                <option value="Transparent">{% trans "Transparent" %}</option>
+                <option value="White">{% trans "White" %}</option>
+              </select>
+              <input id="pvcOther" class="form-control" placeholder="Other" autocomplete="off">
+            </div>
+          </div>
+          <div class="col-6" style="margin-top:9px;">
+            <div class="form-group custom-form">
+              <label>{% trans "Blister Dimensions" %}</label>
+              <input id="blisterDimention" class="form-control" placeholder="Enter Blister Dimensions" autocomplete="off">
+            </div>
+          </div>
+          <div class="col-6" style="margin-top:9px;">
+            <div class="form-group custom-form">
+              <label>{% trans "Aluminum Foil Width" %}</label>
+              <input id="foilWidth" class="form-control" placeholder="Enter Aluminum Foil Width" autocomplete="off">
+            </div>
+          </div>
+          <div class="col-6" style="margin-top:9px;">
+            <div class="form-group custom-form">
+              <label>{% trans "PVC Width" %}</label>
+              <input id="pvcWidth" class="form-control" placeholder="Enter PVC Width" autocomplete="off">
+            </div>
+          </div>
+          <div class="col-6" style="margin-top:9px;">
+            <div class="form-group custom-form">
+              <label>{% trans "Number of Tablets Per Blister" %}</label>
+              <input id="blisterNumber" class="form-control" placeholder="Enter Number of Tablets Per Blister" autocomplete="off">
+            </div>
+          </div>
+          <h6 style="margin-top:16px;" class="col-12">{% trans "Secondary Packaging Specifications" %}</h6>
+          <div class="col-6" style="margin-top:9px;">
+            <div class="form-group custom-form">
+              <label>{% trans "Number of Blister per Box" %}</label>
+              <input id="boxNumber" class="form-control" placeholder="Enter Number of Blister per Box" autocomplete="off">
+            </div>
+          </div>
+          <div class="col-6" style="margin-top:9px;">
+              <div class="form-group custom-form form-inline">
+                  <label>{% trans "Leaflet" %}</label> &nbsp;
+                  <input type="checkbox" class="form-check-input" id="leaflet" autocomplete="off">
+              </div>
+          </div>
+          <div class="col-6" style="margin-top: 9px;">
+            <label>{% trans "Number of Boxes per Carton" %}</label>
+            <div class="form-group custom-form form-inline">
+                <input id="cartNumber" class="form-control" placeholder="" autocomplete="off">
+                <input id="finalContains" class="form-control" placeholder="Remark" autocomplete="off">
+            </div>
+          </div>
+          <div class="col-6" style="margin-top: 9px;">
+            <div class="form-group custom-form">
+              <label>{% trans "TTAC" %}</label>
+              <select id="ttac" class="form-control">
+                <option value="-1">{% trans "Please select your option" %}</option>
+                <option value="Label">{% trans "Label" %}</option>
+                <option value="Print">{% trans "Print" %}</option>
+              </select>
+            </div>
+          </div>
+         </div>
+	    </div>
+	   
+	         <div class="mt-1" id="formSt4">
+     			 <h5 class="mb-0">
+        		 <button class="btn btn-lg btn-block btn-outline-secondary" data-toggle="collapse" data-target="#putFormFour" aria-expanded="false" aria-controls="putFormFour">
+       		       <h5 class="col-12">{% trans "Experiments:" %}</h5>
+                  <h6 class="col-12">{% trans "Required In-process Quality Control" %}</h6>
+        		</button>
+     			 </h5>
+   		       </div>
+    		<div id="putFormFour" class="collapse px-5 py-5 my-3" style="border:2px solid yellowgreen; border-radius:2px;" aria-labelledby="formSt4" data-parent="#acc">
+      			<div class="row">
+          
+          <div class="col-3" >
+              <div class="form-group form-inline custom-form">
+                  <label>{% trans "Diameter" %}</label>&nbsp;
+                  <input type="checkbox" class="form-check-input" id="qcT1" autocomplete="off">
+              </div>
+          </div>
+          <div class="col-3" >
+              <div class="form-group form-inline custom-form">
+                  <label>{% trans "Thickness" %}</label>&nbsp;
+                  <input type="checkbox" class="form-check-input" id="qcT2" autocomplete="off">
+              </div>
+          </div>
+          <div class="col-3">
+              <div class="form-group form-inline custom-form">
+                  <label>{% trans "Weight" %}</label>&nbsp;
+                  <input type="checkbox" class="form-check-input" id="qcT3" autocomplete="off">
+              </div>
+          </div>
+          <div class="col-3" >
+              <div class="form-group form-inline custom-form">
+                  <label>{% trans "Hardness" %}</label>&nbsp;
+                  <input type="checkbox" class="form-check-input" id="qcT4" autocomplete="off">
+              </div>
+          </div>
+          <div class="col-3" style="margin-top: 9px;">
+              <div class="form-group form-inline custom-form">
+                  <label>{% trans "Friability" %}</label>&nbsp;
+                  <input type="checkbox" class="form-check-input" id="qcT5" autocomplete="off">
+              </div>
+          </div>
+          <div class="col-3" style="margin-top: 9px;">
+              <div class="form-group form-inline custom-form">
+                  <label>{% trans "Abrasion" %}</label>&nbsp;
+                  <input type="checkbox" class="form-check-input" id="qcT6" autocomplete="off">
+              </div>
+          </div>
+          <div class="col-3" style="margin-top: 9px;">
+              <div class="form-group form-inline custom-form">
+                  <label>{% trans "Disintegration Time" %}</label>&nbsp;
+                  <input type="checkbox" class="form-check-input" id="qcT7" autocomplete="off">
+              </div>
+          </div>
+          <div class="col-3" style="margin-top: 9px;">
+              <div class="form-group form-inline custom-form">
+                  <label>{% trans "Assay" %}</label>&nbsp;
+                  <input type="checkbox" class="form-check-input" id="qcT8" autocomplete="off">
+              </div>
+          </div>
+          <div class="col-12" style="margin-top:9px;">
+              <div class="form-group form-inline custom-form">
+                  <small>{% trans "Does the client require chemical and microbial testing of the raw material / product other than in-process quality control (physical) tests or not?" %}</small>&nbsp;
+                  <input id="qcTest" class="form-control" placeholder="" autocomplete="off">
+              </div>
+          </div>
+            
+            
+            
+          <div class="col-12 row">
+            <h5 class="col-12">{% trans "Practicable Tests" %}</h5>
+            <div class="col-3" style="margin-top:14px; margin-bottom:12px;">
+              <label>{% trans "Test" %}</label>
+            </div>
+            <div class="col-3" style="text-align:center; margin-top:14px; margin-bottom:12px;">
+              <label>{% trans "Standard" %}</label>
+            </div>
+            <div class="col-3" style="text-align:center; margin-top:14px; margin-bottom:12px;">
+              <label>{% trans "Result" %}</label>
+            </div>
+            <div class="col-3" style="text-align:center; margin-top:14px; margin-bottom:12px;">
+              <label>{% trans "Reference" %}</label>
+            </div>
+
+            <div class="col-3" style="margin-top:7px;">
+              <label>{% trans "Appearance" %}</label>
+            </div>
+            <div class="col-3" style="margin-top:7px;">
+                <div class="form-group custom-form">
+                    <input id="t11" class="form-control" placeholder="" autocomplete="off">
+                </div>
+            </div>
+            <div class="col-3" style="margin-top:7px;">
+                <div class="form-group custom-form">
+                    <input id="t12" class="form-control" placeholder="" autocomplete="off">
+                </div>
+            </div>
+            <div class="col-3" style="margin-top:7px;">
+                <div class="form-group custom-form">
+                    <input id="t13" class="form-control" placeholder="" autocomplete="off">
+                </div>
+            </div>
+
+            <div class="col-3" style="margin-top:7px;">
+              <label>{% trans "Identification" %}</label>
+            </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <input id="t21" class="form-control" placeholder="" autocomplete="off">
+               </div>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <input id="t22" class="form-control" placeholder="" autocomplete="off">
+               </div>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <input id="t23" class="form-control" placeholder="" autocomplete="off">
+               </div>
+             </div>
+
+             <div class="col-3" style="margin-top:7px;">
+               <label>{% trans "Diameter" %}</label>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <input id="t31" class="form-control" placeholder="" autocomplete="off">
+               </div>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <input id="t32" class="form-control" placeholder="" autocomplete="off">
+               </div>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <input id="t33" class="form-control" placeholder="" autocomplete="off">
+               </div>
+             </div>
+
+             <div class="col-3" style="margin-top:7px;">
+               <label>{% trans "Thickness" %}</label>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <input id="t41" class="form-control" placeholder="" autocomplete="off">
+               </div>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <input id="t42" class="form-control" placeholder="" autocomplete="off">
+               </div>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <input id="t43" class="form-control" placeholder="" autocomplete="off">
+               </div>
+             </div>
+
+             <div class="col-3" style="margin-top:7px;">
+               <label>{% trans "Weight" %}</label>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <input id="t51" class="form-control" placeholder="" autocomplete="off">
+               </div>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <input id="t52" class="form-control" placeholder="" autocomplete="off">
+               </div>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <input id="t53" class="form-control" placeholder="" autocomplete="off">
+               </div>
+             </div>
+
+             <div class="col-3" style="margin-top:7px;">
+               <label>{% trans "Hardness" %}</label>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <input id="t61" class="form-control" placeholder="" autocomplete="off">
+               </div>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <input id="t62" class="form-control" placeholder="" autocomplete="off">
+               </div>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <input id="t63" class="form-control" placeholder="" autocomplete="off">
+               </div>
+             </div>
+
+             <div class="col-3" style="margin-top:7px;">
+               <label>{% trans "Friability" %}</label>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <input id="t71" class="form-control" placeholder="" autocomplete="off">
+               </div>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <input id="t72" class="form-control" placeholder="" autocomplete="off">
+               </div>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <input id="t73" class="form-control" placeholder="" autocomplete="off">
+               </div>
+             </div>
+
+             <div class="col-3" style="margin-top:7px;">
+               <label>{% trans "Disintegration Time" %}</label>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <input id="t81" class="form-control" placeholder="" autocomplete="off">
+               </div>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <input id="t82" class="form-control" placeholder="" autocomplete="off">
+               </div>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <input id="t83" class="form-control" placeholder="" autocomplete="off">
+               </div>
+             </div>
+
+             <div class="col-3" style="margin-top:7px;">
+               <label>{% trans "Assay" %}</label>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <input id="t91" class="form-control" placeholder="" autocomplete="off">
+               </div>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <input id="t92" class="form-control" placeholder="" autocomplete="off">
+               </div>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <input id="t93" class="form-control" placeholder="" autocomplete="off">
+               </div>
+             </div>
+
+             <div class="col-3" style="margin-top:7px;">
+               <label>{% trans "Dissolution" %}</label>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <input id="t101" class="form-control" placeholder="" autocomplete="off">
+               </div>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <input id="t102" class="form-control" placeholder="" autocomplete="off">
+               </div>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <input id="t103" class="form-control" placeholder="" autocomplete="off">
+               </div>
+             </div>
+
+             <div class="col-3" style="margin-top:7px;">
+               <label>{% trans "Content Uniformity" %}</label>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <input id="t111" class="form-control" placeholder="" autocomplete="off">
+               </div>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <input id="t112" class="form-control" placeholder="" autocomplete="off">
+               </div>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <input id="t113" class="form-control" placeholder="" autocomplete="off">
+               </div>
+             </div>
+
+             <div class="col-3" style="margin-top:7px;">
+               <label>{% trans "Microbiological Limit Test" %}</label>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <input id="t121" class="form-control" placeholder="" autocomplete="off">
+               </div>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <input id="t122" class="form-control" placeholder="" autocomplete="off">
+               </div>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <input id="t123" class="form-control" placeholder="" autocomplete="off">
+               </div>
+             </div>
+          </div>
+         </div>
+        </div>
+	    </div>
+	    
+	     <h6 class="col-12" style="margin-top:18px;">{% trans "Note:" %}</h6>
+          <P class="col-12">{% trans "- The Contract Giver is required to provide the method of each test with its reference" %}</P>
+          <p class="col-12">{% trans "- If other tests are required to be performed, the Contract Giver should provide the reference to all standards, impurities, HPLC column, etc. while providing the method" %}</p>
+          <div class="row">
+          <div class="col-6" style="margin-top:15px;">
+            <div class="form-group custom-form">
+              <h6> {% trans "Approved by Representative of the Contract Giver" %}</h6>
+              <input id="representative" class="form-control" placeholder="Representative" autocomplete="off">
+            </div>
+          </div>
+          <div class="col-6" style="margin-top:15px;">
+            <div class="form-group custom-form">
+              <h6> {% trans "Approved by Authorised Person of the Contract Giver" %}</h6>
+              <input id="authorised" class="form-control" placeholder="Authorised Person" autocomplete="off">
+            </div>
+          </div>
+          </div>
+	    <input style="margin-top:15px;" class="btn btn-primary" id="contractSubmit" type="submit" name="Submit">
+	    
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+{% endblock %}

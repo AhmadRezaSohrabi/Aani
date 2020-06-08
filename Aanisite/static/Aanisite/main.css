@@ -1,0 +1,997 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+@import url(//db.onlinewebfonts.com/c/3671adca6f650c92b83f906e49656986?family=B+Nazanin);
+@import url(//db.onlinewebfonts.com/c/4527bde76d8fc7aed09f15a9ebfb7a75?family=Edwardian+Script+ITC);
+
+@font-face {
+    font-family: "Edwardian Script ITC";
+    src: url("//db.onlinewebfonts.com/t/4527bde76d8fc7aed09f15a9ebfb7a75.eot");
+    src: url("//db.onlinewebfonts.com/t/4527bde76d8fc7aed09f15a9ebfb7a75.eot?#iefix") format("embedded-opentype"),
+        url("//db.onlinewebfonts.com/t/4527bde76d8fc7aed09f15a9ebfb7a75.woff2") format("woff2"),
+        url("//db.onlinewebfonts.com/t/4527bde76d8fc7aed09f15a9ebfb7a75.woff") format("woff"),
+        url("//db.onlinewebfonts.com/t/4527bde76d8fc7aed09f15a9ebfb7a75.ttf") format("truetype"),
+        url("//db.onlinewebfonts.com/t/4527bde76d8fc7aed09f15a9ebfb7a75.svg#Edwardian Script ITC") format("svg");
+}
+
+@font-face {
+    font-family: "B Nazanin";
+    src: url("//db.onlinewebfonts.com/t/3671adca6f650c92b83f906e49656986.eot");
+    src: url("//db.onlinewebfonts.com/t/3671adca6f650c92b83f906e49656986.eot?#iefix") format("embedded-opentype"),
+        url("//db.onlinewebfonts.com/t/3671adca6f650c92b83f906e49656986.woff2") format("woff2"),
+        url("//db.onlinewebfonts.com/t/3671adca6f650c92b83f906e49656986.woff") format("woff"),
+        url("//db.onlinewebfonts.com/t/3671adca6f650c92b83f906e49656986.ttf") format("truetype"),
+        url("//db.onlinewebfonts.com/t/3671adca6f650c92b83f906e49656986.svg#B Nazanin") format("svg");
+
+
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+/* Preloader */
+.spinner-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(63, 188, 174, 1);
+    z-index: 999999;
+}
+
+.spinner {
+    position: absolute;
+    top: 48%;
+    left: 48%;
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    font-size: 10px;
+}
+
+.spinner>div {
+    background-color: #333;
+    height: 100%;
+    width: 6px;
+    display: inline-block;
+
+    -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+    animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+    -webkit-animation-delay: -1.1s;
+    animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+}
+
+.spinner .rect4 {
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s;
+}
+
+.spinner .rect5 {
+    -webkit-animation-delay: -0.8s;
+    animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+
+    0%,
+    40%,
+    100% {
+        -webkit-transform: scaleY(0.4)
+    }
+
+    20% {
+        -webkit-transform: scaleY(1.0)
+    }
+}
+
+@keyframes sk-stretchdelay {
+
+    0%,
+    40%,
+    100% {
+        transform: scaleY(0.4);
+        -webkit-transform: scaleY(0.4);
+    }
+
+    20% {
+        transform: scaleY(1.0);
+        -webkit-transform: scaleY(1.0);
+    }
+}
+
+.header{
+   background-color: #f5f6f6;
+}
+
+.menu {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-image: linear-gradient(#A2CD19, #a3f71f);
+    z-index: 1000;
+}
+
+#drop-menu{
+    background-image: linear-gradient(#A2CD19, #a3f71f);
+}
+
+/*menu*/
+ul.nav li a {
+    font-size: 16px;
+    text-decoration: none !important;
+    color: white;
+}
+
+ul.nav {
+    transition: 0.25s;
+}
+
+ul.nav li.navbar-item {
+    padding: 0 1rem 0 1rem;
+}
+
+ul.nav li.navbar-item:hover {
+    background-color: white;
+    -webkit-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    transition: background-color 500ms linear;
+    border-radius: 5px 12px 5px 12px;
+}
+
+ul.nav li.navbar-item:hover a {
+    text-decoration: none !important;
+    color: #A2CD19;
+}
+
+#fa {
+    width: 3vw;
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 100%;
+    background-color: #A2CD19;
+    color:black;
+}
+
+#en {
+    width: 3vw;
+    border-top-left-radius: 100%;
+    border-bottom-left-radius: 100%;
+    background-color: white;
+    color:black;
+
+}
+
+.icons{
+width:2rem;
+height:2rem;
+border:2px solid yellowgreen;
+background-color: yellowgreen;
+padding: 5px;
+border-radius:20px;;
+}
+
+.navbar-brand a h2 {
+    font-size: 2.3vw;
+    text-decoration: none !important;
+    margin: auto;
+    color:rgba(50, 145, 31, 0.877);
+    overflow: visible;
+}
+.navbar-brand{
+    margin:0;
+}
+
+.navbar-brand a h2 b {
+    font-family: "Edwardian Script ITC" !important;
+}
+.navbar-brand #company-name:hover {
+    text-decoration: none;
+}
+
+/* menu sidebar injast */
+
+/* i.dropdown-icon {
+    color: white;
+}
+
+i.dropdown-icon:hover {
+    background: white;
+    color: #A3F71F;
+    border-radius: 10px;
+} */
+
+
+.dropdown-menu {
+    background-image: linear-gradient(#A2CD19, #A3F71F);
+    display: none;
+    position: absolute;
+    top: 4.5rem;
+    width: 100%;
+    z-index: 100000000;
+}
+
+
+.dropdown-menu a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 2rem;
+}
+
+/*fade-in-effect*/
+
+.come-in {
+    transform: translateX(150px);
+    animation: come-in 1.5s ease forwards;
+}
+
+.come-in:nth-child(odd) {
+    animation-duration: 1s;
+    /* So they look staggered */
+}
+
+@keyframes come-in {
+    to {
+        transform: translateX(0);
+    }
+}
+
+.come-inleft {
+    transform: translateX(-150px);
+    animation: come-inleft 1.5s ease forwards;
+}
+
+.come-inleft:nth-child(odd) {
+    animation-duration: 0.6s;
+    /* So they look staggered */
+}
+
+@keyframes come-inleft {
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+/*page asli*/
+
+/*back main with parallax method*/
+#motto {
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+}
+#mottodiv{
+     margin: auto;
+}
+
+.parallax-main1 {
+    display: flex;
+    min-height: 650px;
+    opacity: 1;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(1.3);
+}
+
+
+.parallax-main2 {
+    min-height: 550px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax-main3 {
+    min-height: 300px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cardMainDivright {
+    margin: 0;
+}
+
+.cardMainDivleft {
+    margin: 0;
+}
+
+.card {
+    background-color: whitesmoke;
+}
+
+.card-img-top {
+    height: 340px;
+}
+
+.card-body {
+    text-align: center;
+}
+
+#main {
+    /* background-color: #d6d6d6; */
+    background-color: #f5f6f6;
+}
+
+#slideshow {
+    border: 2px solid yellowgreen;
+    max-width: 80%;
+    margin-top: 2rem;
+    margin: auto;
+    margin-top:2rem;
+}
+
+#slideshow img {
+    width: 100%;
+   
+}
+
+
+#abstract-content {
+    border-radius: 20px;
+    border: 2px solid yellowgreen;
+    max-width: 75%;
+    margin: auto;
+}
+
+#abstract-p {
+    margin:auto;
+    max-width: 80%;
+}
+
+#abstract-p p {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+#abstract-img img {
+    z-index: 3;
+    background-color: #f5f6f6;
+}
+
+#abstract-img2{
+    display:flex;
+}
+#abstract-img2 img {
+width:70%;
+margin:auto;
+border-radius: 1rem;
+}
+
+/*page darbare ma*/
+
+.backgroundAboutUs {
+    background-color: #f5f6f6;
+}
+
+.about-us-details {
+    z-index: 0;
+    opacity: 1;
+    filter: brightness(0);
+    margin: auto;
+    font-size: 19px;
+    margin-left: 10px;
+}
+.about-us-detailp {
+    text-align: justify;
+    text-justify: inter-word;
+    padding-left: 5%;
+    padding-right: 5%;
+
+}
+
+/*page tamas ba ma*/
+
+#contact-us{
+    background-color: #f5f6f6;
+}
+#map {
+    width:30rem;
+    height: 15rem;
+    background-color: #f5f6f6;
+    border: solid 2px greenyellow;
+}
+
+.map-container {
+    width: 100%;
+}
+
+#contactus-content img:hover {
+    animation: shake 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+/* bakhsh products */
+#backgroundPD {
+    background-color: #f5f6f6;
+
+}
+
+#products-container {
+    margin:auto;
+    width: 97%;
+    border: 2px solid yellowgreen;
+}
+
+.pd-pic{
+    display:flex;
+}
+.pd-pic img{
+    margin:auto;
+}
+
+.activebtn{
+background-color: rgb(216, 236, 30);
+border-radius: 3px;
+opacity: 0.6;
+}
+#shape-panel {
+    width: 100%;
+    background-image: linear-gradient(#A2CD19, #A3F71F);
+     color:black;
+    border:0.1px solid black;
+    border-radius: 2%;
+}
+
+.btn-2:hover {
+    background-color: #A2CD19;
+         color:black;
+
+}
+
+.btn-2{
+       background-color: #A2CD19; 
+           color:black;
+
+}
+
+.btn-1 {
+   background-color: #fafdfa;
+    color: black;
+}
+
+.form-check-label{
+    text-align: center;
+    align-content: center;
+}
+
+#category-panel {
+    width: 100%;
+    background-color: #fafdfa;
+    color:black;
+    border:0.1px solid black;
+     border-radius: 2%;
+}
+
+#shape-panel div{
+    list-style-type: none;
+    padding: 5px;
+    margin: 5px;
+}
+
+#category-panel div {
+    list-style-type: none;
+    padding: 5px;
+    margin: 5px;
+}
+
+#category-panel div label {
+    width: 100%;
+    cursor: pointer;
+
+}
+#category-panel div label:hover{
+      opacity: 0.6;
+      background-color: #A2CD19;
+}
+
+
+#shape-panel div label {
+    width: 100%;
+    cursor: pointer;
+
+}
+#shape-panel div label:hover {
+    opacity: 0.6;
+    background-color: white;
+
+}
+#shape-panel div input {
+    opacity: 0;
+}
+
+#category-panel div input{
+    opacity: 0;
+}
+
+.subbtn{
+    align-content: center;
+    text-align: center;
+}
+
+/*footer*/
+
+.footer {
+    display: flex;
+    max-width: 100%;
+    background-color: #1c1c1c;
+    height: 250px;
+    flex-direction: row;
+}
+
+#footer-img {
+    margin: 25px;
+    flex: 1;
+    flex-shrink: 0.3;
+    text-align: center;
+}
+
+#footer-img img {
+    height: 200px;
+}
+
+
+#footer-link {
+    margin: 55px;
+    flex: 1;
+    text-align: center;
+}
+
+#footer-link a {
+    color: white;
+    text-decoration: none;
+}
+
+a#link1 {
+    padding: 15px;
+}
+
+#footer-contact {
+    margin: 45px 5px 45px 5px;
+    flex: 1;
+    text-align: center;
+    color: white;
+}
+
+
+#footer-lastline {
+    height: 30px;
+    text-align: center;
+    background-color: black;
+    color: whitesmoke;
+}
+
+
+
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+     #logo {
+         height: 85% !important;
+     }
+    #drop-menu {
+        display: none;
+    }
+
+    .dropdown-menu {
+        display: none;
+    }
+
+     #abstract-content {
+         max-width: 75%;
+     }
+
+     #abstract-p p {
+         padding-right:10%;
+         font-size: 1.2rem;
+     }
+
+     #abstract-img2 {
+         display: none;
+     }
+
+     #abstract-img2 img {
+         display: none;
+     }
+
+     #abstract-img {
+         height: 420px;
+     }
+
+     #abstract-img img {
+         height: 350px;
+         position: relative;
+         right: 5.5rem;
+         top: 2.5rem;
+     }
+}
+
+/* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+
+@media (min-width: 990px) and (max-width: 1280px) {
+     #logo {
+         height: 95% !important;
+         padding-top:1%;
+     }
+    #drop-menu {
+        display: none;
+    }
+
+    .dropdown-menu {
+        display: none;
+    }
+
+      #abstract-content {
+          max-width: 75%;
+      }
+
+      #abstract-p p {
+          font-size: 1.2rem;
+      }
+
+      #abstract-img2 {
+          display: none;
+      }
+
+      #abstract-img2 img {
+          display: none;
+      }
+
+      #abstract-img {
+          height: 350px;
+      }
+
+      #abstract-img img {
+          height: 320px;
+          position: relative;
+          right: 4rem;
+          top: 0.5rem;
+      }
+}
+
+/* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+
+@media (min-width: 768px) and (max-width: 990px) {
+
+    #drop-menu {
+        display: none;
+    }
+
+    .dropdown-menu {
+        display: none;
+    }
+     #logo {
+         height: 100% !important;
+     }
+    #menumenu{
+        margin:0 !important;
+    }
+    .navbar-brand a h2 {
+        font-size: 2rem;
+    }
+    #fa {
+        width: 4.2vw !important;}
+    #en {
+         width: 4vw !important;}
+    
+     #logo2 {
+         display: none;
+     }
+
+     #logo2 img {
+         display: none;
+     }
+     #link-company{
+         display: none !important;
+     }
+
+     #abstract-content {
+         max-width: 65%;
+     }
+
+     #abstract-p p{
+         font-size: 1rem;
+     }
+
+     #abstract-img2 {
+         display: none;
+     }
+
+     #abstract-img2 img {
+         display: none;
+     }
+
+     #abstract-img {
+         height: 260px;
+     }
+     #abstract-img img {
+         height: 250px;
+         position: relative;
+         right: 2.5rem;
+         top: 0.5rem;
+
+     }
+
+}
+
+/* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+
+@media (min-width: 768px) and (max-width: 990px) and (orientation: landscape) {
+
+    
+    #drop-menu {
+        display: none;
+    }
+
+    .dropdown-menu {
+        display: none;
+    }
+    #logo{height: 100% !important;}
+    #menumenu {
+        margin: 0 !important;
+    }
+    .navbar-brand a h2 {
+        font-size: 2rem;
+    }
+
+     #fa {
+         width: 4.2vw !important;
+     }
+
+     #en {
+         width: 4vw !important;
+     }
+     
+    #logo2 {
+        display: none;
+    }
+
+    #logo2 img {
+        display: none;
+    }
+
+    #link-company {
+        display: none !important;
+    }
+
+    #abstract-content {
+        max-width: 85%;
+    }
+
+    #abstract-p p {
+        font-size: 1rem;
+    }
+
+    #abstract-img2 {
+        display: none;
+    }
+
+    #abstract-img2 img {
+        display: none;
+    }
+
+    #abstract-img {
+        height: 260px;
+    }
+    #abstract-img img{
+        height: 250px;
+        position: relative;
+        right: 2.5rem;
+        top: 0.5rem;
+    }
+}
+
+/* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+
+@media (min-width: 481px) and (max-width: 767px) {
+    #logo2 {
+        display: none;
+    }
+
+    #logo2 img {
+        display: none;
+    }
+    .menu{
+        display:none !important;
+    }
+    #link-company {
+        display: none !important;
+    }
+
+    #abstract-content {
+        max-width: 100%;
+    }
+
+     #abstract-p {
+         margin-top: 1rem;
+     }
+
+    #abstract-img {
+        display: none;
+    }
+
+    #abstract-img img {
+        display: none;
+    }
+ 
+     .navbar-brand a h2 {
+         font-size: 2.5rem !important;
+     }
+
+     #fa {
+         width: 6.2vw !important;
+     }
+
+     #en {
+         width: 6.2vw !important;
+     }
+
+    #navbar {
+        display: none !important;
+    }
+
+    .dropdown-menu {
+        box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.2);
+    }
+
+    .dropdown-menu ul {
+        list-style-type: none;
+    }
+
+    .dropdown-menu ul a li {
+        margin: auto;
+    }
+
+    .dropdown-menu ul a li:hover {
+        opacity: 0.8;
+        background-color: white;
+    }
+
+
+}
+
+/* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    #navbar {
+        display: none !important;
+    }
+
+    #logo2 {
+        display: none;
+    }
+
+    #link-company {
+        display: none !important;
+    }
+
+    #abstract-content {
+        max-width: 100%;
+    }
+    #abstract-p{
+        margin-top: 1rem;
+    }
+
+    #abstract-img {
+        display: none;
+    }
+
+    #abstract-img img {
+        display: none;
+    }
+
+     .parallax-main2 {
+         display:none;
+     }
+
+    .navbar-brand a h2 {
+        font-size: 3rem;
+    }
+    
+    .dropdown-menu {
+        box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.2);
+
+    }
+
+    .dropdown-menu ul {
+        list-style-type: none;
+    }
+
+    .dropdown-menu ul a li {
+        margin: auto;
+    }
+
+    .dropdown-menu ul a li:hover {
+        opacity: 0.8;
+        background-color: white;
+    }
+
+
+}

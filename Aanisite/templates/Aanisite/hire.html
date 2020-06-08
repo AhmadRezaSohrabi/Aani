@@ -1,0 +1,34 @@
+{% extends 'Aanisite/base.html' %}
+{% load i18n %}
+{% load static %}
+{% block extra_style %}
+<style>
+    body {
+        background-image: url("{% static 'Aanisite/media/pic521.jpg' %}"); 
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: #f5f6f6;
+    }
+    label {
+        text-align: left;
+    }
+</style>
+{% endblock%}
+{% block content %}
+<div id="forms" class='container mt-5 mb-5'>
+    <div class='row'>
+        <form style='z-index: 1;' class="form-group" method="POST">
+            {% csrf_token %}
+            <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+            {{ e_form.as_table}}</div>
+            {% comment %} <div class="col-xs-12 col-6 col-sm-12 col-md-12 col-lg-6 col-xl-6">{{edu_form.as_table}}<br></div>
+            <div class="col-xs-12 col-6 col-sm-12 col-md-12 col-lg-6 col-xl-6">{{e_history_form.as_table}}<br></div>
+            <div class="col-xs-12 col-6 col-sm-12 col-md-12 col-lg-6 col-xl-6"><h4>Languages</h4>
+            {{lang_form.as_table}}</div> {% endcomment %}
+            <input class="btn btn-primary" type="submit" name="Submit">
+        </form>
+    </div>
+</div>
+{% endblock %}
