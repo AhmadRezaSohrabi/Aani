@@ -1,12 +1,15 @@
+import os
 import json
 import sys
 from django.shortcuts       import render, redirect
 from django.http            import HttpResponseRedirect
 from django.urls            import reverse
 from django.views.generic   import ListView
+from django.template  import Template, Context
+from django.conf            import settings
 from django.core.mail       import send_mail, EmailMessage
 from .forms                 import EducationForm, EmploymentHistoryForm, EmploymentForm, ForeignLanguageForm
-from .models                import Product, Form, TheraputicCategory
+from .models                import Product, Form, TheraputicCategory, TTMTContract
 from django.db.models       import Q
 
 # Create your views here.
@@ -92,7 +95,7 @@ def contact_us_form_handler(request):
 def contract(request):
     if request.method == "POST":
         req_body = request.body.decode('utf-8')
-        context = json.loads(req_body)
+        data = json.loads(req_body)
         generic_name = data['generic_name']
         trade_name = data['trade_name']
         company_name = data['company_name']
@@ -113,8 +116,8 @@ def contract(request):
         Source_Country_Raw_Material = data['Source_Country_Raw_Material']
         Type_Raw_Material = data['Type_Raw_Material']
         Presentation_washing_method = data['Presentation_washing_method']
-        Producr_Batch_Weight = data['Producr_Batch_Weight']
-        Producr_Batch_Number = data['Producr_Batch_Number']
+        Product_Batch_Weight = data['Product_Batch_Weight']
+        Product_Batch_Number = data['Product_Batch_Number']
         Production_Anticipation = data['Production_Anticipation']
         Tablet_or_Capsule = data['Tablet_or_Capsule']
         Kind_of_coat = data['Kind_of_coat']
@@ -218,7 +221,12 @@ def contract(request):
         t123 = data['t123']
         representative = data['representative']
         authorised = data['authorised']
-        context = data
+
+        raw_template = open(os.path.join(settings.BASE_DIR , 'Aanisite/templates/export.html'))
+        rendered_template = Template(raw_template.read())
+        rendered_template = rendered_template.render(Context(data))
+        raw_template.close()
+
        # raw_template = open(path.join(BASE_DIR , 'templates/jcc_pdf.html'))
        # rendered_template = Template(raw_template.read())
        # rendered_template = rendered_template.render(Context(context))
@@ -228,14 +236,14 @@ def contract(request):
        # rendered_template,
        # False,
        # options=options)
-        file_name = 'contract.pdf'
+        file_name = 'contract_export.html'
         email = EmailMessage(
             'Contract submission',
-            'Below contract is submitted. Please review and respond if possible.',
+            'A new contract is submitted. Contact system administrator for contract detail.',
             'info.aanico@gmail.com',
             ['info.aanico@gmail.com', 'info.aanidarman@gmail.com'],
         )
-        email.attach(file_name, pdf_file, 'application/pdf')
+        email.attach(file_name, rendered_template, 'application/pdf')
         email.send()
         return redirect('index')
     return render(request, 'Aanisite/contract.html')        
