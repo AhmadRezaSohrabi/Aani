@@ -20,7 +20,8 @@ from django.conf.urls.i18n import i18n_patterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('i18n/', include('django.conf.urls.i18n')), 
+    path('i18n/', include('django.conf.urls.i18n')),
+    path('submit-contract/', views.submit_contract)
 ]
 
 urlpatterns += i18n_patterns(

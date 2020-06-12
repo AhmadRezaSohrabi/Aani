@@ -27,7 +27,7 @@ SECRET_KEY = 'z0z_!$&2g7bf0jp=%n$-9c3(l5%rb*-ivown^3h2bifzfwx!kx'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['aanidarman.com', 'www.aanidarman.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -47,7 +47,7 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    # 'django.middleware.csrf.wCsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -80,13 +80,9 @@ WSGI_APPLICATION = 'AaniDarman.wsgi.application'
 
 DATABASES = {
     'default': {
-    'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    'ENGINE': 'django.db.backends.sqlite3',
 	'NAME': 'aanidarm_db',
-	'USER': 'aanidarm_user',
-	'PASSWORD': 'A@nisite98',
-	'HOST': 'localhost',
-	'PORT': '5432',
-    }
+	}
 }
 
 
