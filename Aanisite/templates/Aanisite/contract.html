@@ -44,7 +44,7 @@
           <div class="col-6">
             <div class="form-group custom-form">
               <label>{% trans "Phone Number" %}</label>
-              <input id="Phone" class="form-control number" maxlength="11" placeholder="Enter Phone No."
+              <input id="phone" class="form-control number" maxlength="11" placeholder="Enter Phone No."
                 autocomplete="off">
             </div>
           </div>
@@ -58,10 +58,10 @@
             <div class="form-group custom-form">
               <label>{% trans "Product Type" %}</label>
               <select id="productType" class="form-control">
-                <option value="-1">{% trans "Please select your option" %}</option>
-                <option value="Medicine">{% trans "Medicine" %}</option>
-                <option value="Supplement">{% trans "Supplement" %}</option>
-                <option value="Herbal remedy">{% trans "Herbal remedy" %}</option>
+                <option value="not select">{% trans "Please select your option" %}</option>
+                <option value="medicine">{% trans "Medicine" %}</option>
+                <option value="supplement">{% trans "Supplement" %}</option>
+                <option value="herbal remedy">{% trans "Herbal remedy" %}</option>
               </select>
             </div>
           </div>
@@ -69,12 +69,12 @@
             <div class="form-group custom-form">
               <label>{% trans "Terapeutic Category" %}</label>
               <select id="terapeuticCategory" class="form-control">
-                <option value="-1">{% trans "Please select your option" %}</option>
-                <option value="Hormonal">{% trans "Hormonal" %}</option>
-                <option value="Non-hormonal product">{% trans "Non-hormonal product" %}</option>
-                <option value="Non-antibiotics">{% trans "Non-antibiotics" %}</option>
-                <option value="Antibiotics">{% trans "Antibiotics" %}</option>
-                <option value="Hazardous">{% trans "Hazardous" %}</option>
+                <option value="not select">{% trans "Please select your option" %}</option>
+                <option value="hormonal">{% trans "Hormonal" %}</option>
+                <option value="non-hormonal product">{% trans "Non-hormonal product" %}</option>
+                <option value="non-antibiotics">{% trans "Non-antibiotics" %}</option>
+                <option value="antibiotics">{% trans "Antibiotics" %}</option>
+                <option value="hazardous">{% trans "Hazardous" %}</option>
               </select>
             </div>
           </div>
@@ -82,10 +82,10 @@
             <div class="form-group custom-form">
               <label> {% trans "Food and Drug Administration Licenses" %}</label>
               <select id="fdaLicenses" class="form-control">
-                <option value="-1">{% trans "Please select your option" %}</option>
-                <option value="Product license">{% trans "Product license" %}</option>
-                <option value="Contract manufacturing license">{% trans "Contract manufacturing license" %}</option>
-                <option value="None">{% trans "None" %}</option>
+                <option value="not select">{% trans "Please select your option" %}</option>
+                <option value="product license">{% trans "Product license" %}</option>
+                <option value="contract manufacturing license">{% trans "Contract manufacturing license" %}</option>
+                <option value="none">{% trans "None" %}</option>
               </select>
             </div>
           </div>
@@ -150,7 +150,7 @@
             <div class="form-group custom-form">
               <label>{% trans "Type of Raw Material" %} </label>
               <select id="typeRaw" class="form-control">
-                <option value="-1">{% trans "Please select your option" %}</option>
+                <option value="not select">{% trans "Please select your option" %}</option>
                 <option value="Powder">{% trans "Powder" %}</option>
                 <option value="Granules ready for press">{% trans "Granules ready for press" %}</option>
                 <option value="Pellet">{% trans "Pellet" %}</option>
@@ -201,17 +201,17 @@
           <div class="col-6">
             <div class="form-group form-inline custom-form">
               <select id="taCa" class="form-control col-4">
-                <option value="-1">{% trans "Please select your option" %}</option>
-                <option value="Tablet">{% trans "Tablet" %}</option>
-                <option value="Capsule">{% trans "Capsule" %}</option>
+                <option value="not select">{% trans "Please select your option" %}</option>
+                <option value="tablet">{% trans "Tablet" %}</option>
+                <option value="capsule">{% trans "Capsule" %}</option>
               </select>
               <select id="tabKind" class="form-control col-8">
-                <option value="-1">{% trans "Please select your option" %}</option>
-                <option value="Uncoated">{% trans "Uncoated" %}</option>
-                <option value="Coated">{% trans "Coated" %}</option>
-                <option value="Slow release">{% trans "Slow release" %}</option>
-                <option value="Continuous release">{% trans "Continuous release" %}</option>
-                <option value="Other">{% trans "Other" %}</option>
+                <option value="not select">{% trans "Please select your option" %}</option>
+                <option value="uncoated">{% trans "Uncoated" %}</option>
+                <option value="coated">{% trans "Coated" %}</option>
+                <option value="slow release">{% trans "Slow release" %}</option>
+                <option value="continuous release">{% trans "Continuous release" %}</option>
+                <option value="other">{% trans "Other" %}</option>
               </select>
             </div>
           </div>
@@ -225,9 +225,9 @@
             <div class="form-group custom-form">
               <label>{% trans "Granule Production Method" %}</label>
               <select id="gpMethod" class="form-control">
-                <option value="-1">{% trans "Please select your option" %}</option>
-                <option value="Wet granulation">{% trans "Wet granulation" %}</option>
-                <option value="Dry mix">{% trans "Dry mix" %}</option>
+                <option value="not select">{% trans "Please select your option" %}</option>
+                <option value="wet granulation">{% trans "Wet granulation" %}</option>
+                <option value="dry mix">{% trans "Dry mix" %}</option>
               </select>
             </div>
           </div>
@@ -239,9 +239,9 @@
             <div class="form-group custom-form">
               <label>{% trans "Granulator Type" %}</label>
               <select id="granulatorType" class="form-control">
-                <option value="-1">{% trans "Please select your option" %}</option>
-                <option value="HMG">{% trans "HMG" %}</option>
-                <option value="FBD/G">{% trans "FBD/G" %}</option>
+                <option value="not select">{% trans "Please select your option" %}</option>
+                <option value="hmg">{% trans "HMG" %}</option>
+                <option value="fbd/g">{% trans "FBD/G" %}</option>
               </select>
             </div>
           </div>
@@ -267,9 +267,9 @@
             <div class="form-group custom-form">
               <label>{% trans "Temperature Range of Glue Used in Granulation" %}</label>
               <select id="tempGlue" class="form-control">
-                <option value="-1">{% trans "Please select your option" %}</option>
-                <option value="45-65 oC">{% trans "45-65 oC" %}</option>
-                <option value="18-28  oC">{% trans "18-28 oC" %}</option>
+                <option value="not select">{% trans "Please select your option" %}</option>
+                <option value="45-65c">{% trans "45-65 oC" %}</option>
+                <option value="18-28c">{% trans "18-28 oC" %}</option>
               </select>
             </div>
           </div>
@@ -319,10 +319,10 @@
             <div class="form-group custom-form">
               <label>{% trans "Shape" %}</label>
               <select id="pressShape" class="form-control">
-                <option value="-1">{% trans "Please select your option" %}</option>
-                <option value="Normal Concave">{% trans "Normal Concave" %}</option>
-                <option value="Flat">{% trans "Flat" %}</option>
-                <option value="Oblong">{% trans "Oblong" %}</option>
+                <option value="not select">{% trans "Please select your option" %}</option>
+                <option value="normal concave">{% trans "Normal Concave" %}</option>
+                <option value="flat">{% trans "Flat" %}</option>
+                <option value="oblong">{% trans "Oblong" %}</option>
               </select>  
             </div>
           </div>
@@ -330,9 +330,9 @@
             <div class="form-group custom-form">
               <label>{% trans "Punch Specifications" %}</label>
               <select id="punchSpec" class="form-control">
-                <option value="-1">{% trans "Please select your option" %}</option>
-                <option value="Non Scored Tablet">{% trans "Non Scored Tablet" %}</option>
-                <option value="Scored Tablet">{% trans "Scored Tablet" %}</option>
+                <option value="not select">{% trans "Please select your option" %}</option>
+                <option value="non scored tablet">{% trans "Non Scored Tablet" %}</option>
+                <option value="scored tablet">{% trans "Scored Tablet" %}</option>
               </select> 
             </div>
           </div>
@@ -364,16 +364,16 @@
           <div class="col-6 form-group custom-form pt-3">
               <label>{% trans "Specification of capsule’s content" %}</label>
               <select id="specContent" class="form-control">
-                <option value="-1">{% trans "Please select your option" %}</option>
-                <option value="Granule">{% trans "Granule" %}</option>
-                <option value="Pellet">{% trans "Pellet" %}</option>
+                <option value="not select">{% trans "Please select your option" %}</option>
+                <option value="granule">{% trans "Granule" %}</option>
+                <option value="pellet">{% trans "Pellet" %}</option>
               </select>
          </div><div class="col-6"></div>
           <div class="col-2" style="margin-top: 9px;">
              <div class="form-group custom-form">
                <label>{% trans "Capsule Size" %}</label>
                <select id="capsuleSize" class="form-control">
-                 <option value="-1">{% trans "Please select your option" %}</option>
+                 <option value="not select">{% trans "Please select your option" %}</option>
                  <option value="0E">{% trans "0E" %}</option>
                  <option value="0">{% trans "0" %}</option>
                  <option value="1">{% trans "1" %}</option>
@@ -435,7 +435,8 @@
           </div>
         </div>
 	    </div>
-	   
+     
+      
 	         <div class="mt-1" id="formSt3">
      			 <h5 class="mb-0">
         		 <button class="btn btn-lg btn-block btn-outline-secondary" data-toggle="collapse" data-target="#putFormThree" aria-expanded="false" aria-controls="putFormThree">
@@ -449,9 +450,9 @@
           <div class="col-12" >
             <div class="form-group form-inline custom-form">
               <select id="toC" class="form-control col-4">
-                <option value="-1">{% trans "Please select your option" %}</option>
-                <option value="Tablet">{% trans "Tablet" %}</option>
-                <option value="Capsule">{% trans "Capsule" %}</option>
+                <option value="not select">{% trans "Please select your option" %}</option>
+                <option value="tablet">{% trans "Tablet" %}</option>
+                <option value="capsule">{% trans "Capsule" %}</option>
               </select>
               <div class="col-2 form-inline">
                  <label>{% trans "Container" %}</label>&nbsp;
@@ -460,9 +461,9 @@
               <div class="col-6 form-inline">
                  <label>{% trans "Material of Container" %}</label>&nbsp;
                  <select id="contMaterial" class="form-control">
-                     <option value="-1">{% trans "Please select your option" %}</option>
-                     <option value="Plastic">{% trans "Plastic" %}</option>
-                     <option value="Glass">{% trans "Glass" %}</option>
+                     <option value="not select">{% trans "Please select your option" %}</option>
+                     <option value="plastic">{% trans "Plastic" %}</option>
+                     <option value="glass">{% trans "Glass" %}</option>
                   </select>
               </div>
              </div>
@@ -490,9 +491,9 @@
             <div class="form-group custom-form">
               <label>{% trans "Container Cap Model" %}</label>
               <select id="capModel" class="form-control">
-                <option value="-1">{% trans "Please select your option" %}</option>
-                <option value="Childproof">{% trans "Childproof" %}</option>
-                <option value="Simple">{% trans "Simple" %}</option>
+                <option value="not select">{% trans "Please select your option" %}</option>
+                <option value="childproof">{% trans "Childproof" %}</option>
+                <option value="simple">{% trans "Simple" %}</option>
               </select>
             </div>
           </div>
@@ -506,9 +507,9 @@
             <div class="form-group custom-form">
               <label>{% trans "Type of Humidity Control" %}</label>
               <select id="cotSil" class="form-control">
-                <option value="-1">{% trans "Please select your option" %}</option>
-                <option value="Plastic">{% trans "Cotton" %}</option>
-                <option value="Glass">{% trans "Silica Gel" %}</option>
+                <option value="not select">{% trans "Please select your option" %}</option>
+                <option value="plastic">{% trans "Cotton" %}</option>
+                <option value="glass">{% trans "Silica Gel" %}</option>
               </select>
             </div>
           </div>
@@ -523,10 +524,10 @@
             <div class="form-group custom-form">
               <label>{% trans "Blister Type" %}</label>
               <select id="blisterType" class="form-control">
-                <option value="-1">{% trans "Please select your option" %}</option>
-                <option value="Alu-Alu">{% trans "Alu-Alu" %}</option>
-                <option value="Alu-PVC">{% trans "Alu-PVC" %}</option>
-                <option value="Alu-PVDC">{% trans "Alu-PVDC" %}</option>
+                <option value="not select">{% trans "Please select your option" %}</option>
+                <option value="alu-alu">{% trans "Alu-Alu" %}</option>
+                <option value="alu-pvc">{% trans "Alu-PVC" %}</option>
+                <option value="alu-pvdc">{% trans "Alu-PVDC" %}</option>
               </select>
             </div>
           </div>
@@ -534,10 +535,10 @@
             <label>{% trans "PVC & PVDC Type" %}</label>
             <div class="form-group custom-form form-inline">
               <select id="pvcType" class="form-control">
-                <option value="-1">{% trans "Please select your option" %}</option>
-                <option value="Opaque">{% trans "Opaque" %}</option>
-                <option value="Transparent">{% trans "Transparent" %}</option>
-                <option value="White">{% trans "White" %}</option>
+                <option value="not select">{% trans "Please select your option" %}</option>
+                <option value="opaque">{% trans "Opaque" %}</option>
+                <option value="transparent">{% trans "Transparent" %}</option>
+                <option value="white">{% trans "White" %}</option>
               </select>
               <input id="pvcOther" class="form-control" placeholder="Other" autocomplete="off">
             </div>
@@ -590,9 +591,9 @@
             <div class="form-group custom-form">
               <label>{% trans "TTAC" %}</label>
               <select id="ttac" class="form-control">
-                <option value="-1">{% trans "Please select your option" %}</option>
-                <option value="Label">{% trans "Label" %}</option>
-                <option value="Print">{% trans "Print" %}</option>
+                <option value="not select">{% trans "Please select your option" %}</option>
+                <option value="label">{% trans "Label" %}</option>
+                <option value="print">{% trans "Print" %}</option>
               </select>
             </div>
           </div>
@@ -926,8 +927,8 @@
           </div>
           <div class="col-6" style="margin-top:15px;">
             <div class="form-group custom-form">
-              <h6> {% trans "Approved by Authorised Person of the Contract Giver" %}</h6>
-              <input id="authorised" class="form-control" placeholder="Authorised Person" autocomplete="off">
+              <h6> {% trans "Approved by Authorized Person of the Contract Giver" %}</h6>
+              <input id="authorizedPerson" class="form-control" placeholder="Authorised Person" autocomplete="off">
             </div>
           </div>
           </div>

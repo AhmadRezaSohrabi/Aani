@@ -1,0 +1,796 @@
+d<!doctype html>
+<html lang="en">
+
+<head>
+  <title>{% trans "AaniDarman Pharmaceutical Company" %}</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" hreflang="fa" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" hreflang="fa" rel="stylesheet" type="text/css">
+  <link href="//db.onlinewebfonts.com/c/3671adca6f650c92b83f906e49656986?family=B+Nazanin" hreflang="fa"
+    rel="stylesh0eet" type="text/css" />
+  <link href="//db.onlinewebfonts.com/c/4527bde76d8fc7aed09f15a9ebfb7a75?family=Edwardian+Script+ITC" hreflang="fa"
+    rel="stylesheet" type="text/css" />
+  <link href="//db.onlinewebfonts.com/c/f8deb3c1a029ec56b15bb462c1518f07?family=SnellRoundhandW01-Script" hreflang="fa"
+    rel="stylesheet" type="text/css" />
+  
+   
+</head>
+
+<body>
+<div class="container-fluid pb-5 pt-5" style="background-color:#f5f6f6;">
+  <h1 class="page-title ml-5">Contract Manufactoring</h1>
+  <div class="row" style="margin-top: 48px;">
+    <div class="col-2" style="display: -webkit-inline-box;">
+    </div>
+    <div class="col-9">
+      <div id="iranianCard" class="card-c">
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group custom-form">
+              <p>Generic Name:</p>
+              <p>{{ generic_name }}</p>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group custom-form">
+              <p>Trade Name:</p>
+              <p>{{ trade_name }}</p>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group custom-form">
+              <p>Company Name:</p>
+              <p>{{ company_name }}</p>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group custom-form">
+              <p>Company Type:</p>
+              <p>{{ company_type }}</p>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group custom-form">
+              <p>Phone Number:</p>
+              <p>{{ phone_number }}</p>
+            </div>
+          </div>
+          <div class="col-9" >
+            <div class="form-group custom-form">
+              <p>Address:</p>
+              <p>{{ address }}</p>
+            </div>
+          </div>
+          <div class="col-6" style="margin-top: 26px;">
+            <div class="form-group custom-form">
+              <p>Product Type:</p>
+              <p>{{ product_type }}</p>
+            </div>
+          </div>
+          <div class="col-6" style="margin-top: 26px;">
+            <div class="form-group custom-form">
+              <p>Terapeutic Category:</p>
+              <p>{{ terapeutic_category }}</p>
+            </div>
+          </div>
+          <div class="col-6" style="margin-top: 6px;">
+            <div class="form-group custom-form">
+              <p> Food and Drug Administration Licenses:</p>
+              <p>{{ food_and_drug_administration_licenses }}</p>
+            </div>
+          </div>
+          <div class="col-6"></div>
+          <h5 style="margin-top:36px;" class="col-12">Raw Materials & Excipients Specifications</h5>
+          <h6 style="margin-top:9px;" class="col-12">Physicochemical specifications of API & Excipients</h6>
+          <div class="col-6" style="margin-top: 20px;">
+            <div class="form-group custom-form">
+              <p>Temperature/ Humidity Sensitive:</p>&nbsp;&nbsp;
+              <p>{{ temperature_humidity_sensitive }}</p>&nbsp;
+              <p>{{ allowed_humidity_temperature_range }}</p>
+              <small>the allowed humidity / temperature range.</small>
+            </div>
+          </div>
+          <div class="col-6" style="margin-top: 20px;">
+            <div class="form-group custom-form">
+              <p>Light Sensitive:</p>&nbsp;&nbsp;
+              <p>{{ light_senfsitive }}</p>&nbsp;
+              <p>{{ light_conditions }}</p>
+              <small>light conditions</small>
+            </div>
+          </div>
+          <div class="col-12" style="margin-top: 16px;">
+            <div class="form-group form-inline custom-form">
+              <p>API is a Potent or high toxicity substance (Cytotoxic, Hormonal, Hazardous or ...):</p>&nbsp;
+              <p>{{ api }}</p>
+            </div>
+          </div>
+          <div class="col-12" style="margin-top: -12px;">
+            <div class="form-group form-inline custom-form">
+              <p>OEL and OEB are specified:</p>&nbsp;
+              <p>{{ oel }}</p>
+              <p>{{ oel_value }}</p>
+            </div>
+          </div>
+
+          <div class="col-12" style="margin-top: 16px;">
+            <div class="form-group form-inline custom-form">
+              <p>Presentation of a Valid MSDS for all Active Materials and Excipients:</p>&nbsp;
+              <p>{{ valid_msds }}</p>
+            </div>
+          </div>
+          <div class="col-6" style="margin-top: 6px;">
+            <div class="form-group custom-form">
+              <p>Source/ Country of Raw Material:</p>
+              <p>{{ source_country_raw_material }}</p>
+            </div>
+          </div>
+          <div class="col-6" style="margin-top: 6px;">
+            <div class="form-group custom-form">
+              <p>Type of Raw Material:</p>
+              <p>{{ type_raw_material }}</p>
+            </div>
+          </div>
+          <div class="col-12" style="margin-top: 6px;">
+            <div class="form-group custom-form">
+              <p>Presentation of washing method, mention of used solvent or detergent, Dilution method and also standard method of tracing washing residues:</p>
+              <p>{{ presentation_washing_method }}</p>
+            </div>
+          </div>
+          <h5 style="margin-top:36px;" class="col-12">Product Specifications</h5>
+          <div class="col-6" style="margin-top: 9px;">
+            <div class="form-group custom-form">
+              <p>Producr Batch Size:</p>
+              <div class="form-inline">
+                <p style="font-size:0.8rem; margin-top:8px;">{{ product_batch_weight }} Kg /</p>&nbsp;
+                <p style="font-size:0.8rem; margin-top:8px;">{{ product_batch_number }} box</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-6" style="margin-top: 9px;">
+            <div class="form-group custom-form">
+              <p>Production Anticipation:</p>
+              <div class="form-inline">
+               <p class="col-6" style="font-size:0.8rem; margin-top:8px;">{{ production_anticipation }} (Number per Year)</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6" style="margin-top: 9px;">
+            <div class="form-group form-inline custom-form">
+              <p>{{ tablet_or_capsule }} - {{ kind_of_coat }}</p>
+            </div>
+          </div>
+          <div class="col-6" style="margin-top: 9px;">
+            <div class="form-group custom-form">
+               <p>{{ description }}</p>
+            </div>
+          </div>
+          
+
+          <div class="col-6" style="margin-top: 9px;">
+            <!-- <div class="form-group custom-form">
+              <p>Specification of capsule’s content:</p>
+              <p>{{ Specification_capsule_content }}</p>
+            </div> -->
+          </div>
+          <div class="col-6" style="margin-top: 9px;">
+            <div class="form-group custom-form">
+              <p>Granule Production Method:</p>
+              <p>{{ granule_production_method }}</p>
+            </div>
+          </div>
+         
+          <h5 style="margin-top:36px;" class="col-12">Specifications of Devices and Equipment Used in Production:</h5>
+          <h6 style="margin-top:9px;" class="col-12">Granulation stage</h6>
+          <div class="col-6" style="margin-top: 9px;">
+            <div class="form-group custom-form">
+              <p>Granulator Type:</p>
+              <p>{{ granulator_type }}</p>
+            </div>
+          </div>
+          <div class="col-6" style="margin-top: 9px;">
+            <div class="form-group custom-form">
+              <p>Moisture Percentage of Granule Exited from Granulator:</p>
+              <p>{{ moisture_percentage_granule }}</p>
+            </div>
+          </div>
+          <div class="col-6" style="margin-top: 9px;">
+            <div class="form-group custom-form">
+              <p>Required Granulator Tank (Kg):</p>
+              <p>{{ required_granulator_tank }}</p>
+            </div>
+          </div>
+          <div class="col-6" style="margin-top: 9px;">
+            <div class="form-group custom-form">
+              <p>Glue Making Tank Required (Kg):</p>
+              <p>{{ glue_making_tank_required }}</p>
+            </div>
+          </div>
+          <div class="col-6" style="margin-top: 9px;">
+            <div class="form-group custom-form">
+              <p>Temperature Range of Glue Used in Granulation:</p>
+              <p>{{ temperature_granulation }}</p>
+            </div>
+          </div>
+          <div class="col-6" style="margin-top: 9px;">
+            <div class="form-group custom-form">
+              <p>Type of Mill and Mesh Size Required for Granule Sieve:</p>
+              <p>{{ mill_mesh_size }}</p>
+            </div>
+          </div>
+          <div class="col-12" style="margin-top: 9px;">
+            <div class="form-group form-inline custom-form">
+              <p>Drying Machine: FBD </p>&nbsp;
+              <p>{{ fbd }}</p>
+            </div>
+          </div>
+          <h6 style="margin-top:16px;" class="col-12">(Raw Materials) Mill and Sieve Stage</h6>
+          <div class="col-6" style="margin-top: 9px;">
+            <div class="form-group custom-form">
+              <p>Mesh Size Required for API Sieving:</p>
+              <p>{{ mesh_for_api_sieving }}</p>
+            </div>
+          </div>
+          <div class="col-6" style="margin-top: 9px;">
+            <div class="form-group custom-form">
+              <p>Mesh Size Required for Excipients Sieving:</p>
+              <p>{{ mesh_size_required_excipients_sieving }}</p>
+            </div>
+          </div>
+          <h6 style="margin-top:16px;" class="col-12">Blending Stage</h6>
+          <div class="col-6" style="margin-top: 9px;">
+            <div class="form-group custom-form">
+              <p>Required Blender (Kg):</p>
+              <p>{{ required_blender }}</p>
+            </div>
+          </div>
+          <div class="col-6" style="margin-top: 9px;">
+            
+          </div>
+          <h6 style="margin-top:16px;" class="col-12">Pressing Stage</h6>
+          <div class="col-2" style="margin-top: 9px;">
+            <div class="form-group custom-form">
+              <p>Size:</p>
+              <p>{{ press_size }}</p>
+            </div>
+          </div>
+          <div class="col-4" style="margin-top: 9px;">
+            <div class="form-group custom-form">
+              <p>Shape:</p>
+              <p>{{ press_shape }}</p>
+            </div>
+          </div>
+          <div class="col-6" style="margin-top: 9px;">
+            <div class="form-group custom-form">
+              <p>Punch Specifications:</p>
+              <p>{{ punch_specifications }}</p>
+            </div>
+          </div>
+          <div class="col-6" style="margin-top: 9px;">
+            <div class="form-group custom-form">
+              <p>Hardness Range Required for Tablet Press:</p>
+              <p>{{ hardness_range_tablet_press }}</p>
+            </div>
+          </div>
+          <div class="col-6" style="margin-top: 9px;">
+            <div class="form-group custom-form">
+              <p>Diameter Range Required for Tablet Press:</p>
+              <p>{{ diameter_tablet_press }}</p>
+            </div>
+          </div>
+          <div class="col-6" style="margin-top: 9px;">
+            <div class="form-group custom-form">
+              <p>Thickness Range Required for Tablet Press:</p>
+              <p>{{ thickness_tablet_press }}</p>
+            </div>
+          </div>
+          <div class="col-6" style="margin-top: 9px;">
+            <div class="form-group custom-form">
+              <p>Tablet Weight Range:</p>
+              <p>{{ tablet_weight_range }}</p>
+            </div>
+          </div>
+          <h6 style="margin-top:16px;" class="col-12">Capsule Filling:</h6>
+           <div class="col-6" style="margin-top: 9px;">
+             <div class="form-group custom-form">
+               <p>Specification of capsule’s content:</p>
+               <p>{{ specification_capsule }}</p>
+             </div>
+           </div>
+          <div class="col-2" style="margin-top: 9px;">
+             <div class="form-group custom-form">
+               <p>Capsule Size:</p>
+               <p>{{ capsule_size }}</p>
+             </div>
+          </div>
+          <div class="col-4" style="margin-top: 9px;">
+            <div class="form-group custom-form">
+              <p>Empty Shell Weight:</p>
+              <p>{{ empty_shell_weight }}</p>
+            </div>
+          </div>
+          <div class="col-6" style="margin-top: 9px;">
+            <div class="form-group custom-form">
+              <p>Range of Granule Weight in Capsule:</p>
+              <p>{{ range_granule_weight_capsule }}</p>
+            </div>
+          </div>
+          <h5 style="margin-top:36px;" class="col-12">Storage Conditions</h5>
+          <h6 style="margin-top:9px;" class="col-12">Storage Conditions</h6>
+          <div class="col-3" style="margin-top: 9px;">
+            <div class="form-group custom-form">
+              <p>Temperature:</p>
+              <p>{{ storage_temperature }}</p>
+            </div>
+          </div>
+          <div class="col-3" style="margin-top: 9px;">
+            <div class="form-group custom-form">
+              <p>Humidity:</p>
+              <p>{{ humidity_temperature }}</p>
+            </div>
+          </div>
+          <div class="col-6" style="margin-top: 9px;">
+            <div class="form-group custom-form">
+              <p>Containers:</p>
+              <p>{{ containers }}</p>
+            </div>
+          </div>
+          <h6 style="margin-top:16px;" class="col-12">Allowed Maintenance Period at Each Stage</h6>
+          <div class="col-4" style="margin-top: 7px;">
+            <div class="form-group custom-form">
+              <p>Press:</p>
+              <p>{{ press }}</p>
+            </div>
+          </div>
+          <div class="col-4" style="margin-top: 7px;">
+            <div class="form-group custom-form">
+              <p>Capsule Filling:</p>
+              <p>{{ capsule_Filling }}</p>
+            </div>
+          </div>
+          <div class="col-4" style="margin-top:7px;">
+            <div class="form-group custom-form">
+              <p>Coat:</p>
+              <p>{{ coat }}</p>
+            </div>
+          </div>
+          <h5 style="margin-top:36px;" class="col-12">Packaging Materials Specifications</h5>
+          <h6 style="margin-top:9px;" class="col-12">Primary Packaging Specifications</h6>
+          <div class="col-12" style="margin-top: 9px;">
+             <div id="toC" class="form-control col-4">
+               <p>{{ toc }}</p>
+             </div>
+            <div class="form-group col-2 form-inline custom-form">
+              <p>Container:</p>
+              <p>{{ container }}</p>
+            </div>
+          </div>
+          <div class="col-12" style="margin-top: 9px;">
+            <div class="form-group form-inline custom-form">
+              <p >Material of Container:</p>&nbsp;
+              <p>{{ material_container }}</p>
+            </div>
+          </div>
+          <h6 style="margin-top:16px;" class="col-12">Required Container</h6>
+          <div class="col-4" style="margin-top: 7px;">
+            <div class="form-group custom-form">
+              <p>Size:</p>
+              <p>{{ container_size }}</p>
+            </div>
+          </div>
+          <div class="col-4" style="margin-top: 7px;">
+            <div class="form-group custom-form">
+              <p>Height:</p>
+              <p>{{ container_height }}</p>
+            </div>
+          </div>
+          <div class="col-4" style="margin-top:7px;">
+            <div class="form-group custom-form">
+              <p>Opening Diameter:</p>
+              <p>{{ opening_diameter }}</p>
+            </div>
+          </div>
+          <div class="col-6" style="margin-top: 9px;">
+            <div class="form-group custom-form">
+              <p>Container Cap Model:</p>
+              <p>{{ cap_model }}</p>
+            </div>
+          </div>
+          <div class="col-6" style="margin-top:9px;">
+            <div class="form-group custom-form">
+              <p>Number of Tablets / Capsules per Container:</p>
+              <p>{{ number_tablet_capsules_percontainer }}</p>
+            </div>
+          </div>
+          <div class="col-6" style="margin-top: 18px;">
+            <div class="form-group custom-form">
+              <p></p>
+             <p>{{ cotton_silicagel }}</p>
+            </div>
+          </div>
+          <div class="col-6" style="margin-top:9px;">
+            <div class="form-group custom-form">
+              <p>Number of Silica Gel Required:</p>
+              <p>{{ number_silicagel }}</p>
+            </div>
+          </div>
+          <h6 style="margin-top:16px;" class="col-12">Blister</h6>
+          <div class="col-6" style="margin-top: 9px;">
+            <div class="form-group custom-form">
+              <p>Blister Type:</p>
+              <p>{{ blister_type }}</p>
+            </div>
+          </div>
+          <div class="col-6" style="margin-top: 9px;">
+            <p>PVC & PVDC Type:</p>
+            <div class="form-group custom-form form-inline">
+              <p>{{ pvc_type }}</p>&nbsp;
+              <p>- {{ pvc_other }}</p>
+            </div>
+          </div>
+          <div class="col-6" style="margin-top:9px;">
+            <div class="form-group custom-form">
+              <p>Blister Dimensions:</p>
+              <p>{{ blister_dimensions }}</p>
+            </div>
+          </div>
+          <div class="col-6" style="margin-top:9px;">
+            <div class="form-group custom-form">
+              <p>Aluminum Foil Width:</p>
+              <p>{{ aluminum_foil_width }}</p>
+            </div>
+          </div>
+          <div class="col-6" style="margin-top:9px;">
+            <div class="form-group custom-form">
+              <p>PVC Width:</p>
+              <p>{{ pvc_width }}</p>
+            </div>
+          </div>
+          <div class="col-6" style="margin-top:9px;">
+            <div class="form-group custom-form">
+              <p>Number of Tablets Per Blister:</p>
+              <p>{{ number_tablets_blister }}</p>
+            </div>
+          </div>
+          <h6 style="margin-top:16px;" class="col-12">Secondary Packaging Specifications</h6>
+          <div class="col-6" style="margin-top:9px;">
+            <div class="form-group custom-form">
+              <p>Number of Blister per Box:</p>
+              <p>{{ number_blister_box }}</p>
+            </div>
+          </div>
+          <div class="col-6" style="margin-top:9px;">
+              <p>{% trans "Leaflet" %}</p> &nbsp;
+              <p>{{ leaflet }}</p>
+            </div>
+          </div>
+          <div class="col-6" style="margin-top: 9px;">
+            <p>{% trans "Number of Boxes per Carton" %}</p>
+              <p>{{number_box_carton}}{{final_contains}}</p>
+          </div>
+          <div class="col-6" style="margin-top: 9px;">
+              <p>{% trans "TTAC" %}</p>
+              <P>{{ ttac }}</P>
+          </div>
+          <h5 style="margin-top:36px;" class="col-12">Experiments:</h5>
+          <h6 style="margin-top:9px;" class="col-12">Required In-process Quality Control</h6>
+          <div class="col-3" style="margin-top: 9px;">
+              <div class="form-group form-inline custom-form">
+                  <p>Diameter:</p>
+                  <p>{{ diameter }}</p>
+              </div>
+          </div>
+          <div class="col-3" style="margin-top: 9px;">
+              <div class="form-group form-inline custom-form">
+                  <p>Thickness:</p>
+                  <p>{{ thickness }}</p>
+              </div>
+          </div>
+          <div class="col-3" style="margin-top: 9px;">
+              <div class="form-group form-inline custom-form">
+                  <p>Weight:</p>
+                  <p>{{ weight }}</p>
+              </div>
+          </div>
+          <div class="col-3" style="margin-top: 9px;">
+              <div class="form-group form-inline custom-form">
+                  <p>Hardness:</p>
+                  <p>{{ hardness }}</p>
+              </div>
+          </div>
+          <div class="col-3" style="margin-top: 9px;">
+              <div class="form-group form-inline custom-form">
+                  <p>Friability:</p>
+                  <p>{{ friability }}</p>
+              </div>
+          </div>
+          <div class="col-3" style="margin-top: 9px;">
+              <div class="form-group form-inline custom-form">
+                  <p>Abrasion:</p>
+                  <p>{{ abrasion }}</p>
+              </div>
+          </div>
+          <div class="col-3" style="margin-top: 9px;">
+              <div class="form-group form-inline custom-form">
+                  <p>Disintegration Time:</p>
+                  <p>{{ disintegration_Time }}</p>
+              </div>
+          </div>
+          <div class="col-3" style="margin-top: 9px;">
+              <div class="form-group form-inline custom-form">
+                  <p>Assay:</p>
+                  <p>{{ assay }}</p>
+              </div>
+          </div>
+          <div class="col-12" style="margin-top:9px;">
+              <div class="form-group form-inline custom-form">
+                  <small>Does the client require chemical and microbial testing of the raw material / product other than in-process quality control (physical) tests or not?</small>&nbsp;
+                  <p>{{ qc_test }}</p>
+              </div>
+          </div>
+            
+          <div class="col-12 row">
+            <h5 class="col-12">Practicable Tests</h5>
+            <div class="col-3" style="margin-top:14px; margin-bottom:12px;">
+              <p>Test</p>
+            </div>
+            <div class="col-3" style="text-align:center; margin-top:14px; margin-bottom:12px;">
+              <p>Standard</p>
+            </div>
+            <div class="col-3" style="text-align:center; margin-top:14px; margin-bottom:12px;">
+              <p>Result</p>
+            </div>
+            <div class="col-3" style="text-align:center; margin-top:14px; margin-bottom:12px;">
+              <p>Reference</p>
+            </div>
+
+            <div class="col-3" style="margin-top:7px;">
+              <p>Appearance</p>
+            </div>
+            <div class="col-3" style="margin-top:7px;">
+                <p>{{ t11 }}</p>
+            </div>
+            <div class="col-3" style="margin-top:7px;">
+                <div class="form-group custom-form">
+                  <p>{{ t12 }}</p>
+                </div>
+            </div>
+            <div class="col-3" style="margin-top:7px;">
+                <div class="form-group custom-form">
+                  <p>{{ t13 }}</p>
+                </div>
+            </div>
+
+            <div class="col-3" style="margin-top:7px;">
+              <p>Identification</p>
+            </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <p>{{ t21 }}</p>
+               </div>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <p>{{ t22 }}</p>
+               </div>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <p>{{ t23 }}</p>
+               </div>
+             </div>
+
+             <div class="col-3" style="margin-top:7px;">
+               <p>Diameter</p>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <p>{{ t31 }}</p>
+               </div>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <p>{{ t32 }}</p>
+               </div>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <p>{{ t33 }}</p>
+               </div>
+             </div>
+
+             <div class="col-3" style="margin-top:7px;">
+               <p>Thickness</p>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <p>{{ t41 }}</p>
+               </div>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <p>{{ t42 }}</p>
+               </div>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <p>{{ t43 }}</p>
+               </div>
+             </div>
+
+             <div class="col-3" style="margin-top:7px;">
+               <p>Weight</p>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <p>{{ t51 }}</p>
+               </div>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <p>{{ t52 }}</p>
+               </div>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <p>{{ t53 }}</p>
+               </div>
+             </div>
+
+             <div class="col-3" style="margin-top:7px;">
+               <p>Hardness</p>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <p>{{ t61 }}</p>
+               </div>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <p>{{ t62 }}</p>
+               </div>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <p>{{ t63 }}</p>
+               </div>
+             </div>
+
+             <div class="col-3" style="margin-top:7px;">
+               <p>Friability</p>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <p>{{ t71 }}</p>
+               </div>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <p>{{ t72 }}</p>
+               </div>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <p>{{ t73 }}</p>
+               </div>
+             </div>
+
+             <div class="col-3" style="margin-top:7px;">
+               <p>Disintegration Time</p>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <p>{{ t81 }}</p>
+               </div>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <p>{{ t82 }}</p>
+               </div>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <p>{{ t83 }}</p>
+               </div>
+             </div>
+
+             <div class="col-3" style="margin-top:7px;">
+               <p>Assay</p>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <p>{{ t91 }}</p>
+               </div>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <p>{{ t92 }}</p>
+               </div>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <p>{{ t93 }}</p>
+               </div>
+             </div>
+
+             <div class="col-3" style="margin-top:7px;">
+               <p>Dissolution</p>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <p>{{ t101 }}</p>
+               </div>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <p>{{ t102 }}</p>
+               </div>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <p>{{ t103 }}</p>
+               </div>
+             </div>
+
+             <div class="col-3" style="margin-top:7px;">
+               <p>Content Uniformity</p>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <p>{{ t111 }}</p>
+               </div>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <p>{{ t112 }}</p>
+               </div>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <p>{{ t113 }}</p>
+               </div>
+             </div>
+
+             <div class="col-3" style="margin-top:7px;">
+               <p>Microbiological Limit Test</p>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <p>{{ t121 }}</p>
+               </div>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <p>{{ t122 }}</p>
+               </div>
+             </div>
+             <div class="col-3" style="margin-top:7px;">
+               <div class="form-group custom-form">
+                 <p>{{ t123 }}</p>
+               </div>
+             </div>
+          </div>
+          
+          <div class="col-6" style="margin-top:15px;">
+            <div class="form-group custom-form">
+              <h6> Approved by Representative of the Contract Giver:</h6>
+              <p>{{ representative }}</p>
+            </div>
+          </div>
+          <div class="col-6" style="margin-top:15px;">
+            <div class="form-group custom-form">
+              <h6> Approved by Authorised Person of the Contract Giver:</h6>
+              <p>{{ authorized_person }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>

@@ -2,14 +2,14 @@ import os
 import json
 import sys
 from django.shortcuts       import render, redirect
-from django.http            import HttpResponseRedirect
+from django.http            import HttpResponseRedirect, HttpResponse
 from django.urls            import reverse
 from django.views.generic   import ListView
 from django.template  import Template, Context
 from django.conf            import settings
 from django.core.mail       import send_mail, EmailMessage
 from .forms                 import EducationForm, EmploymentHistoryForm, EmploymentForm, ForeignLanguageForm
-from .models                import Product, Form, TheraputicCategory, TTMTContract
+from .models                import *
 from django.db.models       import Q
 
 # Create your views here.
@@ -103,86 +103,95 @@ def contract(request):
         phone_number = data['phone_number']
         address = data['address']
         product_type = data['product_type']
-        terapeutic_category = data['terapeutic_category']
+        therapeutic_category = data['therapeutic_category']
         food_and_drug_administration_licenses = data['food_and_drug_administration_licenses']
+        representative = data['representative']
+        authorized_person = data['authorized_person']
+
+
         temperature_humidity_sensitive = data['temperature_humidity_sensitive']
         allowed_humidity_temperature_range = data['allowed_humidity_temperature_range']
-        Light_Senfsitive = data['Light_Senfsitive']
+        light_senfsitive = data['light_senfsitive']
         light_conditions = data['light_conditions']
-        Api = data['Api']
-        Oel = data['Oel']
-        Oel_value = data['Oel_value']
-        Valid_MSDS = data['Valid_MSDS']
-        Source_Country_Raw_Material = data['Source_Country_Raw_Material']
-        Type_Raw_Material = data['Type_Raw_Material']
-        Presentation_washing_method = data['Presentation_washing_method']
-        Product_Batch_Weight = data['Product_Batch_Weight']
-        Product_Batch_Number = data['Product_Batch_Number']
-        Production_Anticipation = data['Production_Anticipation']
-        Tablet_or_Capsule = data['Tablet_or_Capsule']
-        Kind_of_coat = data['Kind_of_coat']
-        Description = data['Description']
-        Specification_capsule_content = data['Specification_capsule_content']
-        Granule_Production_Method = data['Granule_Production_Method']
-        Granulator_Type = data['Granulator_Type']
-        Moisture_Percentage_Granule = data['Moisture_Percentage_Granule']
-        Required_Granulator_Tank = data['Required_Granulator_Tank']
-        Glue_Making_Tank_Required = data['Glue_Making_Tank_Required']
-        Temperature_Granulation = data['Temperature_Granulation']
-        Mill_Mesh_Size = data['Mill_Mesh_Size']
-        Fbd = data['Fbd']
-        Mesh_for_API_Sieving = data['Mesh_for_API_Sieving']
-        Mesh_Size_Required_Excipients_Sieving = data['Mesh_Size_Required_Excipients_Sieving']
-        Required_Blender = data['Required_Blender']
-        Required_Blender_Shape = data['Required_Blender_Shape']
-        Press_Size = data['Press_Size']
-        Press_Shape = data['Press_Shape']
-        Punch_Specifications = data['Punch_Specifications']
-        Hardness_Range_Tablet_Press = data['Hardness_Range_Tablet_Press']
-        Diameter_Tablet_Press = data['Diameter_Tablet_Press']
-        Thickness_Tablet_Press = data['Thickness_Tablet_Press']
-        Tablet_Weight_Range = data['Tablet_Weight_Range']
-        Capsule_Size = data['Capsule_Size']
-        Empty_Shell_Weight = data['Empty_Shell_Weight']
-        Range_Granule_Weight_Capsule = data['Range_Granule_Weight_Capsule']
-        Storage_Temperature = data['Storage_Temperature']
-        Humidity_Temperature = data['Humidity_Temperature']
-        Containers = data['Containers']
-        Press = data['Press']
-        Capsule_Filling = data['Capsule_Filling']
-        Coat = data['Coat']
-        toC = data['toC']
-        Container = data['Container']
-        Material_Container = data['Material_Container']
-        Container_Size = data['Container_Size'] 
-        Container_Height = data['Container_Height']
-        Opening_Diameter = data['Opening_Diameter']
-        Cap_Model = data['Cap_Model']
-        Number_Tablet_Capsules_perContainer = data['Number_Tablet_Capsules_perContainer']
-        Cotton_SilicaGel = data['Cotton_SilicaGel']
-        Number_SilicaGel = data['Number_SilicaGel']
-        Blister_Type = data['Blister_Type']
-        Pvc_Type = data['Pvc_Type']
-        Pvc_Other = data['Pvc_Other']
-        Blister_Dimensions = data['Blister_Dimensions']
-        Aluminum_Foil_Width = data['Aluminum_Foil_Width']
-        Pvc_Width = data['Pvc_Width']
-        Number_Tablets_Blister = data['Number_Tablets_Blister']
-        Number_Blister_Box = data['Number_Blister_Box']
-        #Final_Product_Packaging_Contains = data['Final_Product_Packaging_Contains']
-        cartNumber = data['cartNumber']
+        api = data['api']
+        oel = data['oel']
+        oel_value = data['oel_value']
+        valid_msds = data['valid_msds']
+        source_country_raw_material = data['source_country_raw_material']
+        type_raw_material = data['type_raw_material']
+        presentation_washing_method = data['presentation_washing_method']
+
+
+        product_batch_weight = data['product_batch_weight']
+        product_batch_number = data['product_batch_number']
+        production_anticipation = data['production_anticipation']
+        tablet_or_capsule = data['tablet_or_capsule']
+        kind_of_coat = data['kind_of_coat']
+        description = data['description']
+        granule_production_method = data['granule_production_method']
+        granulator_type = data['granulator_type']
+        moisture_percentage_granule = data['moisture_percentage_granule']
+        required_granulator_tank = data['required_granulator_tank']
+        glue_making_tank_required = data['glue_making_tank_required']
+        temperature_granulation = data['temperature_granulation']
+        mill_mesh_size = data['mill_mesh_size']
+        fbd = data['fbd']
+        mesh_for_api_sieving = data['mesh_for_api_sieving']
+        mesh_size_required_excipients_sieving = data['mesh_size_required_excipients_sieving']
+        required_blender = data['required_blender']
+        press_size = data['press_size']
+        press_shape = data['press_shape']
+        punch_specifications = data['punch_specifications']
+        hardness_range_tablet_press = data['hardness_range_tablet_press']
+        diameter_tablet_press = data['diameter_tablet_press']
+        thickness_tablet_press = data['thickness_tablet_press']
+        tablet_weight_range = data['tablet_weight_range']
+        specification_capsule = data['specification_capsule']
+        capsule_size = data['capsule_size']
+        empty_shell_weight = data['empty_shell_weight']
+        range_granule_weight_capsule = data['range_granule_weight_capsule']
+        storage_temperature = data['storage_temperature']
+        humidity_temperature = data['humidity_temperature']
+        containers = data['containers']
+        press = data['press']
+        capsule_filling = data['capsule_filling']
+        coat = data['coat']
+
+
+        toc = data['toc']
+        container = data['container']
+        material_container = data['material_container']
+        container_size = data['container_size'] 
+        container_height = data['container_height']
+        opening_diameter = data['opening_diameter']
+        cap_model = data['cap_model']
+        number_tablet_capsules_percontainer = data['number_tablet_capsules_percontainer']
+        cotton_silicagel = data['cotton_silicagel']
+        number_silicagel = data['number_silicagel']
+        blister_type = data['blister_type']
+        pvc_type = data['pvc_type']
+        pvc_other = data['pvc_other']
+        blister_dimensions = data['blister_dimensions']
+        aluminum_foil_width = data['aluminum_foil_width']
+        pvc_width = data['pvc_width']
+        number_tablets_blister = data['number_tablets_blister']
+        number_blister_box = data['number_blister_box']
         leaflet = data['leaflet']
+        number_box_carton = data['number_box_carton']
+        final_contains = data['final_contains']
         ttac = data['ttac']
-        finalContains_other = data['finalContains_other']
-        Diameter = data['Diameter']
-        Thickness = data['Thickness']
-        Weight = data['Weight']
-        Hardness = data['Hardness']
-        Friability = data['Friability']
-        Abrasion = data['Abrasion']
-        Disintegration_Time = data['Disintegration_Time']
-        Assay = data['Assay']
-        qcTest = data['qcTest']
+
+
+
+        diameter = data['diameter']
+        thickness = data['thickness']
+        weight = data['weight']
+        hardness = data['hardness']
+        friability = data['friability']
+        abrasion = data['abrasion']
+        disintegration_time = data['disintegration_time']
+        assay = data['assay']
+        qc_test = data['qc_test']
         t11 = data['t11']
         t12 = data['t12']
         t13 = data['t13']
@@ -219,23 +228,155 @@ def contract(request):
         t121 = data['t121']
         t122 = data['t122']
         t123 = data['t123']
-        representative = data['representative']
-        authorised = data['authorised']
+
+        raw_material_and_excipient_specifications= RawMaterialAndExcipientSpecifications.objects.create(
+            temperature_humidity_sensitive=temperature_humidity_sensitive,
+            allowed_humidity_temperature_range=allowed_humidity_temperature_range,
+            light_senfsitive=light_senfsitive,
+            light_conditions=light_conditions,
+            api=api,
+            oel=oel,
+            oel_value=oel_value,
+            valid_msds=valid_msds,
+            source_country_raw_material=source_country_raw_material,
+            type_raw_material=type_raw_material,
+            presentation_washing_method=presentation_washing_method
+        )
+
+        specifications_of_devices_and_equipment_used_in_production= SpecificationsOfDevicesAndEquipmentUsedInProduction.objects.create(
+            product_batch_weight=product_batch_weight,
+            product_batch_number=product_batch_number,
+            production_anticipation=production_anticipation,
+            tablet_or_capsule=tablet_or_capsule,
+            kind_of_coat=kind_of_coat,
+            description=description,
+            granule_production_method=granule_production_method,
+            granulator_type=granulator_type,
+            moisture_percentage_granule=moisture_percentage_granule,
+            required_granulator_tank=required_granulator_tank,
+            glue_making_tank_required=glue_making_tank_required,
+            temperature_granulation=temperature_granulation,
+            mill_mesh_size=mill_mesh_size,
+            fbd=fbd,
+            mesh_for_api_sieving=mesh_for_api_sieving,
+            mesh_size_required_excipients_sieving=mesh_size_required_excipients_sieving,
+            required_blender=required_blender,
+            press_size=press_size,
+            press_shape=press_shape,
+            punch_specifications=punch_specifications,
+            hardness_range_tablet_press=hardness_range_tablet_press,
+            diameter_tablet_press=diameter_tablet_press,
+            thickness_tablet_press=thickness_tablet_press,
+            tablet_weight_range=tablet_weight_range,
+            specification_capsule=specification_capsule,
+            capsule_size=capsule_size,
+            empty_shell_weight=empty_shell_weight,
+            range_granule_weight_capsule=range_granule_weight_capsule,
+            storage_temperature=storage_temperature,
+            humidity_temperature=humidity_temperature,
+            containers=containers,
+            press=press,
+            capsule_filling=capsule_filling,
+            coat=coat
+        )
+
+        packagin_material_specifications = PackagingMaterialsSpecifications.objects.create(
+            toc=toc,
+            container=container,
+            material_container=material_container,
+            container_size=container_size,
+            container_height=container_height,
+            opening_diameter=opening_diameter,
+            cap_model=cap_model,
+            number_tablet_capsules_percontainer=number_tablet_capsules_percontainer,
+            cotton_silicagel=cotton_silicagel,
+            number_silicagel=number_silicagel,
+            blister_type=blister_type,
+            pvc_type=pvc_type,
+            pvc_other=pvc_other,
+            blister_dimensions=blister_dimensions,
+            aluminum_foil_width=aluminum_foil_width,
+            pvc_width=pvc_width,
+            number_tablets_blister=number_tablets_blister,
+            number_blister_box=number_blister_box,
+            leaflet=leaflet,
+            number_box_carton=number_box_carton,
+            final_contains=final_contains,
+            ttac=ttac,
+        )
+
+        experiments = Experiments.objects.create(
+            diameter=diameter,
+            thickness=thickness,
+            weight=weight,
+            hardness=hardness,
+            friability=friability,
+            abrasion=abrasion,
+            disintegration_time=disintegration_time,
+            assay=assay,
+            qc_test=qc_test,
+            t11=t11,
+            t12=t12,
+            t13=t13,
+            t21=t21,
+            t22=t22,
+            t23=t23,
+            t31=t31,
+            t32=t32,
+            t33=t33,
+            t41=t41,
+            t42=t42,
+            t43=t43,
+            t51=t51,
+            t52=t52,
+            t53=t53,
+            t61=t61,
+            t62=t62,
+            t63=t63,
+            t71=t71,
+            t72=t72,
+            t73=t73,
+            t81=t81,
+            t82=t82,
+            t83=t83,
+            t91=t91,
+            t92=t92,
+            t93=t93,
+            t101=t101,
+            t102=t102,
+            t103=t103,
+            t111=t111,
+            t112=t112,
+            t113=t113,
+            t121=t121,
+            t122=t122,
+            t123=t123
+        )
+
+
+        TTMTContract.objects.create(
+            generic_name=generic_name,
+            trade_name=trade_name,
+            company_name=company_name,
+            company_type=company_type,
+            phone_number=phone_number,
+            address=address,
+            product_type=product_type,
+            therapeutic_category=therapeutic_category,
+            food_and_drug_administration_licenses=food_and_drug_administration_licenses,
+            representative=representative,
+            authorized_person=authorized_person,
+            raw_material_and_excipient_specifications=raw_material_and_excipient_specifications,
+            specifications_of_devices_and_equipment_used_in_production=specifications_of_devices_and_equipment_used_in_production,
+            packagin_material_specifications=packagin_material_specifications,
+            experiments=experiments,
+        )
 
         raw_template = open(os.path.join(settings.BASE_DIR , 'Aanisite/templates/export.html'))
         rendered_template = Template(raw_template.read())
         rendered_template = rendered_template.render(Context(data))
         raw_template.close()
-
-       # raw_template = open(path.join(BASE_DIR , 'templates/jcc_pdf.html'))
-       # rendered_template = Template(raw_template.read())
-       # rendered_template = rendered_template.render(Context(context))
-       # raw_template.close()
-       # options={'page-size':'A4', 'dpi':400}
-       # pdf_file = pdfkit.from_string(
-       # rendered_template,
-       # False,
-       # options=options)
+        return HttpResponse(rendered_template)
         file_name = 'contract_export.html'
         email = EmailMessage(
             'Contract submission',
