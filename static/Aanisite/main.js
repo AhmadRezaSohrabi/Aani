@@ -215,18 +215,11 @@ $(document).ready(function () {
 });
 
 $("#contractSubmit").click(function(){
-    alert( "your form successfully submitted" );
+    createTTMT();
 });
 
 
 //ahmad
-
-onreadystatechange(){
-    $('').click( function(){
-        createTTMT()
-})
-
-
 function createTTMT() {
         let data = {
             generic_name: $("#genericName").val().trim(),
@@ -358,8 +351,10 @@ function createTTMT() {
             url: "/submit-ttmt/",
             type: "POST",
             data: JSON.stringify(data),
+            success: function(data) {
+                alert( "your form successfully submitted" );
+            }
         })
-
       }
 function checkit(checkboxId) {
     let checkbox = null;
