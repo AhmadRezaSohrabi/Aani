@@ -2,7 +2,7 @@ import os
 import json
 import sys
 from django.shortcuts       import render, redirect
-from django.http            import HttpResponseRedirect, HttpResponse
+from django.http            import HttpResponseRedirect, HttpResponse, JsonResponse
 from django.urls            import reverse
 from django.views.generic   import ListView
 from django.template  import Template, Context
@@ -392,4 +392,4 @@ def submit_contract(request):
     )
     email.attach(file_name, rendered_template, 'application/pdf')
     email.send()
-    return
+    return JsonResponse({'message': 'success'})
