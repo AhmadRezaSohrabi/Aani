@@ -35,15 +35,8 @@ class EmploymentHistoryForm(forms.Form):
     position = forms.CharField(max_length=20)
 
 class EmploymentForm(forms.Form):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args,**kwargs)
-        for field_name, field in self.fields.items():
-            if field_name != "birth_date":
-                field.widget.attrs['class'] = 'form-control'    
-        
     surname = forms.CharField(max_length=20)
     name = forms.CharField(max_length=20)
-    birth_date = forms.DateTimeField(widget=forms.SelectDateWidget())
     identification_number = forms.IntegerField()
     telephone = forms.IntegerField()
     home_address = forms.CharField(max_length=100,)

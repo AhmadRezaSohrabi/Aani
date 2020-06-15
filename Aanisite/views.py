@@ -1,4 +1,5 @@
 import os
+import io
 import json
 import sys
 from django.shortcuts       import render, redirect
@@ -36,12 +37,19 @@ def employment_form_render(request):
             post_code = employment_form.cleaned_data.get('post_code')
             email = employment_form.cleaned_data.get('email')
             future_positions = employment_form.cleaned_data.get('future_positions')
-            send_mail(
-                subject=subject,
-                message="{} the {} born in {} with ID of {} has requested an employment application".format(surname,name,birth_date,identification_number),
-                from_email=email,
-                recipient_list=['info.aanidarman@gmail.com'],
-            )
+            resume_file = request.FILES['resume']
+            with io.BytesIO() as resume_buffer:
+                for chunk in resume_file.chunks():
+                    resume_buffer.write(chunk)
+
+                email = EmailMessage(
+                    subject=subject,
+                    message="{} the {} born in {} with ID of {} has requested an employment application".format(surname,name,birth_date,identification_number),
+                    from_email=email,
+                    recipient_list=['info.aanico@gmail.com'],
+                )
+                email.attach('resume.txt', resume_buffer, 'text/plain')
+                email.send()
             return redirect(reverse('index'))
 
     employment_form = EmploymentForm()
@@ -388,8 +396,8 @@ def submit_contract(request):
         'Contract submission',
         'A new contract is submitted. Contact system administrator for contract detail.',
         'info.aanico@gmail.com',
-        ['info.aanico@gmail.com', 'info.aanidarman@gmail.com'],
+        ['info.aanidarman@gmail.com'],
     )
-    email.attach(file_name, rendered_template, 'application/pdf')
+    email.attach(file_name, rendered_template, 'text/html')
     email.send()
     return JsonResponse({'message': 'success'})
