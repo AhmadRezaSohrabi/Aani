@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-01 14:47+0000\n"
+"POT-Creation-Date: 2020-08-10 11:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -487,7 +487,9 @@ msgstr "حساس به دما/رطوبت"
 msgid ""
 "If temperature-sensitive materials are used in the product formulation, "
 "mention the allowed humidity / temperature range."
-msgstr "در صورت حساس به دما بودن مواد موجود در فرمولاسیون محصول، بازه دما و رطوبت مجاز را ذکر کنید."
+msgstr ""
+"در صورت حساس به دما بودن مواد موجود در فرمولاسیون محصول، بازه دما و رطوبت "
+"مجاز را ذکر کنید."
 
 #: Aanisite/templates/Aanisite/contract.html:116
 msgid "Light Sensitive"
@@ -497,13 +499,16 @@ msgstr "حساس به نور"
 msgid ""
 "If specific light conditions are required during production, filling, "
 "pressing,coating and packaging operations, please mention."
-msgstr "اگر شرایط محیطی خاصی از لحاظ نور طی عملیات ساخت، پرکنی،پرس و و بسته بندی محصول مورد نیاز است ذکر فرمایید."
+msgstr ""
+"اگر شرایط محیطی خاصی از لحاظ نور طی عملیات ساخت، پرکنی،پرس و و بسته بندی "
+"محصول مورد نیاز است ذکر فرمایید."
 
 #: Aanisite/templates/Aanisite/contract.html:124
 msgid ""
 "API is a Potent or high toxicity substance (Cytotoxic, Hormonal, Hazardous "
 "or ...)"
-msgstr "API جز مواد Potent و یا به سمت بالا(سایتوتوکسیک، هورمونی و یا ...) است."
+msgstr ""
+"API جز مواد Potent و یا به سمت بالا(سایتوتوکسیک، هورمونی و یا ...) است."
 
 #: Aanisite/templates/Aanisite/contract.html:130
 msgid "OEL and OEB are specified"
@@ -538,7 +543,9 @@ msgstr "پلت"
 msgid ""
 "Presentation of washing method, mention of used solvent or detergent, "
 "Dilution method and also standard method of tracing washing residues"
-msgstr "ارائه روش شستشو، ذکر نام حلال و یا دترجنت مورداستفاده و روش رقیق سازی و نیز روش استاندارد ردیابی باقیمانده مواد شستشو"
+msgstr ""
+"ارائه روش شستشو، ذکر نام حلال و یا دترجنت مورداستفاده و روش رقیق سازی و نیز "
+"روش استاندارد ردیابی باقیمانده مواد شستشو"
 
 #: Aanisite/templates/Aanisite/contract.html:172
 msgid "Specifications of Devices and Equipment Used in Production:"
@@ -711,7 +718,7 @@ msgstr "بدون خط"
 
 #: Aanisite/templates/Aanisite/contract.html:335
 msgid "Scored Tablet"
-msgstr "خط دار
+msgstr "خط دار"
 
 #: Aanisite/templates/Aanisite/contract.html:341
 msgid "Hardness Range Required for Tablet Press"
@@ -863,7 +870,6 @@ msgid "Number of Tablets / Capsules per Container"
 msgstr "تعداد قرص / کپسول در هر ظرف"
 
 #: Aanisite/templates/Aanisite/contract.html:508
-
 msgid "Type of Humidity Control"
 msgstr "نوع کنترل رطوبت"
 
@@ -1013,7 +1019,9 @@ msgstr ""
 msgid ""
 "Does the client require chemical and microbial testing of the raw material / "
 "product other than in-process quality control (physical) tests or not?"
-msgstr "آیا کارفرما به جز آزمایشات حین تولید ( فیزیکی)، نیاز به آزمایشات شیمیایی و میکروبی ماده اولیه/ محصول دارد یا خیر"
+msgstr ""
+"آیا کارفرما به جز آزمایشات حین تولید ( فیزیکی)، نیاز به آزمایشات شیمیایی و "
+"میکروبی ماده اولیه/ محصول دارد یا خیر"
 
 #: Aanisite/templates/Aanisite/contract.html:672
 msgid "Practicable Tests"
@@ -1063,16 +1071,16 @@ msgstr "توضیحات:"
 msgid ""
 "- The Contract Giver is required to provide the method of each test with its "
 "reference"
-msgstr ""
-"کارفرما لازم است روش انجام هر آزمایش را به همراه رفرانس آن ارائه دهد"
-"."
+msgstr "کارفرما لازم است روش انجام هر آزمایش را به همراه رفرانس آن ارائه دهد."
 
 #: Aanisite/templates/Aanisite/contract.html:920
 msgid ""
 "- If other tests are required to be performed, the Contract Giver should "
 "provide the reference to all standards, impurities, HPLC column, etc. while "
 "providing the method"
-msgstr "در صورت نیاز به انجام آزمایشات دیگر، کارفرما ضمن ارائه روش، لازم است رفرانس تمامی استانداردها، ناخالصی‌ها، ستون HPLC و .... را تأمین نماید."
+msgstr ""
+"در صورت نیاز به انجام آزمایشات دیگر، کارفرما ضمن ارائه روش، لازم است رفرانس "
+"تمامی استانداردها، ناخالصی‌ها، ستون HPLC و .... را تأمین نماید."
 
 #: Aanisite/templates/Aanisite/contract.html:924
 msgid "Approved by Representative of the Contract Giver"
