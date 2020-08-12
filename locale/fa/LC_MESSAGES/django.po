@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-10 11:22+0000\n"
+"POT-Creation-Date: 2020-08-12 12:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -303,13 +303,11 @@ msgstr ""
 msgid "Affiliated with Ahran Group"
 msgstr ""
 
-#: Aanisite/templates/Aanisite/base.html:165
-#, fuzzy
-#| msgid "Contact us"
-msgid "Contract Manufactury"
-msgstr "تماس با ما"
+#: Aanisite/templates/Aanisite/base.html:166
+msgid "Contract Manufacturing"
+msgstr "قرارداد تولید"
 
-#: Aanisite/templates/Aanisite/base.html:185
+#: Aanisite/templates/Aanisite/base.html:187
 msgid ""
 "Factory: No.244,Golestan9 Ave,Phase2,Baharestan Industrial\n"
 "                        Estate,Karaj,Iran"
@@ -317,173 +315,173 @@ msgstr ""
 "کارخانه: استان البرز،کرج، شهرک صنعتی بهارستان، فاز دوم، خیابان\n"
 "                        گلستان نهم،پلاک 244"
 
-#: Aanisite/templates/Aanisite/base.html:187
-#: Aanisite/templates/Aanisite/contact-us.html:73
+#: Aanisite/templates/Aanisite/base.html:189
+#: Aanisite/templates/Aanisite/contact-us.html:74
 msgid "Tel: +98-2634762174"
 msgstr "تلفن: 34762174-026"
 
-#: Aanisite/templates/Aanisite/base.html:188
+#: Aanisite/templates/Aanisite/base.html:190
 msgid "Headquarter: No.2,Navak St,Africa Blvd,Tehran,Iran"
 msgstr "دفتر مرکزی: تهران، بلوار آفریقا، خیابان ناوک، پلاک2 "
 
-#: Aanisite/templates/Aanisite/base.html:189
-#: Aanisite/templates/Aanisite/contact-us.html:51
+#: Aanisite/templates/Aanisite/base.html:191
+#: Aanisite/templates/Aanisite/contact-us.html:52
 msgid "Tel: +98-2188659420"
 msgstr "تلفن: 88659420-021"
 
-#: Aanisite/templates/Aanisite/base.html:195
+#: Aanisite/templates/Aanisite/base.html:197
 msgid "www.behdasht.gov.ir"
 msgstr ""
 
-#: Aanisite/templates/Aanisite/base.html:196
+#: Aanisite/templates/Aanisite/base.html:198
 msgid "www.fda.gov.ir"
 msgstr ""
 
-#: Aanisite/templates/Aanisite/base.html:197
+#: Aanisite/templates/Aanisite/base.html:199
 msgid "www.ispe.org"
 msgstr ""
 
-#: Aanisite/templates/Aanisite/base.html:223
+#: Aanisite/templates/Aanisite/base.html:225
 msgid "Copyright Aani Darman CO."
 msgstr ""
 
-#: Aanisite/templates/Aanisite/contact-us.html:49
+#: Aanisite/templates/Aanisite/contact-us.html:50
 msgid "Headquarter"
 msgstr "دفتر مرکزی"
 
-#: Aanisite/templates/Aanisite/contact-us.html:50
+#: Aanisite/templates/Aanisite/contact-us.html:51
 msgid "Address: No.2,Navak St,Africa Blvd,Tehran,Iran"
 msgstr " تهران، بلوار آفریقا،خیابان ناوک،پلاک2"
 
-#: Aanisite/templates/Aanisite/contact-us.html:52
+#: Aanisite/templates/Aanisite/contact-us.html:53
 msgid "Email: info@aanidarman.com"
 msgstr "info@aanidarman.com :ایمیل"
 
-#: Aanisite/templates/Aanisite/contact-us.html:70
+#: Aanisite/templates/Aanisite/contact-us.html:71
 msgid "Factory"
 msgstr "کارخانه"
 
-#: Aanisite/templates/Aanisite/contact-us.html:71
+#: Aanisite/templates/Aanisite/contact-us.html:72
 msgid ""
 "Address: No.244,Golestan9 Ave,Phase2,Baharestan Industrial Estate,Karaj,Iran"
 msgstr "آدرس: کرج، شهرک صنعتی بهارستان، فاز2، خیابان گلستان نهم، پلاک244"
 
-#: Aanisite/templates/Aanisite/contract.html:22
+#: Aanisite/templates/Aanisite/contract.html:35
 msgid "Generic Name"
 msgstr "نام ژنریک محصول"
 
-#: Aanisite/templates/Aanisite/contract.html:28
+#: Aanisite/templates/Aanisite/contract.html:41
 msgid "Trade Name"
 msgstr "نام تجاری"
 
-#: Aanisite/templates/Aanisite/contract.html:34
+#: Aanisite/templates/Aanisite/contract.html:47
 msgid "Company Name"
 msgstr "نام شرکت"
 
-#: Aanisite/templates/Aanisite/contract.html:40
+#: Aanisite/templates/Aanisite/contract.html:53
 msgid "Company Type"
 msgstr "نوع کاربری"
 
-#: Aanisite/templates/Aanisite/contract.html:46
+#: Aanisite/templates/Aanisite/contract.html:59
 msgid "Phone Number"
 msgstr "شماره تلفن"
 
-#: Aanisite/templates/Aanisite/contract.html:53
+#: Aanisite/templates/Aanisite/contract.html:66
 msgid "Address"
 msgstr "آدرس"
 
-#: Aanisite/templates/Aanisite/contract.html:59
+#: Aanisite/templates/Aanisite/contract.html:72
 msgid "Product Type"
 msgstr "نوع محصول"
 
-#: Aanisite/templates/Aanisite/contract.html:61
-#: Aanisite/templates/Aanisite/contract.html:72
+#: Aanisite/templates/Aanisite/contract.html:74
 #: Aanisite/templates/Aanisite/contract.html:85
-#: Aanisite/templates/Aanisite/contract.html:153
-#: Aanisite/templates/Aanisite/contract.html:204
-#: Aanisite/templates/Aanisite/contract.html:209
-#: Aanisite/templates/Aanisite/contract.html:228
-#: Aanisite/templates/Aanisite/contract.html:242
-#: Aanisite/templates/Aanisite/contract.html:270
-#: Aanisite/templates/Aanisite/contract.html:322
-#: Aanisite/templates/Aanisite/contract.html:333
-#: Aanisite/templates/Aanisite/contract.html:367
-#: Aanisite/templates/Aanisite/contract.html:376
-#: Aanisite/templates/Aanisite/contract.html:453
-#: Aanisite/templates/Aanisite/contract.html:464
-#: Aanisite/templates/Aanisite/contract.html:494
-#: Aanisite/templates/Aanisite/contract.html:510
-#: Aanisite/templates/Aanisite/contract.html:527
-#: Aanisite/templates/Aanisite/contract.html:538
-#: Aanisite/templates/Aanisite/contract.html:594
+#: Aanisite/templates/Aanisite/contract.html:98
+#: Aanisite/templates/Aanisite/contract.html:166
+#: Aanisite/templates/Aanisite/contract.html:217
+#: Aanisite/templates/Aanisite/contract.html:222
+#: Aanisite/templates/Aanisite/contract.html:241
+#: Aanisite/templates/Aanisite/contract.html:255
+#: Aanisite/templates/Aanisite/contract.html:283
+#: Aanisite/templates/Aanisite/contract.html:335
+#: Aanisite/templates/Aanisite/contract.html:346
+#: Aanisite/templates/Aanisite/contract.html:380
+#: Aanisite/templates/Aanisite/contract.html:389
+#: Aanisite/templates/Aanisite/contract.html:466
+#: Aanisite/templates/Aanisite/contract.html:477
+#: Aanisite/templates/Aanisite/contract.html:507
+#: Aanisite/templates/Aanisite/contract.html:523
+#: Aanisite/templates/Aanisite/contract.html:540
+#: Aanisite/templates/Aanisite/contract.html:551
+#: Aanisite/templates/Aanisite/contract.html:607
 msgid "Please select your option"
 msgstr "لطفا گزینه مورد نظر خود را انتخاب کنید."
 
-#: Aanisite/templates/Aanisite/contract.html:62
+#: Aanisite/templates/Aanisite/contract.html:75
 msgid "Medicine"
 msgstr "دارو"
 
-#: Aanisite/templates/Aanisite/contract.html:63
+#: Aanisite/templates/Aanisite/contract.html:76
 msgid "Supplement"
 msgstr "مکمل"
 
-#: Aanisite/templates/Aanisite/contract.html:64
+#: Aanisite/templates/Aanisite/contract.html:77
 msgid "Herbal remedy"
 msgstr "گیاهی"
 
-#: Aanisite/templates/Aanisite/contract.html:70
+#: Aanisite/templates/Aanisite/contract.html:83
 msgid "Terapeutic Category"
 msgstr "گروه درمانی"
 
-#: Aanisite/templates/Aanisite/contract.html:73
+#: Aanisite/templates/Aanisite/contract.html:86
 msgid "Hormonal"
 msgstr "هورمونی"
 
-#: Aanisite/templates/Aanisite/contract.html:74
+#: Aanisite/templates/Aanisite/contract.html:87
 msgid "Non-hormonal product"
 msgstr "غیرهورمونی"
 
-#: Aanisite/templates/Aanisite/contract.html:75
+#: Aanisite/templates/Aanisite/contract.html:88
 msgid "Non-antibiotics"
 msgstr "غیر آنتی بیوتیک"
 
-#: Aanisite/templates/Aanisite/contract.html:76
+#: Aanisite/templates/Aanisite/contract.html:89
 msgid "Antibiotics"
 msgstr "آنتی بیوتیک"
 
-#: Aanisite/templates/Aanisite/contract.html:77
+#: Aanisite/templates/Aanisite/contract.html:90
 msgid "Hazardous"
 msgstr "پرخطر"
 
-#: Aanisite/templates/Aanisite/contract.html:83
+#: Aanisite/templates/Aanisite/contract.html:96
 msgid "Food and Drug Administration Licenses"
 msgstr "مجوزهای اخذ شده از سازمان غذا و دارو"
 
-#: Aanisite/templates/Aanisite/contract.html:86
+#: Aanisite/templates/Aanisite/contract.html:99
 msgid "Product license"
 msgstr "پروانه ساخت"
 
-#: Aanisite/templates/Aanisite/contract.html:87
+#: Aanisite/templates/Aanisite/contract.html:100
 msgid "Contract manufacturing license"
 msgstr "مجوز تولید قراردادی"
 
-#: Aanisite/templates/Aanisite/contract.html:88
+#: Aanisite/templates/Aanisite/contract.html:101
 msgid "None"
 msgstr "هیچکدام"
 
-#: Aanisite/templates/Aanisite/contract.html:99
+#: Aanisite/templates/Aanisite/contract.html:112
 msgid "Raw Materials & Excipients Specifications:"
 msgstr "مشخصات ماده اولیه و جانبی"
 
-#: Aanisite/templates/Aanisite/contract.html:100
+#: Aanisite/templates/Aanisite/contract.html:113
 msgid "Physicochemical specifications of API & Excipients"
 msgstr "خصوصیات فیزیکو شیمی API و Excipients"
 
-#: Aanisite/templates/Aanisite/contract.html:108
+#: Aanisite/templates/Aanisite/contract.html:121
 msgid "Temperature/ Humidity Sensitive"
 msgstr "حساس به دما/رطوبت"
 
-#: Aanisite/templates/Aanisite/contract.html:111
+#: Aanisite/templates/Aanisite/contract.html:124
 msgid ""
 "If temperature-sensitive materials are used in the product formulation, "
 "mention the allowed humidity / temperature range."
@@ -491,11 +489,11 @@ msgstr ""
 "در صورت حساس به دما بودن مواد موجود در فرمولاسیون محصول، بازه دما و رطوبت "
 "مجاز را ذکر کنید."
 
-#: Aanisite/templates/Aanisite/contract.html:116
+#: Aanisite/templates/Aanisite/contract.html:129
 msgid "Light Sensitive"
 msgstr "حساس به نور"
 
-#: Aanisite/templates/Aanisite/contract.html:119
+#: Aanisite/templates/Aanisite/contract.html:132
 msgid ""
 "If specific light conditions are required during production, filling, "
 "pressing,coating and packaging operations, please mention."
@@ -503,43 +501,43 @@ msgstr ""
 "اگر شرایط محیطی خاصی از لحاظ نور طی عملیات ساخت، پرکنی،پرس و و بسته بندی "
 "محصول مورد نیاز است ذکر فرمایید."
 
-#: Aanisite/templates/Aanisite/contract.html:124
+#: Aanisite/templates/Aanisite/contract.html:137
 msgid ""
 "API is a Potent or high toxicity substance (Cytotoxic, Hormonal, Hazardous "
 "or ...)"
 msgstr ""
 "API جز مواد Potent و یا به سمت بالا(سایتوتوکسیک، هورمونی و یا ...) است."
 
-#: Aanisite/templates/Aanisite/contract.html:130
+#: Aanisite/templates/Aanisite/contract.html:143
 msgid "OEL and OEB are specified"
 msgstr "میزان OEL و OEB مشخص شده است."
 
-#: Aanisite/templates/Aanisite/contract.html:138
+#: Aanisite/templates/Aanisite/contract.html:151
 msgid "Presentation of a Valid MSDS for all Active Materials and Excipients"
 msgstr "ارائه MSDS معتبر همه مواد موثره و جانبی"
 
-#: Aanisite/templates/Aanisite/contract.html:145
+#: Aanisite/templates/Aanisite/contract.html:158
 msgid "Source/ Country of Raw Material"
 msgstr "منبع / کشور ماده اولیه"
 
-#: Aanisite/templates/Aanisite/contract.html:151
+#: Aanisite/templates/Aanisite/contract.html:164
 msgid "Type of Raw Material"
 msgstr "نوع ماده اولیه"
 
-#: Aanisite/templates/Aanisite/contract.html:154
+#: Aanisite/templates/Aanisite/contract.html:167
 msgid "Powder"
 msgstr "پودر"
 
-#: Aanisite/templates/Aanisite/contract.html:155
+#: Aanisite/templates/Aanisite/contract.html:168
 msgid "Granules ready for press"
 msgstr "گرانول آماده پرس"
 
-#: Aanisite/templates/Aanisite/contract.html:156
-#: Aanisite/templates/Aanisite/contract.html:369
+#: Aanisite/templates/Aanisite/contract.html:169
+#: Aanisite/templates/Aanisite/contract.html:382
 msgid "Pellet"
 msgstr "پلت"
 
-#: Aanisite/templates/Aanisite/contract.html:162
+#: Aanisite/templates/Aanisite/contract.html:175
 msgid ""
 "Presentation of washing method, mention of used solvent or detergent, "
 "Dilution method and also standard method of tracing washing residues"
@@ -547,475 +545,475 @@ msgstr ""
 "ارائه روش شستشو، ذکر نام حلال و یا دترجنت مورداستفاده و روش رقیق سازی و نیز "
 "روش استاندارد ردیابی باقیمانده مواد شستشو"
 
-#: Aanisite/templates/Aanisite/contract.html:172
+#: Aanisite/templates/Aanisite/contract.html:185
 msgid "Specifications of Devices and Equipment Used in Production:"
 msgstr "مشخصات دستگاه‌ها و تجهیزات مورد استفاده در ساخت محصول:"
 
-#: Aanisite/templates/Aanisite/contract.html:173
+#: Aanisite/templates/Aanisite/contract.html:186
 msgid "Granulation stage"
 msgstr "مرحله گرانولاسیون"
 
-#: Aanisite/templates/Aanisite/contract.html:179
+#: Aanisite/templates/Aanisite/contract.html:192
 msgid "Product Specifications:"
 msgstr "مشخصات محصول:"
 
-#: Aanisite/templates/Aanisite/contract.html:182
+#: Aanisite/templates/Aanisite/contract.html:195
 msgid "Producr Batch Size"
 msgstr "بچ سایز محصول"
 
-#: Aanisite/templates/Aanisite/contract.html:185
+#: Aanisite/templates/Aanisite/contract.html:198
 msgid "Kg /"
 msgstr "کیلوگرم"
 
-#: Aanisite/templates/Aanisite/contract.html:187
+#: Aanisite/templates/Aanisite/contract.html:200
 msgid "box"
 msgstr "بسته"
 
-#: Aanisite/templates/Aanisite/contract.html:193
+#: Aanisite/templates/Aanisite/contract.html:206
 msgid "Production Anticipation"
 msgstr "پیش‌بینی تولید"
 
-#: Aanisite/templates/Aanisite/contract.html:196
+#: Aanisite/templates/Aanisite/contract.html:209
 msgid "(Number per Year)"
 msgstr "عدد در سال"
 
-#: Aanisite/templates/Aanisite/contract.html:205
-#: Aanisite/templates/Aanisite/contract.html:454
+#: Aanisite/templates/Aanisite/contract.html:218
+#: Aanisite/templates/Aanisite/contract.html:467
 #: Aanisite/templates/Aanisite/products.html:116
 msgid "Tablet"
 msgstr "قرص"
 
-#: Aanisite/templates/Aanisite/contract.html:206
-#: Aanisite/templates/Aanisite/contract.html:455
+#: Aanisite/templates/Aanisite/contract.html:219
+#: Aanisite/templates/Aanisite/contract.html:468
 #: Aanisite/templates/Aanisite/products.html:113
 msgid "Capsule"
 msgstr "کپسول"
 
-#: Aanisite/templates/Aanisite/contract.html:210
+#: Aanisite/templates/Aanisite/contract.html:223
 msgid "Uncoated"
 msgstr ""
 
-#: Aanisite/templates/Aanisite/contract.html:211
+#: Aanisite/templates/Aanisite/contract.html:224
 msgid "Coated"
 msgstr "روکش دار"
 
-#: Aanisite/templates/Aanisite/contract.html:212
+#: Aanisite/templates/Aanisite/contract.html:225
 msgid "Slow release"
 msgstr "آهسته رهش"
 
-#: Aanisite/templates/Aanisite/contract.html:213
+#: Aanisite/templates/Aanisite/contract.html:226
 msgid "Continuous release"
 msgstr "پیوسته رهش"
 
-#: Aanisite/templates/Aanisite/contract.html:214
+#: Aanisite/templates/Aanisite/contract.html:227
 msgid "Other"
 msgstr "سایر"
 
-#: Aanisite/templates/Aanisite/contract.html:226
+#: Aanisite/templates/Aanisite/contract.html:239
 msgid "Granule Production Method"
 msgstr "نوع روش تولید گرانول"
 
-#: Aanisite/templates/Aanisite/contract.html:229
+#: Aanisite/templates/Aanisite/contract.html:242
 msgid "Wet granulation"
 msgstr "گرانولاسیون مرطوب  "
 
-#: Aanisite/templates/Aanisite/contract.html:230
+#: Aanisite/templates/Aanisite/contract.html:243
 msgid "Dry mix"
 msgstr "میکس خشک  "
 
-#: Aanisite/templates/Aanisite/contract.html:240
+#: Aanisite/templates/Aanisite/contract.html:253
 msgid "Granulator Type"
 msgstr "نوع گرانولاتور"
 
-#: Aanisite/templates/Aanisite/contract.html:243
+#: Aanisite/templates/Aanisite/contract.html:256
 msgid "HMG"
 msgstr ""
 
-#: Aanisite/templates/Aanisite/contract.html:244
+#: Aanisite/templates/Aanisite/contract.html:257
 msgid "FBD/G"
 msgstr ""
 
-#: Aanisite/templates/Aanisite/contract.html:250
+#: Aanisite/templates/Aanisite/contract.html:263
 msgid "Moisture Percentage of Granule Exited from Granulator"
 msgstr "درصد رطوبت گرانول خارج‌شده از گرانولاتور"
 
-#: Aanisite/templates/Aanisite/contract.html:256
+#: Aanisite/templates/Aanisite/contract.html:269
 msgid "Required Granulator Tank (Kg)"
 msgstr "مخزن گرانولاتور مورد نیاز"
 
-#: Aanisite/templates/Aanisite/contract.html:262
+#: Aanisite/templates/Aanisite/contract.html:275
 msgid "Glue Making Tank Required (Kg)"
 msgstr "تانک ساخت چسب مورد نیاز"
 
-#: Aanisite/templates/Aanisite/contract.html:268
+#: Aanisite/templates/Aanisite/contract.html:281
 msgid "Temperature Range of Glue Used in Granulation"
 msgstr "دامنه دمای چسب مورد استفاده در گرانولاسیون"
 
-#: Aanisite/templates/Aanisite/contract.html:271
+#: Aanisite/templates/Aanisite/contract.html:284
 msgid "45-65 oC"
 msgstr ""
 
-#: Aanisite/templates/Aanisite/contract.html:272
+#: Aanisite/templates/Aanisite/contract.html:285
 msgid "18-28 oC"
 msgstr ""
 
-#: Aanisite/templates/Aanisite/contract.html:278
+#: Aanisite/templates/Aanisite/contract.html:291
 msgid "Type of Mill and Mesh Size Required for Granule Sieve"
 msgstr "نوع آسیاب و سایز مش مورد نیاز جهت الک گرانول"
 
-#: Aanisite/templates/Aanisite/contract.html:284
+#: Aanisite/templates/Aanisite/contract.html:297
 msgid "Drying Machine: FBD"
 msgstr "دستگاه خشک کن: FBD"
 
-#: Aanisite/templates/Aanisite/contract.html:288
+#: Aanisite/templates/Aanisite/contract.html:301
 msgid "(Raw Materials) Mill and Sieve Stage"
 msgstr "مرحله آسیاب و الک ( مواد اولیه)"
 
-#: Aanisite/templates/Aanisite/contract.html:291
+#: Aanisite/templates/Aanisite/contract.html:304
 msgid "Mesh Size Required for API Sieving"
 msgstr "سایز مش مورد نیاز جهت الک  API"
 
-#: Aanisite/templates/Aanisite/contract.html:297
+#: Aanisite/templates/Aanisite/contract.html:310
 msgid "Mesh Size Required for Excipients Sieving"
 msgstr "سایز مش مورد نیاز جهت الک  Excipients"
 
-#: Aanisite/templates/Aanisite/contract.html:301
+#: Aanisite/templates/Aanisite/contract.html:314
 msgid "Blending Stage"
 msgstr "مرحله Blending (مخلوط‌کردن)"
 
-#: Aanisite/templates/Aanisite/contract.html:304
+#: Aanisite/templates/Aanisite/contract.html:317
 msgid "Required Bin Blender (Kg)"
 msgstr "ظرفیت بلندر مورد نیاز  (کیلوگرم)"
 
-#: Aanisite/templates/Aanisite/contract.html:311
+#: Aanisite/templates/Aanisite/contract.html:324
 msgid "Pressing Stage"
 msgstr "مرحله پرس"
 
-#: Aanisite/templates/Aanisite/contract.html:320
+#: Aanisite/templates/Aanisite/contract.html:333
 #: Aanisite/templates/Aanisite/products.html:107
 msgid "Shape"
 msgstr "شکل "
 
-#: Aanisite/templates/Aanisite/contract.html:323
+#: Aanisite/templates/Aanisite/contract.html:336
 msgid "Normal Concave"
 msgstr ""
 
-#: Aanisite/templates/Aanisite/contract.html:324
+#: Aanisite/templates/Aanisite/contract.html:337
 msgid "Flat"
 msgstr ""
 
-#: Aanisite/templates/Aanisite/contract.html:325
+#: Aanisite/templates/Aanisite/contract.html:338
 msgid "Oblong"
 msgstr ""
 
-#: Aanisite/templates/Aanisite/contract.html:331
+#: Aanisite/templates/Aanisite/contract.html:344
 msgid "Punch Specifications"
 msgstr "مشخصات سنبه"
 
-#: Aanisite/templates/Aanisite/contract.html:334
+#: Aanisite/templates/Aanisite/contract.html:347
 msgid "Non Scored Tablet"
 msgstr "بدون خط"
 
-#: Aanisite/templates/Aanisite/contract.html:335
+#: Aanisite/templates/Aanisite/contract.html:348
 msgid "Scored Tablet"
 msgstr "خط دار"
 
-#: Aanisite/templates/Aanisite/contract.html:341
+#: Aanisite/templates/Aanisite/contract.html:354
 msgid "Hardness Range Required for Tablet Press"
 msgstr "بازه سختی مورد نیاز جهت پرس قرص"
 
-#: Aanisite/templates/Aanisite/contract.html:347
+#: Aanisite/templates/Aanisite/contract.html:360
 msgid "Diameter Range Required for Tablet Press"
 msgstr "بازه قطر مورد نیاز جهت پرس قرص"
 
-#: Aanisite/templates/Aanisite/contract.html:353
+#: Aanisite/templates/Aanisite/contract.html:366
 msgid "Thickness Range Required for Tablet Press"
 msgstr "بازه ضخامت مورد نیاز جهت پرس قرص"
 
-#: Aanisite/templates/Aanisite/contract.html:359
+#: Aanisite/templates/Aanisite/contract.html:372
 msgid "Tablet Weight Range"
 msgstr "بازه وزن قرص"
 
-#: Aanisite/templates/Aanisite/contract.html:363
-#: Aanisite/templates/Aanisite/contract.html:426
+#: Aanisite/templates/Aanisite/contract.html:376
+#: Aanisite/templates/Aanisite/contract.html:439
 msgid "Capsule Filling"
 msgstr "کپسول پرکن"
 
-#: Aanisite/templates/Aanisite/contract.html:365
+#: Aanisite/templates/Aanisite/contract.html:378
 msgid "Specification of capsule’s content"
 msgstr "مشخصات محتوی کپسول"
 
-#: Aanisite/templates/Aanisite/contract.html:368
+#: Aanisite/templates/Aanisite/contract.html:381
 msgid "Granule"
 msgstr "گرانول"
 
-#: Aanisite/templates/Aanisite/contract.html:374
+#: Aanisite/templates/Aanisite/contract.html:387
 msgid "Capsule Size"
 msgstr "سایز کپسول"
 
-#: Aanisite/templates/Aanisite/contract.html:377
+#: Aanisite/templates/Aanisite/contract.html:390
 msgid "0E"
 msgstr ""
 
-#: Aanisite/templates/Aanisite/contract.html:378
+#: Aanisite/templates/Aanisite/contract.html:391
 msgid "0"
 msgstr ""
 
-#: Aanisite/templates/Aanisite/contract.html:379
+#: Aanisite/templates/Aanisite/contract.html:392
 msgid "1"
 msgstr ""
 
-#: Aanisite/templates/Aanisite/contract.html:380
+#: Aanisite/templates/Aanisite/contract.html:393
 msgid "2"
 msgstr ""
 
-#: Aanisite/templates/Aanisite/contract.html:381
+#: Aanisite/templates/Aanisite/contract.html:394
 msgid "3"
 msgstr ""
 
-#: Aanisite/templates/Aanisite/contract.html:387
+#: Aanisite/templates/Aanisite/contract.html:400
 msgid "Empty Shell Weight"
 msgstr "وزن پوکه خالی"
 
-#: Aanisite/templates/Aanisite/contract.html:393
+#: Aanisite/templates/Aanisite/contract.html:406
 msgid "Range of Granule Weight in Capsule"
 msgstr "بازه وزن گرانول در کپسول"
 
-#: Aanisite/templates/Aanisite/contract.html:397
+#: Aanisite/templates/Aanisite/contract.html:410
 msgid "Storage Conditions:"
 msgstr "شرایط نگهداری:"
 
-#: Aanisite/templates/Aanisite/contract.html:398
+#: Aanisite/templates/Aanisite/contract.html:411
 msgid "Storage Conditions"
 msgstr "شرایط نگداری"
 
-#: Aanisite/templates/Aanisite/contract.html:401
+#: Aanisite/templates/Aanisite/contract.html:414
 msgid "Temperature"
 msgstr "دما"
 
-#: Aanisite/templates/Aanisite/contract.html:407
+#: Aanisite/templates/Aanisite/contract.html:420
 msgid "Humidity"
 msgstr "رطوبت"
 
-#: Aanisite/templates/Aanisite/contract.html:413
+#: Aanisite/templates/Aanisite/contract.html:426
 msgid "Containers"
 msgstr "ظروف نگهداری"
 
-#: Aanisite/templates/Aanisite/contract.html:417
+#: Aanisite/templates/Aanisite/contract.html:430
 msgid "Allowed Maintenance Period at Each Stage"
 msgstr "مدت زمان نگهداری مجاز در هر مرحله"
 
-#: Aanisite/templates/Aanisite/contract.html:420
+#: Aanisite/templates/Aanisite/contract.html:433
 msgid "Press"
 msgstr "پرس"
 
-#: Aanisite/templates/Aanisite/contract.html:432
+#: Aanisite/templates/Aanisite/contract.html:445
 msgid "Coat"
 msgstr "روکش"
 
-#: Aanisite/templates/Aanisite/contract.html:443
+#: Aanisite/templates/Aanisite/contract.html:456
 msgid "Packaging Materials Specifications:"
 msgstr "مشخصات اقلام بسته بندی:"
 
-#: Aanisite/templates/Aanisite/contract.html:444
+#: Aanisite/templates/Aanisite/contract.html:457
 msgid "Primary Packaging Specifications"
 msgstr "مشخصات بسته‌بندی اولیه"
 
-#: Aanisite/templates/Aanisite/contract.html:458
+#: Aanisite/templates/Aanisite/contract.html:471
 msgid "Container"
 msgstr "ظرف"
 
-#: Aanisite/templates/Aanisite/contract.html:462
+#: Aanisite/templates/Aanisite/contract.html:475
 msgid "Material of Container"
 msgstr "جنس ظرف"
 
-#: Aanisite/templates/Aanisite/contract.html:465
+#: Aanisite/templates/Aanisite/contract.html:478
 msgid "Plastic"
 msgstr "پلاستیکی"
 
-#: Aanisite/templates/Aanisite/contract.html:466
+#: Aanisite/templates/Aanisite/contract.html:479
 msgid "Glass"
 msgstr "شیشه ای"
 
-#: Aanisite/templates/Aanisite/contract.html:471
+#: Aanisite/templates/Aanisite/contract.html:484
 msgid "Required Container"
 msgstr "ظرف مورد نیاز"
 
-#: Aanisite/templates/Aanisite/contract.html:474
+#: Aanisite/templates/Aanisite/contract.html:487
 msgid "Size"
 msgstr "سایز"
 
-#: Aanisite/templates/Aanisite/contract.html:480
+#: Aanisite/templates/Aanisite/contract.html:493
 msgid "Height"
 msgstr "ارتفاع"
 
-#: Aanisite/templates/Aanisite/contract.html:486
+#: Aanisite/templates/Aanisite/contract.html:499
 msgid "Opening Diameter"
 msgstr "قطر دهانه"
 
-#: Aanisite/templates/Aanisite/contract.html:492
+#: Aanisite/templates/Aanisite/contract.html:505
 msgid "Container Cap Model"
 msgstr "مدل درب ظرف"
 
-#: Aanisite/templates/Aanisite/contract.html:495
+#: Aanisite/templates/Aanisite/contract.html:508
 msgid "Childproof"
 msgstr ""
 
-#: Aanisite/templates/Aanisite/contract.html:496
+#: Aanisite/templates/Aanisite/contract.html:509
 msgid "Simple"
 msgstr ""
 
-#: Aanisite/templates/Aanisite/contract.html:502
+#: Aanisite/templates/Aanisite/contract.html:515
 msgid "Number of Tablets / Capsules per Container"
 msgstr "تعداد قرص / کپسول در هر ظرف"
 
-#: Aanisite/templates/Aanisite/contract.html:508
+#: Aanisite/templates/Aanisite/contract.html:521
 msgid "Type of Humidity Control"
 msgstr "نوع کنترل رطوبت"
 
-#: Aanisite/templates/Aanisite/contract.html:511
+#: Aanisite/templates/Aanisite/contract.html:524
 msgid "Cotton"
 msgstr "پنبه"
 
-#: Aanisite/templates/Aanisite/contract.html:512
+#: Aanisite/templates/Aanisite/contract.html:525
 msgid "Silica Gel"
 msgstr "سیلیکاژل"
 
-#: Aanisite/templates/Aanisite/contract.html:518
+#: Aanisite/templates/Aanisite/contract.html:531
 msgid "Number of Silica Gel Required"
 msgstr "تعداد سیلیکاژل مورد نیاز"
 
-#: Aanisite/templates/Aanisite/contract.html:522
+#: Aanisite/templates/Aanisite/contract.html:535
 msgid "Blister"
 msgstr "بلیستر"
 
-#: Aanisite/templates/Aanisite/contract.html:525
+#: Aanisite/templates/Aanisite/contract.html:538
 msgid "Blister Type"
 msgstr "نوع بلیستر"
 
-#: Aanisite/templates/Aanisite/contract.html:528
+#: Aanisite/templates/Aanisite/contract.html:541
 msgid "Alu-Alu"
 msgstr ""
 
-#: Aanisite/templates/Aanisite/contract.html:529
+#: Aanisite/templates/Aanisite/contract.html:542
 msgid "Alu-PVC"
 msgstr ""
 
-#: Aanisite/templates/Aanisite/contract.html:530
+#: Aanisite/templates/Aanisite/contract.html:543
 msgid "Alu-PVDC"
 msgstr ""
 
-#: Aanisite/templates/Aanisite/contract.html:535
+#: Aanisite/templates/Aanisite/contract.html:548
 msgid "PVC & PVDC Type"
 msgstr "نوع PVC و PVDC"
 
-#: Aanisite/templates/Aanisite/contract.html:539
+#: Aanisite/templates/Aanisite/contract.html:552
 msgid "Opaque"
 msgstr "مات"
 
-#: Aanisite/templates/Aanisite/contract.html:540
+#: Aanisite/templates/Aanisite/contract.html:553
 msgid "Transparent"
 msgstr "شفاف"
 
-#: Aanisite/templates/Aanisite/contract.html:541
+#: Aanisite/templates/Aanisite/contract.html:554
 msgid "White"
 msgstr "سفید"
 
-#: Aanisite/templates/Aanisite/contract.html:548
+#: Aanisite/templates/Aanisite/contract.html:561
 msgid "Blister Dimensions"
 msgstr "ابعاد بلیستر"
 
-#: Aanisite/templates/Aanisite/contract.html:554
+#: Aanisite/templates/Aanisite/contract.html:567
 msgid "Aluminum Foil Width"
 msgstr "عرض فویل آلومینیوم"
 
-#: Aanisite/templates/Aanisite/contract.html:560
+#: Aanisite/templates/Aanisite/contract.html:573
 msgid "PVC Width"
 msgstr "عرض PVC/ PVDC"
 
-#: Aanisite/templates/Aanisite/contract.html:566
+#: Aanisite/templates/Aanisite/contract.html:579
 msgid "Number of Tablets Per Blister"
 msgstr "تعداد قرص در هر بلیستر"
 
-#: Aanisite/templates/Aanisite/contract.html:570
+#: Aanisite/templates/Aanisite/contract.html:583
 msgid "Secondary Packaging Specifications"
 msgstr "مشخصات بسته‌بندی ثانویه"
 
-#: Aanisite/templates/Aanisite/contract.html:573
+#: Aanisite/templates/Aanisite/contract.html:586
 msgid "Number of Blister per Box"
 msgstr "تعداد بلیستر در جعبه"
 
-#: Aanisite/templates/Aanisite/contract.html:579
+#: Aanisite/templates/Aanisite/contract.html:592
 #: Aanisite/templates/Aanisite/export.html:472
 msgid "Leaflet"
 msgstr "بروشور"
 
-#: Aanisite/templates/Aanisite/contract.html:584
+#: Aanisite/templates/Aanisite/contract.html:597
 #: Aanisite/templates/Aanisite/export.html:477
 msgid "Number of Boxes per Carton"
 msgstr "تعداد بسته در هر کارتن"
 
-#: Aanisite/templates/Aanisite/contract.html:592
+#: Aanisite/templates/Aanisite/contract.html:605
 #: Aanisite/templates/Aanisite/export.html:481
 msgid "TTAC"
 msgstr ""
 
-#: Aanisite/templates/Aanisite/contract.html:595
+#: Aanisite/templates/Aanisite/contract.html:608
 msgid "Label"
 msgstr "لیبل"
 
-#: Aanisite/templates/Aanisite/contract.html:596
+#: Aanisite/templates/Aanisite/contract.html:609
 msgid "Print"
 msgstr "پرینت"
 
-#: Aanisite/templates/Aanisite/contract.html:606
+#: Aanisite/templates/Aanisite/contract.html:619
 msgid "Experiments:"
 msgstr "آزمایشات:"
 
-#: Aanisite/templates/Aanisite/contract.html:607
+#: Aanisite/templates/Aanisite/contract.html:620
 msgid "Required In-process Quality Control"
 msgstr "کنترل حین تولید مورد نیاز"
 
-#: Aanisite/templates/Aanisite/contract.html:616
-#: Aanisite/templates/Aanisite/contract.html:725
+#: Aanisite/templates/Aanisite/contract.html:629
+#: Aanisite/templates/Aanisite/contract.html:738
 msgid "Diameter"
 msgstr ""
 
-#: Aanisite/templates/Aanisite/contract.html:622
-#: Aanisite/templates/Aanisite/contract.html:744
+#: Aanisite/templates/Aanisite/contract.html:635
+#: Aanisite/templates/Aanisite/contract.html:757
 msgid "Thickness"
 msgstr ""
 
-#: Aanisite/templates/Aanisite/contract.html:628
-#: Aanisite/templates/Aanisite/contract.html:763
+#: Aanisite/templates/Aanisite/contract.html:641
+#: Aanisite/templates/Aanisite/contract.html:776
 msgid "Weight"
 msgstr ""
 
-#: Aanisite/templates/Aanisite/contract.html:634
-#: Aanisite/templates/Aanisite/contract.html:782
+#: Aanisite/templates/Aanisite/contract.html:647
+#: Aanisite/templates/Aanisite/contract.html:795
 msgid "Hardness"
 msgstr ""
 
-#: Aanisite/templates/Aanisite/contract.html:640
-#: Aanisite/templates/Aanisite/contract.html:801
+#: Aanisite/templates/Aanisite/contract.html:653
+#: Aanisite/templates/Aanisite/contract.html:814
 msgid "Friability"
 msgstr ""
 
-#: Aanisite/templates/Aanisite/contract.html:646
+#: Aanisite/templates/Aanisite/contract.html:659
 msgid "Abrasion"
 msgstr ""
 
-#: Aanisite/templates/Aanisite/contract.html:652
-#: Aanisite/templates/Aanisite/contract.html:820
+#: Aanisite/templates/Aanisite/contract.html:665
+#: Aanisite/templates/Aanisite/contract.html:833
 msgid "Disintegration Time"
 msgstr ""
 
-#: Aanisite/templates/Aanisite/contract.html:658
-#: Aanisite/templates/Aanisite/contract.html:839
+#: Aanisite/templates/Aanisite/contract.html:671
+#: Aanisite/templates/Aanisite/contract.html:852
 msgid "Assay"
 msgstr ""
 
-#: Aanisite/templates/Aanisite/contract.html:664
+#: Aanisite/templates/Aanisite/contract.html:677
 msgid ""
 "Does the client require chemical and microbial testing of the raw material / "
 "product other than in-process quality control (physical) tests or not?"
@@ -1023,57 +1021,57 @@ msgstr ""
 "آیا کارفرما به جز آزمایشات حین تولید ( فیزیکی)، نیاز به آزمایشات شیمیایی و "
 "میکروبی ماده اولیه/ محصول دارد یا خیر"
 
-#: Aanisite/templates/Aanisite/contract.html:672
+#: Aanisite/templates/Aanisite/contract.html:685
 msgid "Practicable Tests"
 msgstr "تست‌های قابل‌انجام"
 
-#: Aanisite/templates/Aanisite/contract.html:674
+#: Aanisite/templates/Aanisite/contract.html:687
 msgid "Test"
 msgstr ""
 
-#: Aanisite/templates/Aanisite/contract.html:677
+#: Aanisite/templates/Aanisite/contract.html:690
 msgid "Standard"
 msgstr ""
 
-#: Aanisite/templates/Aanisite/contract.html:680
+#: Aanisite/templates/Aanisite/contract.html:693
 msgid "Result"
 msgstr ""
 
-#: Aanisite/templates/Aanisite/contract.html:683
+#: Aanisite/templates/Aanisite/contract.html:696
 msgid "Reference"
 msgstr ""
 
-#: Aanisite/templates/Aanisite/contract.html:687
+#: Aanisite/templates/Aanisite/contract.html:700
 msgid "Appearance"
 msgstr ""
 
-#: Aanisite/templates/Aanisite/contract.html:706
+#: Aanisite/templates/Aanisite/contract.html:719
 msgid "Identification"
 msgstr ""
 
-#: Aanisite/templates/Aanisite/contract.html:858
+#: Aanisite/templates/Aanisite/contract.html:871
 msgid "Dissolution"
 msgstr ""
 
-#: Aanisite/templates/Aanisite/contract.html:877
+#: Aanisite/templates/Aanisite/contract.html:890
 msgid "Content Uniformity"
 msgstr ""
 
-#: Aanisite/templates/Aanisite/contract.html:896
+#: Aanisite/templates/Aanisite/contract.html:909
 msgid "Microbiological Limit Test"
 msgstr ""
 
-#: Aanisite/templates/Aanisite/contract.html:918
+#: Aanisite/templates/Aanisite/contract.html:931
 msgid "Note:"
 msgstr "توضیحات:"
 
-#: Aanisite/templates/Aanisite/contract.html:919
+#: Aanisite/templates/Aanisite/contract.html:932
 msgid ""
 "- The Contract Giver is required to provide the method of each test with its "
 "reference"
 msgstr "کارفرما لازم است روش انجام هر آزمایش را به همراه رفرانس آن ارائه دهد."
 
-#: Aanisite/templates/Aanisite/contract.html:920
+#: Aanisite/templates/Aanisite/contract.html:933
 msgid ""
 "- If other tests are required to be performed, the Contract Giver should "
 "provide the reference to all standards, impurities, HPLC column, etc. while "
@@ -1082,11 +1080,11 @@ msgstr ""
 "در صورت نیاز به انجام آزمایشات دیگر، کارفرما ضمن ارائه روش، لازم است رفرانس "
 "تمامی استانداردها، ناخالصی‌ها، ستون HPLC و .... را تأمین نماید."
 
-#: Aanisite/templates/Aanisite/contract.html:924
+#: Aanisite/templates/Aanisite/contract.html:937
 msgid "Approved by Representative of the Contract Giver"
 msgstr "تأیید نماینده کارفرما"
 
-#: Aanisite/templates/Aanisite/contract.html:930
+#: Aanisite/templates/Aanisite/contract.html:943
 msgid "Approved by Authorized Person of the Contract Giver"
 msgstr "مسئول‌فنی کارفرما"
 
