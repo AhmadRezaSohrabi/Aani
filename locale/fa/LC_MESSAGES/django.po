@@ -305,7 +305,7 @@ msgstr ""
 
 #: Aanisite/templates/Aanisite/base.html:166
 msgid "Contract Manufacturing"
-msgstr "قرارداد تولید"
+msgstr "تولید قراردادی"
 
 #: Aanisite/templates/Aanisite/base.html:187
 msgid ""
