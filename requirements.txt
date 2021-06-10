@@ -1,6 +1,6 @@
 betterpath==0.2.2
 Click==7.0
-Django==2.2.5
+Django==2.2.24
 l==0.11.0
 mysqlclient==1.4.4
 Pillow==6.1.0
